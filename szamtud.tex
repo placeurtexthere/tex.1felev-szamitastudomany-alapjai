@@ -1,0 +1,96 @@
+\documentclass[12pt]{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{geometry}
+	\geometry{a4paper, total={170mm,257mm}, left=20mm, top=20mm, }
+	
+\renewcommand*\contentsname{Tartalomjegyzék}
+
+\AddToHook{cmd/section/before}{\clearpage}
+
+
+\begin{document}
+\begin{titlepage}
+	\centering \vfill
+	{\textsc{Budapesti Műszaki és Gazdaságtudományi Egyetem} \par} \vspace{7cm}
+	{\huge\bfseries A számítástudomány alapjai\par} \vspace{0.5cm}
+	{\large \textsc{Összefoglaló jegyzet}\par} \vspace{1.5cm}
+	{\Large\itshape Készítette: Illyés Dávid\par} \vfill
+
+	\noindent\fbox{%
+    	\parbox{140mm}{
+			Ez  a jegyzet nagyon hasonlóan van struktúrálva az előadás jegyzetekhez és fő célja, hogy olyan módon adja át a "A Programozás Alapjai 1" nevű tárgy anyagát, hogy az teljesen kezdők számára is könnyen megérthető és megtanulható legyen. 
+   		}
+	}
+	
+	\vfill {\large \today\par}
+\end{titlepage} 
+\tableofcontents
+\addtocontents{toc}{~\hfill\textbf{Oldal}\par}
+
+	\section{A gráfelmélet alapjai}
+		\subsection{Mi a gráf?}
+			
+			\textbf{Def:} $G = (V,E)$ \textcolor{red}{egyszerű, irányítatlan gráf}
+			
+			\textbf{Példa:} ha $ V \neq 0$ és $E \subseteq \binom{V}{2}$, ahol $\binom{V}{2} = \{\{u,v\} : u,v \in V, u \neq v\}$.
+			
+			$V$ a $G$ \textcolor{red}{csúcsainak} (vagy \textcolor{red}{(szög)pontjainak}), $E$ pedig G \textcolor{red}{éleinek} halmaza. 
+			
+			\textbf{Példa:} $G = (\{a,b,c,d\},\{a,b\},\{a,c\},\{b,c\},\{b,d\})$
+			
+			\textbf{Def:} A $G = (V,E)$ gráf \textcolor{red}{diagramja} a $G$ egy olyan lerajzolása, amiben $V$-nek a sík különböző pontjai felelnek meg, és $G$ minden $\{u,v\}$ élének egy $u$-t és $v$-t összekötő görbe felel meg.
+			
+			\textbf{Terminológia \& konvenciók:} Gráf alatt rendszerint egyszerű, irányítatlan gráfot értünk. Ha $G$ egy gráf, akkor $V(G)$ a $G$ csúcshalmazát, $E(G)$ pedig $G$ élhalmazát jelöli, azaz $G = (V(G),E(G))$. Az $e = \{u,v\}$ élt röviden $uv$-vel jelöljük. 
+			
+			Ekkor $e$ az $u$ és $v$ csúcsokat \textcolor{red}{köti össze}. Továbbá $u$ és $v$ az $e$ \textcolor{red}{végpontjai}, amelyek az $e$ élre \textcolor{red}{illeszkednek}, és $e$ mentén \textcolor{red}{szomszédosak}.
+		
+		\subsection{Multigráfok és irányított gráfok}
+
+			\textbf{Megj:} Ha egy gráf nem egyszerű, akkor lehetnek \textcolor{red}{párhuzamos élei, hurokélei} vagy akár párhuzamos hurokélei is.
+			
+			\textbf{Def:} Az \textcolor{red}{irányított gráf} olyan gráf, aminek minden éle irányított.
+
+
+
+		\subsection{Handshaking lemma}
+		\subsection{Komplementer és izomorfia}
+		\subsection{Gráfoperációk}
+		\subsection{Háromféle elérhetőség, összefüggőség}
+		\subsection{Gráfok összefüggősége a gyakorlatban}
+		\subsection{Fák és erdők}
+		\subsection{Fák további tulajdonságai}
+		\subsection{Feszítőfák}
+		
+		
+	\section{Minimális költségű feszítőfák}
+		\subsection{Alapkörrendszer, alap vágás renszer}
+		\subsection{Minimális költségű feszítőfa}
+		\subsection{Minimális költségű feszítőfák struktúrája}
+		\subsection{Az ötödik elem}
+		\subsection{Mkkffák egy villamosmérnöki alkalmazása}
+		
+	\section{Gráfbejárások és legrövidebb utak}
+		
+	\section{Legrövidebb utak, DFS, PERT}
+		
+	\section{Euler-séták és Hamilton-körök}
+	
+	\section{Síkgráfok}
+	
+	\section{Lineáris egyenletrendszerek}
+	
+	\section{Az \(\mathbb{R}^n\) tér alaptulajdonságai}
+	
+	\section{Altér bázisa és dimenziója}
+	
+	\section{Négyzetes mátrix determinánsa}
+	
+	\section{Mátrixműveletek és lineáris leképezések}
+	
+	\section{Mátrix rangja és inverze}
+	
+	\section{Mátrixegyenletek}
+	
+\end{document}
