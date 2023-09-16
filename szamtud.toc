@@ -1,0 +1,29 @@
+\nobreakspace {}\hfill \textbf {Oldal}\par 
+\contentsline {section}{\numberline {1}A gráfelmélet alapjai}{2}{}%
+\contentsline {subsection}{\numberline {1.1}Mi a gráf?}{2}{}%
+\contentsline {subsection}{\numberline {1.2}Multigráfok és irányított gráfok}{2}{}%
+\contentsline {subsection}{\numberline {1.3}Handshaking lemma}{2}{}%
+\contentsline {subsection}{\numberline {1.4}Komplementer és izomorfia}{3}{}%
+\contentsline {subsection}{\numberline {1.5}Gráfoperációk}{3}{}%
+\contentsline {subsection}{\numberline {1.6}Háromféle elérhetőség, összefüggőség}{3}{}%
+\contentsline {subsection}{\numberline {1.7}Gráfok összefüggősége a gyakorlatban}{3}{}%
+\contentsline {subsection}{\numberline {1.8}Fák és erdők}{3}{}%
+\contentsline {subsection}{\numberline {1.9}Fák további tulajdonságai}{3}{}%
+\contentsline {subsection}{\numberline {1.10}Feszítőfák}{3}{}%
+\contentsline {section}{\numberline {2}Minimális költségű feszítőfák}{4}{}%
+\contentsline {subsection}{\numberline {2.1}Alapkörrendszer, alap vágás renszer}{4}{}%
+\contentsline {subsection}{\numberline {2.2}Minimális költségű feszítőfa}{4}{}%
+\contentsline {subsection}{\numberline {2.3}Minimális költségű feszítőfák struktúrája}{4}{}%
+\contentsline {subsection}{\numberline {2.4}Az ötödik elem}{4}{}%
+\contentsline {subsection}{\numberline {2.5}Mkkffák egy villamosmérnöki alkalmazása}{4}{}%
+\contentsline {section}{\numberline {3}Gráfbejárások és legrövidebb utak}{5}{}%
+\contentsline {section}{\numberline {4}Legrövidebb utak, DFS, PERT}{6}{}%
+\contentsline {section}{\numberline {5}Euler-séták és Hamilton-körök}{7}{}%
+\contentsline {section}{\numberline {6}Síkgráfok}{8}{}%
+\contentsline {section}{\numberline {7}Lineáris egyenletrendszerek}{9}{}%
+\contentsline {section}{\numberline {8}Az \(\mathbb {R}^n\) tér alaptulajdonságai}{10}{}%
+\contentsline {section}{\numberline {9}Altér bázisa és dimenziója}{11}{}%
+\contentsline {section}{\numberline {10}Négyzetes mátrix determinánsa}{12}{}%
+\contentsline {section}{\numberline {11}Mátrixműveletek és lineáris leképezések}{13}{}%
+\contentsline {section}{\numberline {12}Mátrix rangja és inverze}{14}{}%
+\contentsline {section}{\numberline {13}Mátrixegyenletek}{15}{}%

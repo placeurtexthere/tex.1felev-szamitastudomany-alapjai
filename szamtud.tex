@@ -1,7 +1,7 @@
 \documentclass[12pt]{article}
 \usepackage{amssymb}
 \usepackage{amsmath}
-\usepackage{xcolor}
+\usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{geometry}
 	\geometry{a4paper, total={170mm,257mm}, left=20mm, top=20mm, }
 	
@@ -32,15 +32,15 @@
 	\section{A gráfelmélet alapjai}
 		\subsection{Mi a gráf?}
 			
-			\textbf{Def:} $G = (V,E)$ \textcolor{red}{egyszerű, irányítatlan gráf}
+			\textcolor{blue}{\textbf{Def:}} $G = (V,E)$ \textcolor{red}{egyszerű, irányítatlan gráf}
 			
-			\textbf{Példa:} ha $ V \neq 0$ és $E \subseteq \binom{V}{2}$, ahol $\binom{V}{2} = \{\{u,v\} : u,v \in V, u \neq v\}$.
+			\textcolor{purple}{\textbf{Példa:}} ha $ V \neq 0$ és $E \subseteq \binom{V}{2}$, ahol $\binom{V}{2} = \{\{u,v\} : u,v \in V, u \neq v\}$.
 			
 			$V$ a $G$ \textcolor{red}{csúcsainak} (vagy \textcolor{red}{(szög)pontjainak}), $E$ pedig G \textcolor{red}{éleinek} halmaza. 
 			
-			\textbf{Példa:} $G = (\{a,b,c,d\},\{a,b\},\{a,c\},\{b,c\},\{b,d\})$
+			\textcolor{purple}{\textbf{Példa:}} $G = (\{a,b,c,d\},\{a,b\},\{a,c\},\{b,c\},\{b,d\})$
 			
-			\textbf{Def:} A $G = (V,E)$ gráf \textcolor{red}{diagramja} a $G$ egy olyan lerajzolása, amiben $V$-nek a sík különböző pontjai felelnek meg, és $G$ minden $\{u,v\}$ élének egy $u$-t és $v$-t összekötő görbe felel meg.
+			\textcolor{blue}{\textbf{Def:}} A $G = (V,E)$ gráf \textcolor{red}{diagramja} a $G$ egy olyan lerajzolása, amiben $V$-nek a sík különböző pontjai felelnek meg, és $G$ minden $\{u,v\}$ élének egy $u$-t és $v$-t összekötő görbe felel meg.
 			
 			\textbf{Terminológia \& konvenciók:} Gráf alatt rendszerint egyszerű, irányítatlan gráfot értünk. Ha $G$ egy gráf, akkor $V(G)$ a $G$ csúcshalmazát, $E(G)$ pedig $G$ élhalmazát jelöli, azaz $G = (V(G),E(G))$. Az $e = \{u,v\}$ élt röviden $uv$-vel jelöljük. 
 			
@@ -48,14 +48,44 @@
 		
 		\subsection{Multigráfok és irányított gráfok}
 
-			\textbf{Megj:} Ha egy gráf nem egyszerű, akkor lehetnek \textcolor{red}{párhuzamos élei, hurokélei} vagy akár párhuzamos hurokélei is.
+			\textcolor{blue}{\textbf{Megj:}} Ha egy gráf nem egyszerű, akkor lehetnek \textcolor{red}{párhuzamos élei, hurokélei} vagy akár párhuzamos hurokélei is.
 			
-			\textbf{Def:} Az \textcolor{red}{irányított gráf} olyan gráf, aminek minden éle irányított.
+			\textcolor{blue}{\textbf{Def:}} Az \textcolor{red}{irányított gráf} olyan gráf, aminek minden éle irányított.
 
+			\textcolor{blue}{\textbf{Def:}} $G = (V,E)$ \textcolor{red}{véges gráf}, ha $V$ és $E$ is véges halmazok.
 
+			\textcolor{blue}{\textbf{Def:}} Az \textcolor{red}{n-pontú út, n-pontú kör}, ill. \textcolor{red}{n-pontú teljes gráf} jele rendre $P_n$, $C_n$, ill. $K_n$. ($P_1,P_2,P_3$ elfajulók.) \textcolor{orange}{\textbf{Megf:}} $K_1 = P_1, P_2=C_2, C_3=K_3$
+
+			\textcolor{blue}{\textbf{Def:}} $c \in V(G)$ esetén a $v$-re illeszkedő élek száma a $v$ fokszáma. Jelölése $d_g(v)$ vagy $d(v)$, a hurokél kétszer számít. (Irányított gráf esetén $\delta(v)$ ill. $\rho(v)$ a $v$ \textcolor{red}{ki-} ill. \textcolor{red}{befokát} jelöli.)
+
+			\textcolor{blue}{\textbf{Def:}} A $G$ gráf maximális ill. minimális fokszáma $\Delta(G)$ ill. $\delta(G)$. $G$ \textcolor{red}{reguláris}, ha minden csúcsának foka ugyanannyi: $\Delta(G)=\delta(G),G$ pedig \textcolor{red}{k-reguláris}, ha minden csúcsának pontosan $k$ a fokszáma.
+
+			\textcolor{orange}{\textbf{Megf:}} Minden kör 2-reguláris, $K_n$ pedig $(n-1)$-reguláris.
 
 		\subsection{Handshaking lemma}
+
+			\textcolor{orange}{\textbf{Kézfogás-lemma (KFL):}} Ha $G = (V,E)$ véges, nem feltétlenül egyszerű gráf, akkor $\sum_{v \in V} d(v)=2|E|$, azaz a csúcsok fokszámösszege az élszám kétszerese.
+		
+			\textcolor{orange}{\textbf{Általánosított kézfogás-lemma:}} Tetsz. $G = (V,E)$ véges irányított gráfra $\sum_{v \in V} \delta (v) = \sum_{v \in V} \rho (V) = |E|$, azaz a csúcsok ki- és befokainak összege is az élszámot adja meg. 
+
+			\textcolor{green}{\textbf{Biz:}} Az egyes csúcsokból kilépő éleket megszámolva $G$ minden irányított élét pontosan egyszer számoljuk meg. Ezért a kifokok összege az élszám. A belépő éleket leszámlálva hasonló igaz, ezért a befokok összege is az élszám.
+			
+			\textcolor{green}{\textbf{A KFL bizonyítása:}} Készítsükel a $G'$ digráfot úgy, hogy $G$ minden élét egy oda-vissza irányított élpárral helyettesítjük. Ekkor \[\sum_{v \in V} d_G(V) = \sum_{v \in V} \delta_{G'} (v) = |E(G')| = 2|E(G)| \]
+
+			\textcolor{blue}{\textbf{Megj:}} Úgy is bizonyíthattuk volna az általánosított kéfogás-lemmát, hogy egyenként húzzuk be $G$-be az éleket. 0-elű (\textcolor{red}{üres})gráfokra a lemma triviális, és minden egyes él behúzása pontosan 1-gyel növeli az élszámot is és a ki/befokok összegét is.
+
+			\textcolor{blue}{\textbf{Megj:}} Úgy is bizonyíthattuk volna a kézfogás-lemmát, hogy egyenként húzzuk be $G$-be az éleket. Üresgráfokra a lemma triviális, és minden egyes él behúzása pontosan 2-vel növeli a kétszeres élszámot és a csúcsok fokszámösszeget is.
+
+
 		\subsection{Komplementer és izomorfia}
+
+			\textcolor{blue}{\textbf{Def:}}	A $G$ \textbf{egyszerű} gráf \textcolor{red}{komplementere} $\overline{G} = (V,(G), \binom{v}{2} \backslash E(G))$.
+
+			\textcolor{blue}{\textbf{Megj:}} $G$ és $\overline{G}$ csúcsai megegyeznek, és két csúcs pontosan akkor szomszédos $\overline{G}$-ben, ha nem szomszédosak $G$-ben.
+
+			\textcolor{purple}{\textbf{Példa:}}
+
+
 		\subsection{Gráfoperációk}
 		\subsection{Háromféle elérhetőség, összefüggőség}
 		\subsection{Gráfok összefüggősége a gyakorlatban}
