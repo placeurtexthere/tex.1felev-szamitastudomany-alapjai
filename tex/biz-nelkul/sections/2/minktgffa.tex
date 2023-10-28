@@ -1,0 +1,93 @@
+\documentclass[../szamtud.tex]{subfiles}
+
+\begin{document}
+
+    \subsection{Alapkörrendszer, alap vágás renszer}
+
+        Adott egy $G$ gráf és $G$-nek egy $F$rögzített feszítőfája. Ekkor $G$ minden éléhez $F$ meghatározza $G$ éleinek egy fontos részhalmazát. Attól függően, hogy az adott él $F$-hez tartozik-e vagy sem, különböző fajta részhalmazról van szó.
+
+        \textcolor{blue}{\textbf{Def:}} A $G$ gráf $F$ feszítőfájának $f$ éléhez tartozó \textcolor{red}{alap vágást} $G$ azon élei alkotják, amik az $F-f$ két komponense között futnak. Az $e \in E(G) \backslash E(F)$ éléhez tarozó \textcolor{red}{alapkör} pedig az $F+e$ köre.
+
+        \textcolor{orange}{\textbf{Megf:}} Tfh $f \in F$ és $e \in E(G) \backslash E(F)$. Ekkor ($F-f+e$ ffa) $\Longleftrightarrow$ ($f$ benne van $e$ alapkörében) $\Longleftrightarrow$ ($e$ benne van $f$ alap vágásában).
+
+        \textcolor{orange}{\textbf{Köv:}} Az $e \in E(G) \backslash E(F)$ alapkörét $e$ mellett azon $F$-beli élek alkotják, amelyek alapvágása $e$-t tartalmazza. Az $f \in F$ alapvágást $f$ mellett a $G$ azon élei alkotják, amelyek alapköre $f$-t tartalmazza.
+
+    \subsection{Minimális költségű feszítőfa}
+
+        \textcolor{blue}{\textbf{Def:}} Adott a $G = (V,E)$ irányítatlan gráf élein a $k:E \rightarrow \mathbb{R}_+$ költségfüggvény. Az $F \subseteq E$ élhalmaz \textcolor{red}{költsége} az $F$-beli élek összköltsége: $k(F) = \sum_{f\in F}k(F)$.
+
+        Az $F \subseteq E$ élhalmaz $G$-ben \textcolor{red}{minimális költségű feszítőfa} (\textcolor{red}{mkffa}), ha 
+
+        (1) $(V,F)$ a $G$ feszítőfája, és
+        
+        (2) $k(F) \leq k(F')$ teljesül a $G$ bármely $(V,F')$ feszítőfájára.
+        
+        Az $F \subseteq E$ élhalmaz $G$-ben \textcolor{red}{minimális költségű feszítő erdeje}, ha 
+
+        (1) $(V,F)$ a $G$ feszítő erdeje, és
+
+        (2) $k(F) \leq k(F')$ teljesül a $G$ bármely $(V,F')$ feszítő erdejére.
+
+        \textcolor{red}{\textbf{Cél:}} Hatékony eljárás mkffa keresésére.
+        
+        \textcolor{purple}{\textbf{Ötlet:}} Keressük a feszítőfát a tanult módon, az élk egyenkénti behúzásával, az ÉHL szerint zöldre színezett élek halmazaként. 
+
+        Zöld él: olyan él, ami nem alkot kört a korábban felépített élekkel.
+
+        \textcolor{green}{\textbf{Mohó stratégia:}} A feszítőfa építésekor költség szerint növekvő sorrendben döntsünk az élekről, hátha mkffát kapunk a végén.
+
+        \textcolor{blue}{\textbf{Kruskal-algoritmus:}} \underline{Input}: $G=(V,E)$ és $k:E \rightarrow \mathbb{R}_+$ költségfüggvény. \underline{Output}: $F \subseteq E$ \underline{Működés}: Tfh $k(e_1) \leq k(e_2) \leq \dots \leq k(e_m)$, ahol $E=\{e_1,e_2,\dots, e_m\}$. Legyen $F_0=0$, és $i=1,2,\dots,m$-re
+
+            \begin{equation*}
+                F_i :=\begin{cases}
+                    F_{i-1}\cup \{e_i\} & \text{ha $F_{i-1}\cup \{e_i\}$ körmentes.} \\
+                    F_{i-1} & \text{ha $F_{i-1}\cup \{e_i\}$ tartalmaz kört. \;\;\; $F:=F_m$}
+                \end{cases}
+            \end{equation*}
+
+    \subsection{Minimális költségű feszítőfák struktúrája}
+
+        $G=(V,E)$ gráf és $k:E \rightarrow \mathbb{R}_+$ költségfüggvény esetén legyen $G_c$ a legfeljebb $c$ költségű élek alkotta feszítő részgráfja $G$-nak: $G_c = (V,E_c)$, ahol $E_c := \{e \in E : k(e)\leq c\}$.
+
+        \textcolor{orange}{\textbf{Megf:}} A $G$ gráfon futtotott Kruskal-algoritmus outputja tartalmazza $G_c$ egy feszítő erdejét minden $c \geq 0$ esetén.
+
+        %\textcolor{green}{\textbf{Biz:}} A Kruskal-algoritmus a legfeljebb $c$ költségű ($E_c$-beli) éleket hamarabb dolgozza fel, mint a $c$-nél drágábbakat. Ezért $E_c$ összes élének feldolgozása után pontosan azt az állapotot érjük el, mintha a Kruskal-algoritmust a $G_c$ frágon futtattunk volna. Korábban (az ÉHL előtt) láttuk, hogy az utóbbi algoritmus outputja $G_c$ egye feszítő erdeje. \textcolor{blue}{$\Box$} 
+
+        \textcolor{orange}{\textbf{Lemma:}} Tfh $F=\{f_1,f_2,\dots,f_l\}, k(f_1) \leq k(f_2) \leq \dots \leq k(f_l)$ és $F\cap E_c$ a $G_c$ egy feszítő erdeje $\forall c \geq 0$-ra. Tfh $F' = \{f'_1, f'_2,\dots,f'_l\}$ a $G$ egy feszítő erdejének élei, és $k(f'_1) \leq k(f'_2) \leq \dots \leq k(f'_l)$. Ekkor $k(f_i) \leq k(f'_i)$ teljesül $\forall 1 \leq i \leq l$ esetén, így $k(F) \leq k(F')$.
+        
+        %\textcolor{green}{\textbf{Biz:}} Indirekt: tfh $k(f_i) > k(f'_i) = c$. Ekkor $|E_c \cap F| <i$, így a feltevés miatt $E_c \cap F$a $G_c$ egy $i$-nél kevesebb élű feszítő erdeje. Az $f'_1, f'_2, \dots, f'_i$ élek is mind $E_c$-beliek, és többen vannak az $E_c\cap F$ feszítő erdő élszámánál. Tehát $f'_1, f'_2, \dots, f'_i$ nem lehet körmentes, így $f'_1, f'_2, \dots, f'_l$ sem. Ez ellentmondás. Tehát $k(f_i) \leq k(f'_i) \:\forall i$. Ezért $k(F) = \sum_{i=1}^{l}k(f_i) \leq \sum_{i=1}^{l}k(f'_i)=k(F')$. \textcolor{blue}{$\Box$} 
+
+        \textcolor{orange}{\textbf{Köv:}} (1) A Kruskal-algoritmus outputja a $G$ gráf egy minimális költségű feszítő erdeje. 
+        
+        %\textcolor{green}{\textbf{Biz:}} Legyen $F$ a Kruskal-algoritmus outputja. A megfigyelés miatt $F \cap E_c$ a $G_c$ feszítő erdeje $\forall c \geq 0$-ra, ezért a Lemma szerint $k(F) \leq k(F')$ teljesül $G$ tetszőleges $F'$ feszítő erdejére. \textcolor{blue}{$\Box$} 
+
+        \textcolor{orange}{\textbf{Köv:}} (2) Az $F'$ élhalmaz pontosan akkor minimális költségű feszítő erdeje $G$-nek, ha $F' \cap E_c$ a $G_c$ egy feszítő erdeje minden $c \leq 0$-ra.
+
+        %\textcolor{green}{\textbf{Biz:}} A Lemma bizonyítja az elégfégességet.
+
+        %\textcolor{green}{\textbf{Biz:}} A szükségességhez tfh $F' \cap E_c$ nem feszítő erdeje $G_c$-nek, és legyen $F$ a Kruskal-algoritmus outputja. Mivel $F \cap E_c$ a $G_c$ feszítő erdeje, ezért $|F \cap E_c| > |F' \cap E_c|$, így $k(f_i) < k(f'_i)$ teljesül legalább egy $i$-re, és minden $j$-re $k(k_j) \leq k(f'_i)$. Innen $k(F) < k(F')$. \textcolor{blue}{$\Box$}
+
+        \textcolor{orange}{\textbf{Köv:}} (3) Ha a $G$ gárf összefüggő, akkor $G$ feszítő erdeje a $G$ feszítő fája, így a Kruskal-algoritmus mkffát talál. A (2) következmény pedig $G$ mkffáit karakterizálja.
+    
+    \subsection{Az ötödik elem}
+    
+        Algoritmusok megadásakor öt dologra figyelünk:
+
+        Input \checkmark, Output \checkmark, Működés \checkmark, Helyesség \checkmark, Lépésszám. 
+
+        Utóbbiról nem volt szó a Kruskal-algoritmus esetében. 
+
+        Tfh $n$ ill. $m$ a $G$ csúcsai ill. élei száma. 
+
+        A Kruskal-algoritmus két részből áll: 
+
+        \;\;\;\;\;\textcolor{blue}{1.} Élek költség szerinti sorbarendezése 
+
+        \;\;\;\;\;\textcolor{blue}{2.} Döntés az egyes élekről a fenti sorrendben. 
+        
+        \textcolor{blue}{1.} $m$ szám sorbarendezéséhez a buborékrendezés legfeljebb $\binom{m}{2}$ összehasonlítást használ.
+        
+        \textcolor{blue}{1.} $n$ csúcsú $G$ gráf esetén egy élről döntés megoldható $konst \cdot \log_2n$ lépésben az adatstruktúra karbantartásával együtt is. Az összes döntéshez tehát elegendő $konst \cdot n \cdot \log_2n$ lépés. A Kruskal-algoritmus lépésszáma ezért felülről becsülhető $konst \cdot (n+m) \cdot \log_2(n+m)$-mel.
+    
+
+\end{document}
