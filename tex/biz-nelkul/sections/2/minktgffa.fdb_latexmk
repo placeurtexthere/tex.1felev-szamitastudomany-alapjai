@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1698493447 "/Users/dave/Documents/GitHub/tex.1felev-szamitastudomany-alapjai/tex/biz-nelkul/sections/2/minktgffa.tex" "minktgffa.pdf" "minktgffa" 1698493448 0
-  "../../szamtud.tex" 1698493301 1988 390cb94f03b8bf85a184bd58925e8169 ""
-  "/Users/dave/Documents/GitHub/tex.1felev-szamitastudomany-alapjai/tex/biz-nelkul/sections/2/minktgffa.tex" 1698493447 7511 a4d3cb4e4e15a88f11f9f2b83780bc88 ""
+["pdflatex"] 1698495134 "/Users/dave/Documents/GitHub/tex.1felev-szamitastudomany-alapjai/tex/biz-nelkul/sections/2/minktgffa.tex" "minktgffa.pdf" "minktgffa" 1698495136 0
+  "../../szamtud.tex" 1698495134 1995 fa887110e8ade69908085eabe7a51c50 ""
+  "/Users/dave/Documents/GitHub/tex.1felev-szamitastudomany-alapjai/tex/biz-nelkul/sections/2/minktgffa.tex" 1698493496 7511 a4d3cb4e4e15a88f11f9f2b83780bc88 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -75,8 +75,8 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1694545731 4681924 2c19acd65d59ba67d808d6d74d1273b0 ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1694545878 8183370 1c525ac4ee073a127ca1a6d396f25aaf ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "minktgffa.aux" 1698493448 542 28bd7841683edcdc05550dfbce8c6e0e "pdflatex"
-  "minktgffa.tex" 1698493447 7511 a4d3cb4e4e15a88f11f9f2b83780bc88 ""
+  "minktgffa.aux" 1698495136 542 28bd7841683edcdc05550dfbce8c6e0e "pdflatex"
+  "minktgffa.tex" 1698493496 7511 a4d3cb4e4e15a88f11f9f2b83780bc88 ""
   (generated)
   "minktgffa.aux"
   "minktgffa.log"

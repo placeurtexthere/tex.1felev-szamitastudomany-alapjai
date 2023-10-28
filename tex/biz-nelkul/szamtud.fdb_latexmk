@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1698493622 "/Users/dave/Documents/GitHub/tex.1felev-szamitastudomany-alapjai/tex/biz-nelkul/szamtud.tex" "szamtud.pdf" "szamtud" 1698493624 0
-  "/Users/dave/Documents/GitHub/tex.1felev-szamitastudomany-alapjai/tex/biz-nelkul/szamtud.tex" 1698493619 1988 390cb94f03b8bf85a184bd58925e8169 ""
+["pdflatex"] 1698495147 "/Users/dave/Documents/GitHub/tex.1felev-szamitastudomany-alapjai/tex/biz-nelkul/szamtud.tex" "szamtud.pdf" "szamtud" 1698495149 0
+  "/Users/dave/Documents/GitHub/tex.1felev-szamitastudomany-alapjai/tex/biz-nelkul/szamtud.tex" 1698495134 1995 fa887110e8ade69908085eabe7a51c50 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -100,9 +100,9 @@
   "sections/5/img/2.png" 1698493300 69190 59223a6e0ee5a9aedf3c7fb6091c4a41 ""
   "sections/6/./img/1.png" 1698493300 19402 b18921f82dd78b3d83b3426559e63eb2 ""
   "sections/6/sikgrafok.tex" 1698493606 10903 dadab002d10fdd48d1cb71034c873a5e ""
-  "szamtud.aux" 1698493623 5621 6d0b7cbd14f6de73c13a846f38ac57c6 "pdflatex"
-  "szamtud.tex" 1698493619 1988 390cb94f03b8bf85a184bd58925e8169 ""
-  "szamtud.toc" 1698493623 3681 97e4d80a2b7f1c2d3b0777b7cb493367 "pdflatex"
+  "szamtud.aux" 1698495148 4771 05c5755b4b642d377bd521ba278b85b4 "pdflatex"
+  "szamtud.tex" 1698495134 1995 fa887110e8ade69908085eabe7a51c50 ""
+  "szamtud.toc" 1698495148 3119 469d46a34a25d098dc399110efee2f1e "pdflatex"
   (generated)
   "szamtud.aux"
   "szamtud.log"

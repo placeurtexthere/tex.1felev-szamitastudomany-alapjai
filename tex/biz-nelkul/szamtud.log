@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  28 OCT 2023 13:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  28 OCT 2023 14:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -291,25 +291,25 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 ) [1
 
-{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./szamtud.toc [1
-
-])
+{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./szamtud.toc)
 \tf@toc=\write3
 \openout3 = `szamtud.toc'.
 
- [2] (./sections/1/grafelmeletialapok.tex [3
+ [1
 
-] [4] [5]) [6] (./sections/2/minktgffa.tex [7
+] (./sections/1/grafelmeletialapok.tex [2
 
-]) [8] (./sections/3/bfsdijkstra.tex [9
+] [3] [4]) [5] (./sections/2/minktgffa.tex [6
 
-] [10]) [11] (./sections/4/fordfloyddfs.tex
-<sections/4/img/1.png, id=55, 703.62875pt x 180.675pt>
+]) [7] (./sections/3/bfsdijkstra.tex [8
+
+] [9]) [10] (./sections/4/fordfloyddfs.tex
+<sections/4/img/1.png, id=52, 703.62875pt x 180.675pt>
 File: sections/4/img/1.png Graphic file (type png)
 <use sections/4/img/1.png>
 Package pdftex.def Info: sections/4/img/1.png  used on input line 17.
 (pdftex.def)             Requested size: 483.69684pt x 124.19995pt.
- [12
+ [11
 
 {/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./sections/4/img/1.png>]
 Overfull \hbox (4.18732pt too wide) in paragraph at lines 92--93
@@ -322,8 +322,8 @@ File: omscmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 116.
- [13]) [14] (./sections/5/eulerhamilton.tex
-<sections/5/img/1.png, id=69, 544.0325pt x 124.465pt>
+ [12]) [13] (./sections/5/eulerhamilton.tex
+<sections/5/img/1.png, id=66, 544.0325pt x 124.465pt>
 File: sections/5/img/1.png Graphic file (type png)
 <use sections/5/img/1.png>
 Package pdftex.def Info: sections/5/img/1.png  used on input line 9.
@@ -333,7 +333,7 @@ Overfull \hbox (17.62482pt too wide) in paragraph at lines 9--10
 [][] 
  []
 
-<sections/5/img/2.png, id=70, 722.7pt x 106.3975pt>
+<sections/5/img/2.png, id=67, 722.7pt x 106.3975pt>
 File: sections/5/img/2.png Graphic file (type png)
 <use sections/5/img/2.png>
 Package pdftex.def Info: sections/5/img/2.png  used on input line 47.
@@ -343,7 +343,7 @@ Overfull \hbox (17.62482pt too wide) in paragraph at lines 47--48
 [][] 
  []
 
-<sections/5/./img/3.png, id=71, 601.24625pt x 99.37125pt>
+<sections/5/./img/3.png, id=68, 601.24625pt x 99.37125pt>
 File: sections/5/./img/3.png Graphic file (type png)
 <use sections/5/./img/3.png>
 Package pdftex.def Info: sections/5/./img/3.png  used on input line 57.
@@ -353,10 +353,10 @@ Overfull \hbox (17.62482pt too wide) in paragraph at lines 57--58
 [][] 
  []
 
-[15
+[14
 
  <./sections/5/img/1.png> <./sections/5/img/2.png>]
-<sections/5/./img/4.png, id=77, 547.04375pt x 86.3225pt>
+<sections/5/./img/4.png, id=74, 547.04375pt x 86.3225pt>
 File: sections/5/./img/4.png Graphic file (type png)
 <use sections/5/./img/4.png>
 Package pdftex.def Info: sections/5/./img/4.png  used on input line 81.
@@ -366,63 +366,49 @@ Overfull \hbox (17.62482pt too wide) in paragraph at lines 81--82
 [][] 
  []
 
-<sections/5/./img/5.png, id=78, 198.7425pt x 176.66pt>
+<sections/5/./img/5.png, id=75, 198.7425pt x 176.66pt>
 File: sections/5/./img/5.png Graphic file (type png)
 <use sections/5/./img/5.png>
 Package pdftex.def Info: sections/5/./img/5.png  used on input line 88.
 (pdftex.def)             Requested size: 96.73788pt x 85.98999pt.
-[16 <./sections/5/./img/3.png> <./sections/5/./img/4.png>]
-<sections/5/./img/6.png, id=84, 191.71625pt x 172.645pt>
+[15 <./sections/5/./img/3.png> <./sections/5/./img/4.png>]
+<sections/5/./img/6.png, id=81, 191.71625pt x 172.645pt>
 File: sections/5/./img/6.png Graphic file (type png)
 <use sections/5/./img/6.png>
 Package pdftex.def Info: sections/5/./img/6.png  used on input line 93.
 (pdftex.def)             Requested size: 96.73788pt x 87.11522pt.
-<sections/5/./img/7.png, id=85, 367.3725pt x 196.735pt>
+<sections/5/./img/7.png, id=82, 367.3725pt x 196.735pt>
 File: sections/5/./img/7.png Graphic file (type png)
 <use sections/5/./img/7.png>
 Package pdftex.def Info: sections/5/./img/7.png  used on input line 111.
 (pdftex.def)             Requested size: 96.73788pt x 51.8043pt.
- [17 <./sections/5/./img/5.png> <./sections/5/./img/6.png> <./sections/5/./img/7.png>]) [18] (./sections/6/sikgrafok.tex
-<sections/6/./img/1.png, id=96, 174.6525pt x 138.5175pt>
+ [16 <./sections/5/./img/5.png> <./sections/5/./img/6.png> <./sections/5/./img/7.png>]) [17] (./sections/6/sikgrafok.tex
+<sections/6/./img/1.png, id=92, 174.6525pt x 138.5175pt>
 File: sections/6/./img/1.png Graphic file (type png)
 <use sections/6/./img/1.png>
 Package pdftex.def Info: sections/6/./img/1.png  used on input line 47.
 (pdftex.def)             Requested size: 96.73788pt x 76.72382pt.
- [19
+ [18
 
- <./sections/6/./img/1.png>]) [20] [21
-
-] [22
-
-] [23
-
-] [24
-
-] [25
-
-] [26
-
-] [27
-
-] (./szamtud.aux)
+ <./sections/6/./img/1.png>]) [19] (./szamtud.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 6470 strings out of 474934
- 99169 string characters out of 5759811
+ 6460 strings out of 474934
+ 98956 string characters out of 5759811
  1937807 words of memory out of 5000000
- 27698 multiletter control sequences out of 15000+600000
- 576415 words of font info for 187 fonts, out of 8000000 for 9000
+ 27688 multiletter control sequences out of 15000+600000
+ 575168 words of font info for 182 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,12n,65p,1084b,388s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on szamtud.pdf (28 pages, 551134 bytes).
+Output written on szamtud.pdf (20 pages, 548041 bytes).
 PDF statistics:
- 195 PDF objects out of 1000 (max. 8388607)
- 113 compressed objects within 2 object streams
+ 169 PDF objects out of 1000 (max. 8388607)
+ 96 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  36910 words of extra memory for PDF output out of 42996 (max. 10000000)
 

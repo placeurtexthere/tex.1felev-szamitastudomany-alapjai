@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  23 OCT 2023 19:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  28 OCT 2023 14:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/dave/Documents/GitHub/tex.szamtud_osszefoglalo/tex/szamtud.tex
-(/Users/dave/Documents/GitHub/tex.szamtud_osszefoglalo/tex/szamtud.tex
+**/Users/dave/Documents/GitHub/tex.1felev-szamitastudomany-alapjai/tex/teljes/szamtud.tex
+(/Users/dave/Documents/GitHub/tex.1felev-szamitastudomany-alapjai/tex/teljes/szamtud.tex
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
 (/usr/local/texlive/2023/texmf-dist/tex/latex/base/article.cls
@@ -291,40 +291,40 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 ) [1
 
-{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./szamtud.toc [1
-
-])
+{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./szamtud.toc)
 \tf@toc=\write3
 \openout3 = `szamtud.toc'.
 
- [2] (./sections/1/grafelmeletialapok.tex [3
+ [1
 
-] [4] [5]) [6] (./sections/2/minktgffa.tex [7
+] (./sections/1/grafelmeletialapok.tex [2
 
-]) [8] (./sections/3/bfsdijkstra.tex [9
+] [3] [4]) [5] (./sections/2/minktgffa.tex [6
 
-] [10] [11]) [12] (./sections/4/fordfloyddfs.tex
-<sections/4/img/1.png, id=59, 703.62875pt x 180.675pt>
+]) [7] (./sections/3/bfsdijkstra.tex [8
+
+] [9] [10]) [11] (./sections/4/fordfloyddfs.tex
+<sections/4/img/1.png, id=55, 703.62875pt x 180.675pt>
 File: sections/4/img/1.png Graphic file (type png)
 <use sections/4/img/1.png>
 Package pdftex.def Info: sections/4/img/1.png  used on input line 17.
 (pdftex.def)             Requested size: 483.69684pt x 124.19995pt.
- [13
+ [12
 
 {/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./sections/4/img/1.png>]
 Overfull \hbox (4.18732pt too wide) in paragraph at lines 92--93
 [][]\OT1/cmr/bx/n/12 (-20) P^^Selda:[] \OT1/cmr/m/n/12 (-20) DAG-ot ^^Sugy kaphatunk, hogy egy $\OML/cmm/m/it/12 G$ \OT1/cmr/m/n/12 (-20) ir^^Sany^^S^^Ptatlan gr^^Saf cs^^Sucsait csupa k^^?ul^^?onb^^?oz}osz^^Sammal
  []
 
-[14]
+[13]
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 116.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 116.
- [15]) [16] (./sections/5/eulerhamilton.tex
-<sections/5/img/1.png, id=75, 544.0325pt x 124.465pt>
+ [14]) [15] (./sections/5/eulerhamilton.tex
+<sections/5/img/1.png, id=72, 544.0325pt x 124.465pt>
 File: sections/5/img/1.png Graphic file (type png)
 <use sections/5/img/1.png>
 Package pdftex.def Info: sections/5/img/1.png  used on input line 9.
@@ -334,7 +334,7 @@ Overfull \hbox (17.62482pt too wide) in paragraph at lines 9--10
 [][] 
  []
 
-<sections/5/img/2.png, id=76, 722.7pt x 106.3975pt>
+<sections/5/img/2.png, id=73, 722.7pt x 106.3975pt>
 File: sections/5/img/2.png Graphic file (type png)
 <use sections/5/img/2.png>
 Package pdftex.def Info: sections/5/img/2.png  used on input line 47.
@@ -344,10 +344,10 @@ Overfull \hbox (17.62482pt too wide) in paragraph at lines 47--48
 [][] 
  []
 
-[17
+[16
 
  <./sections/5/img/1.png>]
-<sections/5/./img/3.png, id=81, 601.24625pt x 99.37125pt>
+<sections/5/./img/3.png, id=78, 601.24625pt x 99.37125pt>
 File: sections/5/./img/3.png Graphic file (type png)
 <use sections/5/./img/3.png>
 Package pdftex.def Info: sections/5/./img/3.png  used on input line 57.
@@ -357,8 +357,8 @@ Overfull \hbox (17.62482pt too wide) in paragraph at lines 57--58
 [][] 
  []
 
-[18 <./sections/5/img/2.png> <./sections/5/./img/3.png>]
-<sections/5/./img/4.png, id=88, 547.04375pt x 86.3225pt>
+[17 <./sections/5/img/2.png> <./sections/5/./img/3.png>]
+<sections/5/./img/4.png, id=84, 547.04375pt x 86.3225pt>
 File: sections/5/./img/4.png Graphic file (type png)
 <use sections/5/./img/4.png>
 Package pdftex.def Info: sections/5/./img/4.png  used on input line 81.
@@ -368,18 +368,18 @@ Overfull \hbox (17.62482pt too wide) in paragraph at lines 81--82
 [][] 
  []
 
-<sections/5/./img/5.png, id=89, 198.7425pt x 176.66pt>
+<sections/5/./img/5.png, id=85, 198.7425pt x 176.66pt>
 File: sections/5/./img/5.png Graphic file (type png)
 <use sections/5/./img/5.png>
 Package pdftex.def Info: sections/5/./img/5.png  used on input line 88.
 (pdftex.def)             Requested size: 96.73788pt x 85.98999pt.
-<sections/5/./img/6.png, id=90, 191.71625pt x 172.645pt>
+<sections/5/./img/6.png, id=86, 191.71625pt x 172.645pt>
 File: sections/5/./img/6.png Graphic file (type png)
 <use sections/5/./img/6.png>
 Package pdftex.def Info: sections/5/./img/6.png  used on input line 93.
 (pdftex.def)             Requested size: 96.73788pt x 87.11522pt.
-[19 <./sections/5/./img/4.png> <./sections/5/./img/5.png> <./sections/5/./img/6.png>]
-<sections/5/./img/7.png, id=97, 367.3725pt x 196.735pt>
+[18 <./sections/5/./img/4.png> <./sections/5/./img/5.png> <./sections/5/./img/6.png>]
+<sections/5/./img/7.png, id=94, 367.3725pt x 196.735pt>
 File: sections/5/./img/7.png Graphic file (type png)
 <use sections/5/./img/7.png>
 Package pdftex.def Info: sections/5/./img/7.png  used on input line 111.
@@ -389,47 +389,33 @@ Overfull \hbox (3.19066pt too wide) in paragraph at lines 123--124
 [][]\OT1/cmr/bx/n/12 (-20) Biz:[] \OT1/cmr/m/n/12 (-20) A h^^S^^Pzlal^^Sasi lemma alapj^^San $\OML/cmm/m/it/12 G$ \OT1/cmr/m/n/12 (-20) b^^Sarmely k^^Set nem-szomsz^^Sedos cs^^Sucs^^Sat "ingyen" ^^?osszek^^?othetj^^?uk.
  []
 
-) [20 <./sections/5/./img/7.png>] (./sections/6/sikgrafok.tex
-<sections/6/./img/1.png, id=102, 174.6525pt x 138.5175pt>
+) [19 <./sections/5/./img/7.png>] (./sections/6/sikgrafok.tex
+<sections/6/./img/1.png, id=99, 174.6525pt x 138.5175pt>
 File: sections/6/./img/1.png Graphic file (type png)
 <use sections/6/./img/1.png>
 Package pdftex.def Info: sections/6/./img/1.png  used on input line 47.
 (pdftex.def)             Requested size: 96.73788pt x 76.72382pt.
- [21
+ [20
 
- <./sections/6/./img/1.png>] [22]) [23] [24
-
-] [25
-
-] [26
-
-] [27
-
-] [28
-
-] [29
-
-] [30
-
-] (./szamtud.aux)
+ <./sections/6/./img/1.png>] [21]) [22] (./szamtud.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 6486 strings out of 474934
- 99229 string characters out of 5759811
+ 6476 strings out of 474934
+ 99070 string characters out of 5759811
  1939807 words of memory out of 5000000
- 27698 multiletter control sequences out of 15000+600000
- 576898 words of font info for 195 fonts, out of 8000000 for 9000
+ 27688 multiletter control sequences out of 15000+600000
+ 575651 words of font info for 190 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,12n,65p,1062b,381s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,12n,65p,1080b,381s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on szamtud.pdf (31 pages, 577681 bytes).
+Output written on szamtud.pdf (23 pages, 574725 bytes).
 PDF statistics:
- 205 PDF objects out of 1000 (max. 8388607)
- 120 compressed objects within 2 object streams
+ 179 PDF objects out of 1000 (max. 8388607)
+ 102 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  36910 words of extra memory for PDF output out of 42996 (max. 10000000)
 
