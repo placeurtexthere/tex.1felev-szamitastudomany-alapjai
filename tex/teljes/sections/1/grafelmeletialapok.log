@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  23 OCT 2023 12:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  31 OCT 2023 15:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/dave/Documents/GitHub/tex.szamtud_osszefoglalo/tex/sections/1/grafelmeletialapok.tex
-(/Users/dave/Documents/GitHub/tex.szamtud_osszefoglalo/tex/sections/1/grafelmeletialapok.tex
+**/Users/dave/Documents/GitHub/tex.1felev-szamitastudomany-alapjai/tex/teljes/sections/1/grafelmeletialapok.tex
+(/Users/dave/Documents/GitHub/tex.1felev-szamitastudomany-alapjai/tex/teljes/sections/1/grafelmeletialapok.tex
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
 (/usr/local/texlive/2023/texmf-dist/tex/latex/subfiles/subfiles.cls
@@ -301,15 +301,15 @@ L3 programming layer <2023-08-29>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 6148 strings out of 474934
- 93725 string characters out of 5759811
- 1937807 words of memory out of 5000000
+ 6146 strings out of 474934
+ 93765 string characters out of 5759811
+ 1936807 words of memory out of 5000000
  27531 multiletter control sequences out of 15000+600000
- 566944 words of font info for 111 fonts, out of 8000000 for 9000
+ 566895 words of font info for 110 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 77i,8n,82p,1084b,136s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 77i,8n,82p,1102b,136s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on grafelmeletialapok.pdf (4 pages, 136833 bytes).
+Output written on grafelmeletialapok.pdf (4 pages, 137312 bytes).
 PDF statistics:
  67 PDF objects out of 1000 (max. 8388607)
  40 compressed objects within 1 object stream

@@ -8,7 +8,7 @@
 \usepackage{graphicx}
 \usepackage{geometry}
 	\geometry{a4paper, total={170mm,257mm}, left=20mm, top=20mm, }
-	
+
 \renewcommand*\contentsname{Tartalomjegyzék}
 
 \AddToHook{cmd/section/before}{\clearpage}
@@ -26,48 +26,48 @@
 			\color{red}\textbf{Ez  a jegyzet nagyon hasonlóan van struktúrálva az előadás jegyzetekhez és fő célja, hogy olyan módon adja át a "A Programozás Alapjai 1" nevű tárgy anyagát, hogy az teljesen kezdők számára is könnyen megérthető és megtanulható legyen. }
    		}
 	}
-	
+
 	\vfill {\large \today\par}
-\end{titlepage} 
+\end{titlepage}
 \tableofcontents
 \addtocontents{toc}{~\hfill\textbf{Oldal}\par}
 
 	\section{A gráfelmélet alapjai}
-		
+
 		\subfile{sections/1/grafelmeletialapok.tex}
-	 
+
 	\section{Minimális költségű feszítőfák}
 
 		\subfile{sections/2/minktgffa.tex}
 
 	\section{Gráfbejárások és legrövidebb utak}
-		
+
 		\subfile{sections/3/bfsdijkstra.tex}
-		
+
 	\section{Legrövidebb utak, DFS, PERT}
 
 		\subfile{sections/4/fordfloyddfs.tex}
-		
+
 	\section{Euler-séták és Hamilton-körök}
 
 		\subfile{sections/5/eulerhamilton.tex}
-	
+
 	\section{Síkgráfok}
-	
+
 		\subfile{sections/6/sikgrafok.tex}
 
 	%\section{Lineáris egyenletrendszerek}
-	
+
 	%\section{Az $\mathbb{R}^n$ tér alaptulajdonságai}
-	
+
 	%\section{Altér bázisa és dimenziója}
-	
+
 	%\section{Négyzetes mátrix determinánsa}
-	
+
 	%\section{Mátrixműveletek és lineáris leképezések}
-	
+
 	%\section{Mátrix rangja és inverze}
-	
+
 	%\section{Mátrixegyenletek}
-	
+
 \end{document}

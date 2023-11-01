@@ -1,8 +1,8 @@
-PWD /Users/dave/Documents/GitHub/tex.szamtud_osszefoglalo/tex/sections/1
+PWD /Users/dave/Documents/GitHub/tex.1felev-szamitastudomany-alapjai/tex/teljes/sections/1
 INPUT /usr/local/texlive/2023/texmf.cnf
 INPUT /usr/local/texlive/2023/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/dave/Documents/GitHub/tex.szamtud_osszefoglalo/tex/sections/1/grafelmeletialapok.tex
+INPUT /Users/dave/Documents/GitHub/tex.1felev-szamitastudomany-alapjai/tex/teljes/sections/1/grafelmeletialapok.tex
 OUTPUT grafelmeletialapok.log
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/subfiles/subfiles.cls
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/subfiles/subfiles.cls
