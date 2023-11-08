@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1698838293 "/Users/dave/Documents/GitHub/tex.1felev-szamitastudomany-alapjai/tex/teljes/szamtud.tex" "szamtud.pdf" "szamtud" 1698838295 0
-  "/Users/dave/Documents/GitHub/tex.1felev-szamitastudomany-alapjai/tex/teljes/szamtud.tex" 1698760015 1973 fb8cebe04c94f855e48e3462fd088fc8 ""
+["pdflatex"] 1699355216 "/Users/dave/Documents/GitHub/tex.1felev-szamitastudomany-alapjai/tex/teljes/szamtud.tex" "szamtud.pdf" "szamtud" 1699355218 0
+  "/Users/dave/Documents/GitHub/tex.1felev-szamitastudomany-alapjai/tex/teljes/szamtud.tex" 1699355214 2016 43ee221c2c08c0f57384f2d91daec6ba ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -87,8 +87,8 @@
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
   "sections/1/grafelmeletialapok.tex" 1698761982 18479 f0cb2e58a4c5e848ba86b351447e1a75 ""
   "sections/2/minktgffa.tex" 1698776639 7507 d66dcd2be425184750f43d06f6cf98db ""
-  "sections/3/bfsdijkstra.tex" 1698492829 13647 301c7fc652da9192f2a9e93db3396ead ""
-  "sections/4/fordfloyddfs.tex" 1698492829 13594 70c45270abfa16b79ce0425b38d0cf04 ""
+  "sections/3/bfsdijkstra.tex" 1698856147 13646 8a872c5982cbf9030bf08937ac00fb85 ""
+  "sections/4/fordfloyddfs.tex" 1698860011 13594 c05edbc371a1b820f1ffb531044c7daa ""
   "sections/4/img/1.png" 1698492829 91947 09c92492b221d35b5e5c2131cba41975 ""
   "sections/5/./img/3.png" 1698492829 62710 065829641311091e396d912900c12378 ""
   "sections/5/./img/4.png" 1698492829 24923 e466a7008ee7b0810cb63695897f4959 ""
@@ -100,9 +100,10 @@
   "sections/5/img/2.png" 1698492829 69190 59223a6e0ee5a9aedf3c7fb6091c4a41 ""
   "sections/6/./img/1.png" 1698492829 19402 b18921f82dd78b3d83b3426559e63eb2 ""
   "sections/6/sikgrafok.tex" 1698492829 10892 b0627d638b5b51b20d83a83235a1c3e0 ""
-  "szamtud.aux" 1698838295 4774 0e47c22c62a58b22afd31afeeb85218f "pdflatex"
-  "szamtud.tex" 1698760015 1973 fb8cebe04c94f855e48e3462fd088fc8 ""
-  "szamtud.toc" 1698838295 3122 a89cff8756358bdbb5bd2ff8bee73f75 "pdflatex"
+  "sections/7/gausseliminacio.tex" 1699355168 80 fce3a59d02f601603a856d6a799266fe ""
+  "szamtud.aux" 1699355218 4891 c7b32068fe129057af55db03603151fb "pdflatex"
+  "szamtud.tex" 1699355214 2016 43ee221c2c08c0f57384f2d91daec6ba ""
+  "szamtud.toc" 1699355218 3198 f391338fbf2c0280b10bdbc30080e5ff "pdflatex"
   (generated)
   "szamtud.aux"
   "szamtud.log"

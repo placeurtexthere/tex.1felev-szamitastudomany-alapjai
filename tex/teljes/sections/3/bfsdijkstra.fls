@@ -1,8 +1,8 @@
-PWD /Users/dave/Documents/GitHub/tex.szamtud_osszefoglalo/tex/sections/3
+PWD /Users/dave/Documents/GitHub/tex.1felev-szamitastudomany-alapjai/tex/teljes/sections/3
 INPUT /usr/local/texlive/2023/texmf.cnf
 INPUT /usr/local/texlive/2023/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/dave/Documents/GitHub/tex.szamtud_osszefoglalo/tex/sections/3/bfsdijkstra.tex
+INPUT /Users/dave/Documents/GitHub/tex.1felev-szamitastudomany-alapjai/tex/teljes/sections/3/bfsdijkstra.tex
 OUTPUT bfsdijkstra.log
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/subfiles/subfiles.cls
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/subfiles/subfiles.cls
@@ -141,16 +141,3 @@ INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
 OUTPUT bfsdijkstra.pdf
 INPUT /usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map
-INPUT bfsdijkstra.aux
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb

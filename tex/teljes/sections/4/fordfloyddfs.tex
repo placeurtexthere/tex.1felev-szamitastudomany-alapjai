@@ -42,7 +42,7 @@
 
         Mindkét esetben helyes a képlet.  \textcolor{blue}{$\Box$} 
 
-        \textcolor{blue}{\textbf{Floys-algoritmus:}} \underline{Input:} $G = (V,E)$, konzervatív $l:E \rightarrow \mathbb{R}$. \underline{Output:} $dist_l(u,v)\forall u,v \in V$ \underline{Működés:} $d^{(0)}$ felírása (2) alapján. Az $i$-dik fázis: $d^{(i-1)}$-ből meghatározzuk $d^{(i)}$-t (3) alapján. OUTPUT: $d^{(n)}(u,v) = dist_l(u,v)\; \forall u,v \in V$.
+        \textcolor{blue}{\textbf{Floyd-algoritmus:}} \underline{Input:} $G = (V,E)$, konzervatív $l:E \rightarrow \mathbb{R}$. \underline{Output:} $dist_l(u,v)\forall u,v \in V$ \underline{Működés:} $d^{(0)}$ felírása (2) alapján. Az $i$-dik fázis: $d^{(i-1)}$-ből meghatározzuk $d^{(i)}$-t (3) alapján. OUTPUT: $d^{(n)}(u,v) = dist_l(u,v)\; \forall u,v \in V$.
 
         \textcolor{blue}{\textbf{"Lépésszámanalízis":}} A $d^{(0)}$ felírása $konst \cdot n^2$ lépés. Minden fázis $konst' \cdot n^2$. Mivel összesen $n$ fázis van, a lépésszám legfeljebb $konst" \cdot n^3$ lépés, az algoritmus hatékony.
 

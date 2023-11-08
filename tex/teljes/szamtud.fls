@@ -214,6 +214,10 @@ INPUT ./sections/6/./img/1.png
 INPUT sections/6/./img/1.png
 INPUT ./sections/6/./img/1.png
 INPUT ./sections/6/./img/1.png
+INPUT ./sections/7/gausseliminacio.tex
+INPUT sections/7/gausseliminacio.tex
+INPUT ./sections/7/gausseliminacio.tex
+INPUT sections/7/gausseliminacio.tex
 INPUT szamtud.aux
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
