@@ -1,0 +1,197 @@
+\documentclass[10pt]{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{subfiles}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{indentfirst}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{geometry}
+	\geometry{a4paper, total={170mm,257mm}, left=20mm, top=20mm, }
+	
+\renewcommand*\contentsname{Tartalomjegyzék}
+
+\AddToHook{cmd/section/before}{\clearpage}
+
+\begin{document}
+\begin{titlepage}
+	\centering \vfill
+	{\textsc{Budapesti Műszaki és Gazdaságtudományi Egyetem} \par} \vspace{7cm}
+	{\huge\bfseries A számítástudomány alapjai\par} \vspace{0.5cm}
+	{\large \textsc{Összefoglaló jegyzet}\par} \vspace{1.5cm}
+	{\Large\itshape Készítette: Illyés Dávid\par} \vfill
+
+	\noindent\fbox{%
+    	\parbox{140mm}{
+			\color{red}\textbf{Ez  a jegyzet nagyon hasonlóan van struktúrálva az előadás jegyzetekhez és fő célja, hogy olyan módon adja át a "A Programozás Alapjai 1" nevű tárgy anyagát, hogy az teljesen kezdők számára is könnyen megérthető és megtanulható legyen. }
+   		}
+	}
+	
+	\vfill {\large \today\par}
+\end{titlepage} 
+\tableofcontents
+\addtocontents{toc}{~\hfill\textbf{Oldal}\par}
+
+    \section*{Tételek:}
+
+        A \textbf{félkövéren} szedett dolgokat tudni kell ismertetni, kimondani, ill. definiálni. Az \underline{aláhúzottakat} bizonyítottuk, a \textit{dőlten} szedetteket nem. A vizsgán az anyag értő ismeretét kérjük számon, elégségesért nem kell bizonyítást tudni.
+
+        \begin{enumerate}
+            \item Gráfelméleti alapfogalmak: \textbf{csúcs, él, diagram, fokszám}. Egyszerű gráf, irányított gráf, véges gráf, komplementer gráf, reguláris gráf, él/csúcstörlés, élhozzáadás, (feszítő/feszített) részgráf, izomorfia, élsorozat, séta, út, kör,\textbf{összefüggő gráf}, komponens. \underline{\textbf{kézfogás-lemma}}.
+            \item \underline{\textbf{Élhozzáadási lemma}} erdő, \textbf{fa}, fák egyszerűbb tulajdonságai: \underline{két levél}, \underline{erdők élszáma}. \textbf{Feszítőfa} \underline{létezése}, feszítőfához tartozó alapkörök és alap vágások.
+            \item \textbf{Minimális költségű feszítőfa}, mkffák struktúrája, \textbf{Kruskal-algoritmus} \underline{helyessége}, villamos hálózathoz tartozó normál fa keresése.
+            \item Éltalános gráfbejárás: \textbf{a csúcsok állapotváltozása, a bejárás általános lépése}, a bejáráshoz tartozó sorrender ill. az élek osztályozása bejárás után. A \textbf{BFS} és \underbar{tulajdonságai}, legrövidebb utak fájának \underline{létezése}.
+            \item Gréfút hossza, gráfcsúcsok távolsága, nemnegatív és konzervatív hosszfüggvény, triviális és pontos $(r,l)$\textbf{-felső becslés, \underline{élmenti javítás.} Dijkstra-algoritmus működése}, Ford-algoritmus \underline{helyessége} és lépésszáma. Legrövidebb utak fájának létezése.
+            \item \textbf{Mélységi keresés} és alkalmazásai (\underline{fellépő éltípusok}, mélységi- és befejezési számozásból az éltípus meghatározása, \underline{irányított kör létezésének eldöntése DFS-sel)}.
+            \item \textbf{DAG}, \underline{jellemzése}, \textbf{topologikus sorrend} \underline{keresése}. Leghosszabb utak keresése, \textbf{PERT-módszer}, kritikus utak és tevékenységek.
+            \item \textbf{Euler-séta és körséta} \underline{létezésének szükkséges és elégséges feltétele}. \textbf{Hamilton-kör és út} létezésére szükséges, ill. elégséges feltételek: \underline{komponensszám ponttörlés után} (Petersen-gráf) \underline{\textbf{Dirac, Ore tételei}}, gazdag párok, \underline{hízlalási lemma}, Chavátal-lezárt.
+            \item \textbf{Gráfok síkba ill. gömbre rajzolhatósága, tartomény, sztereografikus projekció}, következményei. Az \underline{\textbf{Euler-féle poliédertétel}, duális kézfogáslemma} és következményei: \underline{felső korlátok az élszámra} és a \underline{minimális fokszáma} egyszerű, síkbarajzolható gráfokon.
+            \item \underline{\textbf{Kuratowski gráfok} síkbarajzolhatósága}, \textbf{soros bővítés, \textit{Kuratowski-tétel} könnyű iránya}. \textbf{Síkbarajzolt gárf duálisa}, a duális paraméterei. Vágás, elvágó él, soros élek. \textit{Kör-vágás duaklitása}, különféle élek duálisai. Whitney két tétele, Whitney operációk.
+            \item \textbf{Lineáris egyenletrendszer, kibővített együtthatómátrix, elemi sorekvivalens átalakítás} és \underline{kapcsolata a megoldásokkal}. \textbf{LA és RLA mátrix, vezéregyes, megoldás leolvasása RLA mátrix esetén}. Tilos sor, kötött változó, szabad paraméter, \underline{ezek jelentése a megoldás/megoldhatóság szempontjából.} \textbf{Gauss-elimináció}, \underline{összefüggés az egyértelműmegoldhatóság, az egynletek és ismeretlenek száma között}.
+            \item Az $\mathbb{R}^n$ \textbf{tér}, vektorműveletek azonosságai, (generált) \textbf{altér} (példák), (triviális) \textbf{lineáris kombináció}, alterek metszete, \textbf{generátorrendszer}, \textbf{lineáris függetlenség} (kétféle definíció). \underline{Lin.ftn rendszer hízlalása}, \underline{generátor-rendszer ritkítása}, \underline{kicserélési lemma}, \underline{\textbf{FG-egyenlőtlenség}} és következménye.
+            \item ESÁ hatása a sor- és oszlopvektorokra, \textbf{oszlopvektorok lin.ftn-ségének eldöntése}. \textbf{Bázis} fogalm, \underline{\textbf{altér bázisának előállítása generátorrendszerből}} ill. homogén lineáris egyenletrendszerrel megadott altér esetén.
+            \item Generátorrendszerből homogén lin.egyenletredszer előállítása. \textbf{Altér dimenziójának \underline{jóldefiniáltsága}}, $\mathbb{R}^n$ \textbf{standard bázisa, bázishoz tartozó koordinátavektor \underline{kiszámítása}}.
+            \item $n$ elem permutációja, a permutáció \textbf{inverziószáma}. \textbf{Bástyaelhelyezés}, inverzióban álló bástyapárok, \textbf{determináns, \underline{felső háromszögmátrix determinánsa}}.
+            \item \textbf{Mátrix transzponáltja}, \underline{transzponált determinánsa}, \textbf{\underline{ESÁ hatása a determinánsra}, előjeles aldetermináns, \underline{kifejtési téte}}.
+            \item Vektorok skaláris szorzásának tulajdonságai. \textbf{Mátrixok összeadása és szorzásai}, e műveletek tulajdonságai. \textbf{A szorzatmátrix sorainak és oszlopainak \underline{különös tulajdonsága}}, ESÁ és mátrixszorzás kapcsolata.
+            \item \textbf{Lineáris leképezések} és \underline{mátrixszorzások kapcsolata}. \textbf{Lineáris leképezés mátrixának meghatározása.} Leképezések egymásutánjának mátrixa, \underline{mátrixszorzás asszociativitása}.
+            \item \textbf{Mátrix jobb- és balinverze}, ezek viszonya. \textbf{\underline{Balinverz kiszámítása ESÁ-okkal}} és előjeles aldeterminánsokkal, \textbf{reguláris mátrixok} jellemzése determinánssal, sorokkal, oszlopokkal ill. RLA mátrix segítségével.
+            \item \textbf{Sor- oszlop- és determinánsrang}, \underline{ezek viszonya} és \textbf{kiszámítása}. Összeg és szorzat rangja. \textbf{Lineáris egyenletrendszer mátrixegyenletes alakja}, a \underline{megoldhatóság és az oszlopok alterének kapcsolata}. Az egyértelmű megoldhatóság feltétele $n \times n$ együtthatómátrix esetén.
+        \end{enumerate}
+
+		
+
+4.
+Gráfút hossza, gráfcsúcsok távolsága nemnegatív és konzervatív hosszfüggvény, triviális és pontos (r, l)-felső becslés.
+!Kép!Adott G=(V,E) (ir.) gráf és egy !Képlet!élhosszfv.Egy G-beli  (ir.) út hossza az út éleinek összhossza, diste(n,v) pedig az (ir.)uv-utak közül a legrövidebb hosszát jelöli.Az l hosszfv konzervatív ha nincs G-ben negatív összhosszúságú (ir.) kör. Adott G=(V,E) (ir.) gráf r e v és egy l:E->R élhosszfv. Az f: ->R függvényt (r,l) - felső becslésnek nevezzük, ha f(r)=o és !Képlet! teljesül G minden v csúcsára. Az e=uv élmenti javítás esetén a f (v) értéket a min !Képlet! értékkel helyettesíthetjük.  (1) Ha l konzervatív akkor tetsz.  (r,l)-f. b. élmenti javítása (r,l)-fb-t ad. (2) Ha az f (r,l) felső becsléshez nincs érdemi élmenti javítás, akkor f(v)=diste(r,v) !Képlet!
+* Élmenti javítás:!Kép!!Kép!!Kép!
+* Dijkstra algoritmus működése:
+* Input: G=(V,E) (ir.) gráf, l. E-> R+ nemnegatív hosszfv, !Képlet! gyökér
+* Output: diste (r,v) minden !Képlet!
+* Működés. Kezdetben !Képlet! Az algoritmus C-dik fázisában (i=1,2,..., (v) a következő történik. 1. Legyen ui az v csúcs a !Képket! halmazból, amelyre f (r) minimális és legy !Képlet!2. Végezzünk élmenti javításokat minden Ui-ből kivezető uix élen. Az output a (v)-dik fázik utáni f függvény. Szokás  megjelölni a végső f (v) értékeket beállító éleket. Ha az output az f (r,l)- felső becslés, akkor (1) f (ui)!Képlet!(2) f (u1) !Képlet! (3) élmentijavítás nem változhat f-n
+A Dijkstra-algoritmus helyesen működik,azaz diste (r,v)=f(v) !Képlet! teljesül. Az algoritmus során megjelölt élek egy legrövidebb utak fáját alkotják G-ben: az r gyökérből minden r-ből elérhető csúcshoz vezet olyan legrövidebb út is ami csak megjelölt éleket tartalmaz. A Dijkstra-algoritmus lépésszáma legfeljebb. konst. !Képlet!, ahol n=(v) m=(E).
+!Kép!!Kép!!Kép!!Kép!
+*Ford-algoritmus: Input: G=(V,E) (ir.) gráf, l:E->R konzervatív hosszfv, !Képlet! gyökérpont.Output: diste(r,v) minden !Képlet! Működés: Legyen !Képlet! Kezdetben legy !Képlet! Az i-dik fázis !Képlet! esetén abból éll, hogy elvégezzük az !Képlet! élek menti javításokat. A végén az output !Képlet! minden v-re !Képlet!
+!Kép!
+Biz: Ha l konzervatív, akkor diste (r,v)=!Képlet! f1 (v)=dist(r,v) ha !Képlet! legrövidebb rv-út. f2(v)=dist(r,v) ha !Képlet! legrövidebb rv-út. !Képlet!=dist(r,v) ha !Képlet! élű legrövidebb rv-út. Tehát !Képlet! Ha fi=fi-1, akkor a Ford-algoritmust az i-dik fázis után be lehet fejezni, hisz nincs érdemi émj, így fu-1=fi. Az !Képlet! beállító élek legrövidebb utak fáját alkotják.
+Biz: A Dijkstra esethez hasonló. Tetsz. csúcsból visszafelé követve a végső értéket beállító éleket !Képlet!hosszúságú rv-utat találunk.Lépészám: Ha a !Képlet! akkor minden fázisban !Képlet!, ami konst.m lépés. Ez összesen !Képlet! az algoritmus hatékony.
+* Floyd-algoritmus: Input: G=(V,E) (ir.) gráf l:E->R konzervatív. Output: dist (u,v) !Képlet! Működés: Legyen !Képlet! és !Képlet! a legrövidebb olyan !Képlet! út hossza, aminek belső pontjai csak !Képlet! lehetnek. Kezdetben !Képlet!, különben !Képlet!. A j-dik fázisban !Képlet! alapján a !Képlet! függvényt határozza meg. Az n-dik fázi után dist!Képlet! az output. Ha ez fennáll: tehát helyes a Floyd-algoritmus. OUTPUT !Képlet! dist !Képlet!
+*Lépésszám: A !Képlet! felírása konst * n2 lépés. Minden fázis konst' *n2. Mivel összesen u fázis van azért a lépésszám legfeljebb konst'*n3 lépés, az algoritmus hatékony.
+
+11.
+*Altér bázisa A !Képlet! altér bázisa a V egy lin.ftn. generátorrendszere. Az e1, e2,...en vektorok az Rn standard bázisát alkotják. Állítás: Minden altérnek van bázisa. Kétféleképp is előállíthatjuk Rn tetsz. V alterének egy bázisát.  (1) Generátorrendszer ritkításával, azaz generátorrendszerből a többi által generált elem elhagyásával egész addig, amíg a maradék rendszer egyetlen elemét sem generálja a többi maradék ellen. Az így kapott generátorrendszer lin.ftn. (2) Lin.ftn. rendszer hízlalásával. Ha van az albérben a lin. ftn. rendszer által nem generált vektor, akkor azzal a rendszer úgy bővíthető, hogy a lin. ftn. tulajdonság megmarad.
+*Bázis előállítása generátorrendszerből: Tfh az M mátrixból az M'RLA mátrix ESA'-okkal kapható és legyen V az M oszlopai által generált altér. Ekkor az M'-ben M-t tartalmazó oszlopoknak megfelelő M-beli oszlopok a V bázisát alkotják. Homogén lineáris egyenletrendszer alatt olyan lineáris egyenletrendszert értünk, amiben minden egyenlet jobb oldalán konstans a 0 konstans áll.
+* Generátorrendszerből homogén lin. egyr. előállítása: Tetsz. u ismeretlenes homogén lin. egyr. megoldásaiból alkotott oszlopvektorok zártak az összeadásra és skalárral való szorzásra, így az Rn tér egy altért alkotják. Homogén egyenletrendszer segítségével megadott altér bázisát alkotják a kom. lin. egyr. mindazon a megoldásaikhoz tartozó vektorok, amelyekben egy szabad paramétert 1-nek, a többit pedig 0-nak választjuk. Állítás: A Rn tetsz. V alteréhez található olyan kom. lin. egyr., aminek a megoldásaiból képzett oszlopvektorok pontosan a V altér elemei. A fennt leírt egyenletrendszer megkapható úgy, hogy tekintjük V egy G generátorrendszerét (pl. egy bázisát) és a G-beli oszlopvektorok alkotta mátrixot kiegészítjük egy !Képlet! vektorral. ESA'-okkal az utolsó oszlop nélkül RLA mátixot készítünk,és a v1-et nem tartalmazó sorok utolsó elemeit 0-val egyenlővé tesszük.
+* Altér dimenziójának jóldefiniáltsága:Tétel: Ha B1 ÉS B2 a !Képlet! bázisai, akkor (B1)=(B2). Mivel B1 lin. ftn. és B2 generátorrendszer V-ben, ezért az FG- egyenlőtlenség miatt !Képlet!Az is igaz, hogy B2 lin. ftn. és B1 generátorrendszer V-ben, ezért az FG- egyenlőtlenség miatt !Képlet! Az előbbi két eredmény összevetéséből (B1)=(B2) adódik.Def.: A !Képlet!
+altér dimenziója !Képlet!, ha V-nek van k vektorból álló bázisa. A fenti tétel szerint az altér dimenziója egyértelmű. Pl. Az Rn tér dimenziója n. -> Ha !Képlet!, akkor !Képlet! Legyen B az U bázisa. Ekkor !Képlet! lin. ftn. ezért a korábban látott módszerrel B-t ki lehet egészíteni V egy B' bázissávú úgy dim !Képlet! Ha !Képlet! és V1,V2 A V alterei, akkor !Képlet!+ !Képlet!
+
+12.
+*n elem permutációja, inverziószám:!Képlet! n elem permutációja alatt egy !Képlet! kölcsönösen egyértelmű leképezést értünk. Ezek halmazát Sn jelöli. AZ !Képlet! vektorok egy sorrendjéhez az a !Képlet! permutáció tartozik, amire!Képlet! sorszáma az adott sorrendben minden értelmes i-re. Az !Képlet! tetsz. sorrendje esetén a vektorok úgy oszthatók csoportokba, hogy a csoportokon  belül ciklikus helycsere történik Ez a csoportokra osztás egyértelmű -> a fent csoportok a sorrendhez tartozó permutáció orbitjai. Az !Képlet! vektorok tetsz. sorrendjén egy cserét elvégezve az orbitok száma pontosan 1-gyel változik. Az f: A->B függvény bikekció, ha minden B-beli elem pontosan egy A-beli képenként áll elő. A !Képlet! bijekciót n elem permutációjának nevezzük. Az ilyen permutációk halmaza Sn. Az !Képlet! vektorok tetsz sorrendjéhez tartozik egy egyértelmű o permutáció, amelyre !Képlet!, ha !Képlet!a sorban. A !Képlet! permutációban az (i,j)pár inverzióban áll, ha i és j nagyságviszonya fordított !Képlet! nagyságú viszonyához képest. A !Képlet! permutáció I(o)-val jelölt inverziószáma a o szerint inverzióban álló párok száma (1) Szomszédos vektorok cseréjekor I (o) 1-gyel változik. (2) Két tetsz. vektorok cseréjekor I (o) mindig páratlanul változik.
+* Bástyaelhelyezések:Az !Képlet! vektorok egy sorrendjéhez tartozó bástyaelhelyezés a nxn mátrixnak azon pozícióit jelenti, ahol 1-esek állnak fenti sorrendben felírt egységvektorok alkotta mátrixban. A bástyaelhelyezéshez tartozó permutáció inverziószáma megegyezik az ÉK-DNy pozícióban álló bástyapárok számával.
+!Kép!
+*Determináns:  * Transzponált  * Felső ? mátrix !Kép!!Kép!!Kép!
+Biz.: (1) Az előiző állítás (2) részét alkalmazzuk AT transzponálra.  (2) Az előző állítás (4) részét alkalmazzuk az AT transzponálra. (3) Az előző állítás (1)  részét alkalmazva a transzponálra a lecserélt sorú determináns megkapható (A)+(A') összegként, ahol A'-nek két egyforma sora van. A korábban látottal és az előző állítás (3) része miatt (S')=I (A')T=0
+(2) F háromszögmátrix determinánsa a főátlóbeli elemi sorozata. Biz.: Minden kif. tag tartalmaz 0 tényezőt, kivéve a főátlóbeli szorzata, aminek az előjele pozitív.
+* Előjeles aldetermináns. Az !Képlet!mátrix i-dik sorának j-dik eleméhez tartozó Ai,j előjeles aldetermináns az i-dik sor is j-dik oszlop elhagyásával keletkező (n-1) x (n-1) méretű mátrix determinánsának !Képlet! szerese.
+* Kifejtési tétel. Tfg, !Képlet! és ai,j jelöli A i-dik sorának j-dik elemét. Ekkor (1)  (A) !Képlet! (oszlop szerinti kifejtés) (2)  (A) !Képlet! (sor szerinti kifejtés)
+
+
+13.
+* Vektorok skaláris szorzásának tul.: !Kép!
+* Mátixok összeadása és szorzása: Azonos méretű mátrixok összeadása és mátrix skalárral szorzása a vektorokhoz hasonlóan koordinátánként történik. !Kép!!Képl!
+* ESA'és mátrixszorzás kapcsolata: (1) Ha AB értelmes, akkor AB i-dik sora a B sorainak lin. kombja, A i-dik sora szerinti együtthatókkal vet lin. kombja.  (2) C pontosan akkor áll elő AB alakban rögzített B-re, ha C minden sora B sorainak lin. kombja. (3) C pontosan akkor áll elő AB alakban rögzített A-ra, ha C minden oszlopa A oszlopainak lin. kombja. (4) Ha A' Az A mátrixból ESA'-okkal áll elő, akkor A'=BA alkalmas B-re.
+* Lineáris leképezések: !Kép!
+* A MÁTRIXSZORZÁS egy különös tulajdonsága: !Kép!
+* Lemma: Tfh !Képlet!. Ekkor f: U->V lin. lekép. <-> f zárt a lin. kombra azaz !Képlet!. Mivel f additív és homogén, ezért !Képlet! azaz f zárt a lin. kombra.Ha f zárt a lin. kombra, akkor !Képlet!, hisz !Képlet! az a lin. kombja, továbbá !Képlet!, tehát f homogén is additív, más szóval f lineáris leképezés. Köv.: Ha f: U->v lin. lekép. !Képlet! az U bázis és !Képlet!, akkor !Képlet! azaz a báziselemeken felvett értékek egyértelműen meghatározzák a lin. lekép-t.Lemma: Tfh !Képlet!, !Képlet!, f:U->V lin. lekép. !Képlet! az U-bázisa és !Képlet! tetsz. vektorok. Ekkor van olyan !Képlet! mátrix, amire !Képlet!teljesül !Képlet! esetén. Köv.: Tetsz. f: K->V lin. lekép. esetén !Képlet!teljesül a Lemmában definiált (f) mátrixra !Képlet! esetén, azaz minden lineáris leképzés előáll mátix-al történő balszorzással. !Kép!
+* Lineáris leképzés mátrixra: !Kép! Lemma. Tfh !Képlet! és !Képlet! lin. lekép-ek. Ekkor !Képlet! is lin. lekép., ahol !Képlet!és !Képlet!. Biz.: Először igazoljuk gof linearitását.!Képlet!=!Képlet! homogén, ill. !Képlet!=!Képlet!=!Képlet! lineráis. Tehát gof csakugyan lineáris leképezés. A tanultak szerint [gof] i-dik oszlopa !Képlet!. Láttuk, hogy !Képlet! az [f] i-dik oszlopa így !Képlet! mátrix szorzata az [f] mátrix i-dik oszlopával. Ez pedig nem más, minta az [g] [f] szorzatmátrix i-dik oszlopa. Ezek szerint [gof]=[g] [f]. köv.: Ha értelmesek a műveletek, akkor A (BC)=(AB)C !Kép!
+
+14.
+* Mátrix jobb és bal inverze: Az AB mátrix az !Képlet! mátrix balinverze, ha !Képlet!, AZ AJ mátrix pedig az A jobbinverze, ha !Képlet!. Ha AB ÉS AJ az A bal- ill. jobbinverze, akkor AB=AJ. Ha A-nak van balinverze, akkor. (1) AB előáll ESA'-okkal (2) az  (A'In) mátrixokból ESA'-okkal kapott RLA mátrix !Képlet! Ha A-nak nincs balinverze, akkor az RLA mátrixban van v1 az n-dik oszloptól jobbra. Tfh. A négyzetes mátrix. Ekkor (A-nak van balinverze) <-> (A sorai lin. ftn-ek) <-> !Képlet!<-> (A oszlopai lin. ftnek) <-> (A-nak van jobbinverze)
+* Előjeles abdetermináns: !Kép! Tetsz. A négyzetes mátrix esetén akkor !Képlet! jelöli inverzét (ha van). Ha A-nak van inverze, akkor Aa reguláris (invertálható). Ha A-nak nincs inverze, akkor A szinguláris. Tfh !Képlet! és a B mátrix i-dik sorának j-dik eleme az Aj,i előjeles aldetermináns.!Képlet!,!Képlet! Ekkor !Képlet! Köv. : Ha A reguláris, akkor !Képlet!, ahol B az előző állításban definiált mátrix.
+* Sor, oszlop, determináns rang. !Kép!ESA' során a sorrang és oszloprang sem változik. Láttuk, hogy ESA' során a sorok által generált altér nem változik, így a dimenziója is ugyanannyi marad. ESA' hatására az oszlopok közti lineáris összefüggések sem változnak, ezért oszlopok egy halmaza pontosan akkorlin. ftn.ESA' előtt, ha ugyanezen oszlophalmaz ln. ftn. ESA' után. Ha A RLA mátrix akkor !Képlet! száma. A v1-ekhez tartozó oszlopok az oszlopok által generált altér bárisát alkotják, így !Képlet! száma. RLA mátrix csupa 0 sorait elhagyva a maradék (v1-t tartalmazó) sorok lin. ftn-ek,hisz egyikse áll elő a többi lin. kombjaként. Ezért S (A) is a v1-ek száma, tehát !Képlet!.Tetsz. A mátrix esetén !Képlet!. Legyen A' Az A-ból ESA'-okkal kapott RLA mátrix. Ekkor !Képlet!. !Képlet! Tetsz. A mátrixra !Képlet!. Ha s (A)=k, akkor az előző állítás miatt !Képlet!. Ha pedig d (A)=k akkor !Képlet! Ezért s(A)=d (A). AZ !Képlet! mátrix rangja r(A)=d(A) Rang meghatározása: ESA'-okkal képzett RLA mátrix v1-ei száma.
+(1) A transzponált sorai a mátrix oszlopainak felelnek meg. (2) A sorok által generált altér egy bázisát választhatjuk a sorvektorokból. Ez a bázis a sorok egy maximális méretű lin. ftn. részhalmaza. Ezért ennek a bázisnak az elemszáma s(A), vagyis a sorvektorok által generált altér dimenziója. Az oszlopokra vonatkozó állítást hasonló érvelés igazolja.
+!Kép!!Kép!!Kép!
+
+
+	\section{}
+		
+		\subfile{sections/1/1.tex}
+
+	\section{}
+		
+		\subfile{sections/2/2.tex}
+		
+	\section{}
+		
+		\subfile{sections/3/3.tex}
+
+	\section{}
+		
+		\subfile{sections/4/4.tex}
+
+	\section{}
+		
+		\subfile{sections/5/5.tex}
+
+	\section{}
+		
+		\subfile{sections/6/6.tex}
+
+	\section{}
+		
+		\subfile{sections/7/7.tex}
+
+	\section{}
+		
+		\subfile{sections/8/8.tex}
+
+	\section{}
+		
+		\subfile{sections/9/9.tex}
+
+	\section{}
+		
+		\subfile{sections/10/10.tex}
+
+	\section{}
+		
+		\subfile{sections/11/11.tex}
+
+	\section{}
+		
+		\subfile{sections/12/12.tex}
+
+	\section{}
+		
+		\subfile{sections/13/13.tex}
+
+	\section{}
+		
+		\subfile{sections/14/14.tex}
+
+	\section{}
+		
+		\subfile{sections/15/15.tex}
+
+	\section{}
+		
+		\subfile{sections/16/16.tex}
+
+	\section{}
+		
+		\subfile{sections/17/17.tex}
+
+	\section{}
+		
+		\subfile{sections/18/18.tex}
+
+	\section{}
+		
+		\subfile{sections/19/19.tex}
+
+	\section{}
+		
+		\subfile{sections/20/20.tex}
+
+	
+\end{document}

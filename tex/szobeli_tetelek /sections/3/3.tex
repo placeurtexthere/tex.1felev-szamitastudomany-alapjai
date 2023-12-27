@@ -1,0 +1,24 @@
+\documentclass[../../szobeli.tex]{subfiles}
+
+\begin{document}
+
+\begin{center}
+    \noindent\fbox{%
+    	\parbox{160mm}{
+			\textbf{Minimális költségű feszítőfa}, mkffák struktúrája, \textbf{Kruskal-algoritmus} \underline{helyessége}, villamos hálózathoz tartozó normál fa keresése.
+        }
+    }
+\end{center}
+
+    3.
+    * Általános gráfbejárás:  A bejárás során kialakul a csúcsok egy elérési il. egy befejezési sorrendje, továbbá minden csúcsban feljegyezzük azt is, hogy melyik él mentén értük el (ha van ilyen él). Ez utóbbi élek (faélek) alkotják a bejárás fáját (ami egyrészt irányított, másrészt  pedig erdő).A G gráf további uv éle elő!KÉPLET!  ->ha u a bejárás fájába a v őse ha u a v leszármazottja, akkor visszaél. Minden más pedig keresztél. (Irányítatlan gráf bejáráskor minden élt oda-vissza irányított élenek tekintjük) !KÉP!
+    *BFS és tulajdonságai. A szélességi bejárás imputja a G= (V,E) gráf és egy r gyökércsúcs. A szélességi bejárás során az r csúcsot már a legelején elértnek tekintjük, valamint az 1. esetben mindig a lehető legkorábban elért u csúcsot választjuk. !Kép! A szélességi fa (BFS) a szélességi bejárás fája
+    Tulajdonságok: (BSF) !Kép!, !Kép!
+    * Legrövidebb utak fája: Tetsz G gráf u és v csúcsainak !képlet! távolsága a legrövidebb G-beli w-út élszáma. A BFS bejárás fája az r csúcsból minden más csúcsba a G gráf egy legrövidebb (legkevesebb élből álló) útját tartalmazza, azaz tetszőleges v csúcs G-beli távolsága r-től megegyezik az r gyökerű F szélességi fán mért távolsággal. !Képlet!
+
+
+    \begin{itemize}
+        \item 
+    \end{itemize}
+
+\end{document}

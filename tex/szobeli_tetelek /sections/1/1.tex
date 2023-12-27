@@ -1,0 +1,65 @@
+\documentclass[../../szobeli.tex]{subfiles}
+
+\begin{document}
+
+\begin{center}
+    \noindent\fbox{%
+    	\parbox{160mm}{
+			Gráfelméleti alapfogalmak: \textbf{csúcs, él, diagram, fokszám}. Egyszerű gráf, irányított gráf, véges gráf, komplementer gráf, reguláris gráf, él/csúcstörlés, élhozzáadás, (feszítő/feszített) részgráf, izomorfia, élsorozat, séta, út, kör,\textbf{összefüggő gráf}, komponens. \underline{\textbf{kézfogás-lemma}}.
+        }
+    }
+\end{center}
+
+    Gráfelméleti alapfogalmak: 
+
+    \begin{itemize}
+        \item \textbf{csúcs, élek:} \begin{itemize}
+            \item G=(V,E) egyszerű irányítatlan gráf ha $V \neq \emptyset$ és $E \leq \binom{V}{2}$ , ahol $\binom{V}{2} = \{\{u,v\}:u,v\in V,u\neq v\}$
+            \item $V$ a $G$ csúcsainak ((szög) pontjainak) halmaza.
+            \item $E$ pedig $G$ éleinek halmaza.
+        \end{itemize} 
+        \item \textbf{Diagram:} A $G = (V,E)$ gráf \textcolor{red}{diagramja} egy olyan lerajzolása, melyben a csúcsoknak (síkbeli) pontok felelnek meg, éleknek pedig a két végpontot összekötő, önmagukat nem metsző görbék.
+        \item \textbf{Fokszám:}\begin{itemize}
+            \item $v \in V(G)$  esetén a $v$-re illeszkedő élek száma a $v$ fokszáma.
+            \item A G gráf csúcsának d (v) foka a vé végpontú élek száma (hurokél kétszer számít).
+        \end{itemize}
+        \item \textbf{Egyszerű gráf:} ha egy gráf nem egyszerű, akkor lehetnek párhuzamos élei, hurokélei.
+        \item \textbf{Irányított gráf:} Az \textcolor{red}{irányított gráf} olyan gráf, aminek minden éle irányított.
+        \item \textbf{Véges gráf:} $G = (V,E)$ \textcolor{red}{véges gráf}, ha $V$ és $E$ is véges halmazok.
+        \item \textbf{Komplementer gráf:} \begin{itemize}
+            \item A $G$ \textbf{egyszerű} gráf \textcolor{red}{komplementere} $\overline{G} = (V,(G), \binom{v}{2} \backslash E(G))$.
+            \item Két csúcs pontosan akkor szomszédos $G$-ben, ha a fokszámai megegyeznek vagy, ha minden csúcsának foka ugyan annyi.
+        \end{itemize}
+        \item \textbf{Reguláris gráf:} k-reguláris, ha minden csúcsának pontosan k a fokszáma.
+        \item \textbf{Él/Csúcstörlés:} Ha $G=(V,E)$ gráf $e \in E$ és $v \in E$ akkor $G-e=(V,E \backslash \{e\})$ az éltörés eredménye $\rightarrow$ \textcolor{red}{Feszítő részgráf} (éltöréssel kapható gráf), a csúcstörléssel keletkező $G-v$ gráfhoz $V$-ből töröljük $v$-t, $E$-ből pedig a $v$-re illeszkedő éleket. \textcolor{red}{Feszített részgráf}: (csúcstörlésekkel kapható gráf) $\Rightarrow$ \textcolor{red}{Részgráf}: él- és csúcstörlésekkel kapható gráf. (jelzőnélküli részgráf) $\rightarrow$ élhozzáadás: $G(V,E)$ gráfban az $E+1$ nő.
+        \item \textbf{Izomorfia:} A $G$ és $G'$ gráfok akkor \textcolor{red}{izomorfak}, ha mindekét gráf csúcsai úgy számozhatók meg az 1-től $n$-ig terjedő egész számokkal (alkalmas $n$ esetén), hogy $G$ bármely két $u,v$ csúcsa között pontosan annyi él fut $G$-ben, mint az $u$-nak és $v$-nek megfelelő sorszámú csúcsok között $G'$-ben. Jelölése: $G \cong G'$.
+        \item \textbf{Élsorozat:} ($v_1,e_1,v_2,e_2,\dots,v_k,e_k,v_{k+1}$), ahol $e_i=v_i v_{i+1}\forall i$. (Tulajdonképp egyik csúcsból eljutunk egy másik csúcsba mindig élek mentén haladva.)
+        \item \textbf{Séta:} olyan élsorozat, amelyikben nincs ismétlődő él. 	
+        \item \textbf{Út:} olyan séta, amelyikben nincs ismétlődő csúcs.
+        \item \textbf{Kör:} $u = v$, de a kezdő (és vég)pontot nem akarjuk megnevezni, akkor \textcolor{red}{zárt élsorozatról}, \textcolor{green}{körsétáról} ill. \textcolor{brown}{körről} beszélünk.
+        \item \textbf{Összefüggő gráf:} \begin{itemize}
+            \item A $G$ irányítatlan gráf \textcolor{red}{\textbf{összefüggő}}, ha $u \sim v \forall u,v \in V(G)$ (ha bármely két pontja között vezet séta), ha bármely két csúcsa között vezet út $G$-ben (ha egy komponense van).
+            \item A $G$ irányított gráfot akkor mondjuk \textcolor{red}{\textbf{erősen összefüggő}}nek, ha $G$ bármely $u,v \in V(G) $ esetén van \textbf{irányított} $uv$-út $G$-ben.
+            \item \textcolor{red}{\textbf{gyengén összefügő}}, ha a $G$-nek megfelelő irányítatlan gráf összefüggő.
+        \end{itemize}
+        \item \textbf{Komponens:} \begin{itemize}
+            \item[(1)] $K \subseteq V(G)$ pontosan akkor komponense $G$-nek, ha $K$-ból nem lép ki éle $G$-nek, de $\forall v,v' \in$ esetén $v \sim v'$.
+            \item[(2)] Minden $G$ irányítatlan gráf csúcshalmaza egyértelműen bomlik fel $G$ komponenseinek diszjunkt uniójára.
+            \item A $G$ komponense alatt sokszor nem csupán a $G$ csúcsainak egy $K$ részhalmazát, hanem a $K$ által feszített részgráfot értjük. 
+            \item $K \leq V(G)$ a $G$ gráf komponense, ha bármely $u,v \in K$ között létezik $G$ séta, de nem létezik $uv$-séta, ha $u\in K, v\in V(G)\backslash K$. (Minden gráf egyértelműen bontható komponensekre)
+        \end{itemize}
+        \item \textbf{Kézfogás-lemma:} Ha $G = (V,E)$ véges, nem feltétlenül egyszerű gráf, akkor $\sum_{v \in V} d(v)=2|E|$, azaz a csúcsok fokszámösszege az élszám kétszerese. 
+        \item \textbf{Általánosított kézfogás-lemma:}: Tetszőleges G=(G,V) véges irányított gráfra KÉPLET  A KFL bizonyítása. irányítsuk G éleit tetszőlegesen. Ekkor. KÉPLET Megj.: úgy is bizonyíthattuk volna, hogy egyenként húzunk be G-be éleket. Üresgráfokra a lemma triviális, és minden egyes él behúzása pontosan 2-növeli a kétszeres élszámot és a csúcsok fokszám összegét is.
+        \item \textbf{Élhozzáadási lemma (ÉHL):} Legyen $G$ irányítatlan gráf és $G' = G + e$. Ekkor az alábbi két esetből pontosan egy valósul meg. \begin{itemize}
+            \item[(1)] $G$ és $G'$ komponensei megegyeznek, de $G'$-nek több köre van, mint $G$-nek.
+            \item[(2)] $G$ és $G'$ körei megegyeznek, de $G'$-nek eggyel keveseb komponense van, mint $G$-nek. 
+        \end{itemize}
+        \item \textbf{Erdő:} A körmentes irányítatlan gráfot \textcolor{red}{erdőnek} nevezzük. 
+        \item \textbf{Fa:} Az öszefüggő, körmentes irányítatlan gráf neve \textcolor{red}{fa}. \begin{itemize}
+            \item $G$ erdő $\Longleftrightarrow  G$ minden komponense fa.
+            \item $G$ $n$-csúcsú, $k$-komponensű erdő $\Rightarrow |E(G)| = n-k$.
+            \item \textbf{Biz:} Építsük fel $G$-t a $\overline{K_n}$ üresgráfból az élek egyenkénti behúzásával. $G$ körmentes, ezért az ÉHL miatt minden lé zöld: behúzásakor 1-gyel csökken a komponensek száma. A $\overline{K_n}$ üresgráfnak $n$ komponense van, $G$-nek pedig $k$. Ezért pontosan $n-k$ zöld élt kellett behúzni $G$ felépítéséhez.
+        \end{itemize}
+    \end{itemize}
+
+\end{document}
