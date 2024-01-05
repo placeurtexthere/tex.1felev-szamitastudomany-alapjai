@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1698081729 "/Users/dave/Documents/GitHub/tex.szamtud_osszefoglalo/tex/sections/6/sikgrafok.tex" "sikgrafok.pdf" "sikgrafok" 1698081730 0
-  "../../szamtud.tex" 1698071159 1988 390cb94f03b8bf85a184bd58925e8169 ""
-  "/Users/dave/Documents/GitHub/tex.szamtud_osszefoglalo/tex/sections/6/sikgrafok.tex" 1698081728 10892 b0627d638b5b51b20d83a83235a1c3e0 ""
+["pdflatex"] 1704295942 "/Users/dave/Documents/GitHub/tex.1felev-szamitastudomany-alapjai/tex/teljes/sections/6/sikgrafok.tex" "sikgrafok.pdf" "sikgrafok" 1704295944 0
+  "../../szamtud.tex" 1699355214 2016 43ee221c2c08c0f57384f2d91daec6ba ""
+  "/Users/dave/Documents/GitHub/tex.1felev-szamitastudomany-alapjai/tex/teljes/sections/6/sikgrafok.tex" 1704295942 10903 1b2c3361d4a6dd2a7b970e021273fe9d ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -76,9 +76,9 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1694545731 4681924 2c19acd65d59ba67d808d6d74d1273b0 ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1694545878 8183370 1c525ac4ee073a127ca1a6d396f25aaf ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "img/1.png" 1698076761 19402 b18921f82dd78b3d83b3426559e63eb2 ""
-  "sikgrafok.aux" 1698081730 515 3038778380dfd4011a284c79f4d5e03c "pdflatex"
-  "sikgrafok.tex" 1698081728 10892 b0627d638b5b51b20d83a83235a1c3e0 ""
+  "img/1.png" 1698492829 19402 b18921f82dd78b3d83b3426559e63eb2 ""
+  "sikgrafok.aux" 1704295944 515 c275fffaa650dbd4f4af8830561c392f "pdflatex"
+  "sikgrafok.tex" 1704295942 10903 1b2c3361d4a6dd2a7b970e021273fe9d ""
   (generated)
   "sikgrafok.aux"
   "sikgrafok.log"

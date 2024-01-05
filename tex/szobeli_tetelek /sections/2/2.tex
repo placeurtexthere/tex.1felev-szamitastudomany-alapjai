@@ -9,23 +9,24 @@
         }
     }
 \end{center}
-
-    2.
-    !KÉPLET!
-    *Feszítőfa: F a G gráf feszítőfája (ffa), ha F egy G-ből éltörésekkel kapható fa. ha G-nek van feszítőfája <-> összefüggő.
-    * Alapvágás, Alapkör: A G gráf F feszítőfájának f éléhez tartozó alap vágást G azon élei alkotják, amik az F-f két komponense között futnak. Az !KÉPLET!  éléhez tartozó alapkör pedig az !KÉPLET!  köre. Megf.: Tegyük fel hogy !KÉPLET!  Ekkor !KÉPLET!  <-> f benne e alapkörében <-> e benne van f alap vágósávban.
-    *Minimális költségű ffa: olyan !KÉPLET!  élhalmaz, amire (V, F) fA, É Sk (F) minimális.
-    * Kruskal (mohó) algoritmus: !KÉPLET! ahol !KÉPLET!  1. Élek költség szerinti sorba rendezése 2. Döntés az egyes élekről a fenti sorrendben. - Legyen !KÉPLET!  egy gráf, és k: E->R egy tetsz költségfüggvény, (V,F) pedig a G egy ffa F pontosan akkor mkffa, ha minden C-re teljesül, F tartalmazza a G legfeljebb c költségű !KÉPLET! gráf egy feszítő erdejét. - Az algoritmus által kiszámított F élhalmaz a G egy min költségű feszítő erdeje.
-    Mkffák struktúrája. G=(V, E)gráf és !KÉPLET!  esetén legyen !KÉPLET!  legfeljebb c költségű élek alkotta feszítő részgráfja G-nek: !KÉPLET! A G gráfon folytatott Kruskal- algoritmus outpontja tartalmazza !KÉPLET!  egy feszítő erdejét minden !KÉPLET!  esetén.
-    * Villamos hálózathoz tartozó normál fa keresése: normál fa: G olyan feszítőfája, ami minden feszültségforrást tartalmaz, de egyetlen áramforrást sem (és mindemellett a legtöbb kapacitást és a lehető legkevesebb induktivitást tartalmazza). Normál fa keresése. fesz.forrás (1.) kapacitás (2.) ellenállás (3.) induktivitás (4.) , áramforrás (5.) élköltségekhez keressünk mkffát!Ha ez tartalmaz áramforrást, vagy nem tartalmaz minden feszültségforrást, akkor nincs normál fa, egyébként a mkffa egy normál fa és egyértelmű a megoldás "értelmes" a hálózat.
-
-
     \begin{itemize}
+        \item \underline{\textbf{Élhozzáadási lemma (ÉHL):}} Legyen $G$ irányítatlan gráf és $G' = G + e$. Ekkor az alábbi két esetből pontosan egy valósul meg. \begin{itemize}
+            \item[(1)] $G$ és $G'$ komponensei megegyeznek, de $G'$-nek több köre van, mint $G$-nek.
+            \item[(2)] $G$ és $G'$ körei megegyeznek, de $G'$-nek eggyel keveseb komponense van, mint $G$-nek. 
+        \end{itemize}
+        \item Erdő: A körmentes irányítatlan gráfot \textcolor{red}{erdőnek} nevezzük. 
+        \item \textbf{Fa:} Az öszefüggő, körmentes irányítatlan gráf neve \textcolor{red}{fa}. \begin{itemize}
+            \item $G$ erdő $\Longleftrightarrow  G$ minden komponense fa.
+            \item $G$ $n$-csúcsú, $k$-komponensű erdő $\Rightarrow |E(G)| = n-k$.
+            \item \textbf{Biz:} Építsük fel $G$-t a $\overline{K_n}$ üresgráfból az élek egyenkénti behúzásával. $G$ körmentes, ezért az ÉHL miatt minden lé zöld: behúzásakor 1-gyel csökken a komponensek száma. A $\overline{K_n}$ üresgráfnak $n$ komponense van, $G$-nek pedig $k$. Ezért pontosan $n-k$ zöld élt kellett behúzni $G$ felépítéséhez.
+        \end{itemize}
         \item \textbf{Két levél:} Legyen $F$ egy tetszőleges fa $n$ csúcson. Ekkor ha $n \geq 2$, akkor $F$-nek legalább két levele van.
         \begin{itemize}
-            \item \textcolor{green}{\textbf{Biz:}}: (Algebrai út) A KFL miatt $\sum_{v\in V(G)}(d(v)-2)=\sum_{v\in V(G)}d(v)-2n=2(n-1)-2n=-2$. $F$ minden $v$ csúcsára $d(v) \geq 1$ teljesül, ezért $d(v) - 2 \geq -1$. A fenti összeg csak úgy lehet $-2$, ha $F$-nek legalább 2 levele van.
-            \item \textcolor{green}{\textbf{Biz:}}: (Kombinatorikus út) Induljunk el $F$ egy tetszőleges $v$ csúcsából egy sétán, és haladjunk, amíg tununk. Ha sosem akadunk el, akkor előbb-utóbb ismétlődik egy csúcs, és kört találunk. Ezért elakadunk, és az csakis egy $v$-től különböző $u$ levélben történhet. Ha $d(v)=1$, akkor $v$ egy $u$-tól különböző levél. Ha $d(v) \geq 2$, akkor sétát indulhatjuk $v$-ből egy másik él mentén. Ekkor egy $u$-tól különböző levélben akadunk el.
+            \item \textbf{Biz:}: (Algebrai út) A KFL miatt $\sum_{v\in V(G)}(d(v)-2)=\sum_{v\in V(G)}d(v)-2n=2(n-1)-2n=-2$. $F$ minden $v$ csúcsára $d(v) \geq 1$ teljesül, ezért $d(v) - 2 \geq -1$. A fenti összeg csak úgy lehet $-2$, ha $F$-nek legalább 2 levele van.
+            \item \textbf{Biz:}: (Kombinatorikus út) Induljunk el $F$ egy tetszőleges $v$ csúcsából egy sétán, és haladjunk, amíg tununk. Ha sosem akadunk el, akkor előbb-utóbb ismétlődik egy csúcs, és kört találunk. Ezért elakadunk, és az csakis egy $v$-től különböző $u$ levélben történhet. Ha $d(v)=1$, akkor $v$ egy $u$-tól különböző levél. Ha $d(v) \geq 2$, akkor sétát indulhatjuk $v$-ből egy másik él mentén. Ekkor egy $u$-tól különböző levélben akadunk el.
         \end{itemize}
+        \item \textbf{Feszítőfa}: $F$ a $G$ gráf feszítőfája (ffa), ha $F$ egy $G$-ből éltörésekkel kapható fa. Ha $G$-nek van feszítőfája $\Leftrightarrow$ összefüggő.
+        \item Alapvágás, alapkör: A $G$ gráf $F$ feszítőfájának $f$ éléhez tartozó \textcolor{red}{alap vágást} $G$ azon élei alkotják, amik az $F-f$ két komponense között futnak. Az $e \in E(G) \backslash E(F)$ éléhez tarozó \textcolor{red}{alapkör} pedig az $F+e$ köre. \\ \textbf{Megf:} Tfh $f \in F$ és $e \in E(G) \backslash E(F)$. Ekkor ($F-f+e$ ffa) $\Longleftrightarrow$ ($f$ benne van $e$ alapkörében) $\Longleftrightarrow$ ($e$ benne van $f$ alap vágásában).
     \end{itemize}
 
 \end{document}

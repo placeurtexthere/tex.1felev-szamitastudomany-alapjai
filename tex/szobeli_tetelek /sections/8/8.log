@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  27 DEC 2023 14:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  3 JAN 2024 12:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -292,27 +292,85 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 10.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-) [1
+)
+<img/1.png, id=1, 544.0325pt x 124.465pt>
+File: img/1.png Graphic file (type png)
+<use img/1.png>
+Package pdftex.def Info: img/1.png  used on input line 18.
+(pdftex.def)             Requested size: 483.69684pt x 110.66714pt.
 
-{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] (sections/8/8.aux)
+Overfull \hbox (25.00003pt too wide) in paragraph at lines 18--19
+[][] 
+ []
+
+<img/2.png, id=3, 722.7pt x 106.3975pt>
+File: img/2.png Graphic file (type png)
+<use img/2.png>
+Package pdftex.def Info: img/2.png  used on input line 56.
+(pdftex.def)             Requested size: 483.69684pt x 71.21126pt.
+
+Overfull \hbox (25.00003pt too wide) in paragraph at lines 56--57
+[][] 
+ []
+
+[1
+
+{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <sections/8/img/1.png> <sections/8/img/2.png>]
+<./img/3.png, id=17, 601.24625pt x 99.37125pt>
+File: ./img/3.png Graphic file (type png)
+<use ./img/3.png>
+Package pdftex.def Info: ./img/3.png  used on input line 66.
+(pdftex.def)             Requested size: 483.69684pt x 79.94592pt.
+
+Overfull \hbox (25.00003pt too wide) in paragraph at lines 66--67
+[][] 
+ []
+
+<./img/4.png, id=18, 547.04375pt x 86.3225pt>
+File: ./img/4.png Graphic file (type png)
+<use ./img/4.png>
+Package pdftex.def Info: ./img/4.png  used on input line 90.
+(pdftex.def)             Requested size: 483.69684pt x 76.32755pt.
+
+Overfull \hbox (25.00003pt too wide) in paragraph at lines 90--91
+[][] 
+ []
+
+[2 <sections/8/./img/3.png>]
+<./img/5.png, id=24, 198.7425pt x 176.66pt>
+File: ./img/5.png Graphic file (type png)
+<use ./img/5.png>
+Package pdftex.def Info: ./img/5.png  used on input line 97.
+(pdftex.def)             Requested size: 96.73788pt x 85.98999pt.
+<./img/6.png, id=25, 191.71625pt x 172.645pt>
+File: ./img/6.png Graphic file (type png)
+<use ./img/6.png>
+Package pdftex.def Info: ./img/6.png  used on input line 102.
+(pdftex.def)             Requested size: 96.73788pt x 87.11522pt.
+<./img/7.png, id=26, 367.3725pt x 196.735pt>
+File: ./img/7.png Graphic file (type png)
+<use ./img/7.png>
+Package pdftex.def Info: ./img/7.png  used on input line 120.
+(pdftex.def)             Requested size: 96.73788pt x 51.8043pt.
+ [3 <sections/8/./img/4.png> <sections/8/./img/5.png> <sections/8/./img/6.png> <sections/8/./img/7.png>] [4] (sections/8/8.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 6040 strings out of 474934
- 92749 string characters out of 5759811
- 1920807 words of memory out of 5000000
- 27508 multiletter control sequences out of 15000+600000
- 560968 words of font info for 57 fonts, out of 8000000 for 9000
+ 6173 strings out of 474934
+ 94298 string characters out of 5759811
+ 1936807 words of memory out of 5000000
+ 27561 multiletter control sequences out of 15000+600000
+ 563136 words of font info for 97 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 77i,7n,82p,1097b,262s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on sections/8/8.pdf (1 page, 36589 bytes).
+ 77i,8n,82p,1097b,417s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on sections/8/8.pdf (4 pages, 322006 bytes).
 PDF statistics:
- 24 PDF objects out of 1000 (max. 8388607)
- 14 compressed objects within 1 object stream
+ 78 PDF objects out of 1000 (max. 8388607)
+ 39 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 10241 words of extra memory for PDF output out of 12000 (max. 10000000)
+ 10276 words of extra memory for PDF output out of 12000 (max. 10000000)
 

@@ -11,7 +11,151 @@
 \end{center}
 
     \begin{itemize}
-        \item 
-    \end{itemize}
+        \item \textbf{Az $\mathbb{R}^n$ tér} 
+        
+            \textcolor{blue}{\textbf{Def:}} $A \times B = \{(a,b):a\in A,b\in B\}$ az $A$ és $B$-beli elemekből álló rendezett párok halmaza. Hasonlóan $A_1 \times A_2 \times \dots \times A_n = \{(a_1, a_2,\dots,a_n):a_i \in A_i \forall i\}$ a rendezett $n$-esek halmaza.
 
+            $A^n:= A \times A \times \dots \times A$ az $n$-szeres Decartes-szorzat jelölése. 
+
+            \textcolor{blue}{\textbf{Megj:}} (1) A továbbiakban $\mathbb{R}^n$ elemeivel fogunk dolgozni. Ezeket $n$ magasságú vektoroknak fogjuk hívni, jelezve, hogy (általában) oszlopvektorként gondolunk rájuk. 
+
+            \textcolor{violet}{\textbf{Példa:}} 
+            \[
+            \begin{pmatrix}
+                e \\
+                \pi \\
+                42 
+            \end{pmatrix}  
+            \in \mathbb{R}^3, \underline{0} = 
+            \begin{pmatrix}
+                0 \\
+                0 \\
+                \vdots \\
+                0 
+            \end{pmatrix}  
+            \in \mathbb{R}^n,\; \textrm{ill.}\; e_i = 
+            \begin{pmatrix}
+                0 \\
+                \vdots \\
+                0 \\
+                1 \\
+                0 \\
+                \vdots \\
+                0 
+            \end{pmatrix} 
+            \in \mathbb{R}^n, \textrm{utóbbi esetben az 1-es felülről az }i \textrm{-dik helyen áll.}
+            \]
+
+            \textcolor{blue}{\textbf{Megj:}} (1) A továbbiakban $\mathbb{R}^n$ elemeivel fogunk dolgozni. Ezeket $n$ magasságú vektoroknak fogjuk hívni, jelezve, hogy (általában) oszlopvektroként gondolunk rájuk. \textcolor{blue}{\textbf{Def:}} \textcolor{red}{\underline{0}, \underline{$e_i$}}
+
+            (2) Ha $n$ világos a szövegkörnyezetből, akkor $\mathbb{R}^n$ elemeti vektoroknak, $\mathbb{R}$ elemeit pedig skalároknak fogjuk nevezni. 
+
+            \textcolor{violet}{\textbf{Konvenció:}} A jelölés során az oszlopvektorokat aláhúzással különöbztetjük meg a skalároktól.
+
+            \textcolor{blue}{\textbf{Megj:}} A vektorok tehát itt és mont nem "irányított szakaszok", hanem ennél általánosabb fogalmat takarnak: az irányíott szakasok is tekinthetők vektoroknak, de egy vektor a mi tárgylásunkban nem feltétlenül irányított szakasz.
+
+        \item \textbf{Vektorműveletek azonosságai}
+        
+            \textcolor{orange}{\textbf{Állítás:}} Az $\mathbb{R}^n$ tér vektoraival történő számolásban néhány fontos szabály sokat segít. Tetszőleges $\underline{u,v,w} \in \mathbb{R}^n$ vektorokra és $\lambda, \mu \in \mathbb{R}$ skalárokra az alábbiak teljesülnek.
+
+            (1) $\underline{u} + \underline{v} = \underline{v} + \underline{u}$ (összeadás kommutatív)
+            
+            (2) $(\underline{u} + \underline{v}) + \underline{w} = \underline{v} + (\underline{u} + \underline{w})$ (az összeadás asszociatív)
+            
+            (3) $\lambda(\underline{u} + \underline{v}) = \lambda \underline{u} + \lambda \underline{v}$ (egyik disztributivitás)
+            
+            (4) $(\lambda + \mu)\underline{u} = \lambda \underline{u} + \mu \underline{u}$ (másik disztributivitás)
+            
+            (5) $(\lambda\mu)\underline{u} = \lambda(\mu\underline{u})$ (skalárral szorzás asszociativitása)
+
+            \textcolor{green}{\textbf{Biz:}} Mivel mindkét művelet koordinátánként történik, elég az egyes azonosságokat koordinátánként ellenőrizni. Ezek viszont éppen a valós számokra (azaz a skalárokra) vonatkozó, jól ismert szabályok.
+
+            \textcolor{violet}{\textbf{Konvenció:}} $\underline{v} \in \mathbb{R}^n$ esetén $-\underline{v} := (-1) \cdot v$.
+            
+            \textcolor{blue}{\textbf{Megj:}} Vektorok között nem csak az összeadás, hanem a kivonás is értelmezhető: $\underline{u} - \underline{v} := \underline{u} + (-1) \underline{v}$. Ezáltal a kivonás is egyfajta összeadás, tehát az összeadásra vonatkozó szabályok értelemszerű változatai a kivonásra is érvényesek.
+
+            A vektorokkal történő számoláskor érvényes szabályok nagyon hasonlók a valós számok esetén megszokott szabályokhoz.
+
+        \item \textbf{Generált altér (példák)}
+        
+            \textcolor{blue}{\textbf{Def:}} $\emptyset \neq V \subseteq \mathbb{R}^n$ az $\mathbb{R}^n$ tér \textcolor{red}{altere} (jel: $\textcolor{red}{V \leq \mathbb{R}^n}$), ha $V$ zárt a műveletekre: $\underline{x} + \underline{y}, \lambda\underline{x} \in V$ teljesül $\forall\underline{x}, \underline{y} \in V$ és $\forall \lambda \in \mathbb{R}$ esetén.
+
+            \textcolor{violet}{\textbf{Példa:}} $\mathbb{R}^2$-ben tetszőleges origón áthaladó egyenes pontjaihoz tartozó vektorok alteret alkotnak. $\mathbb{R}^3$-ban tetszőleges origón áthaladó sík vagy egyenes pontjainak megfelelő vektorok alteret alkotnak.
+
+            \textcolor{red}{\textbf{Kérdés:}} Mik az $\mathbb{R}^n$ tér alterei, és hogyan lehet ezeket megkapni?
+
+            \textcolor{orange}{\textbf{Megf:}} Ha $V \leq \mathbb{R}^n, \underline{x}_1, \underline{x}_2,\dots,\underline{x}_k \in V$ és $\lambda_1, \dots, \lambda_k \in \mathbb{R}$, akkor $\sum_{i=1}^{k} \lambda_i  \underline{x}_i = \lambda_1 \cdot  \underline{x}_1 + \dots + \lambda_k \cdot  \underline{x}_k \in V$
+
+            \textcolor{blue}{\textbf{Def:}} Az $ \underline{x}_1, \dots,  \underline{x}_k$ által \textcolor{red}{generált altér} a $\langle  \underline{x}_1, \dots,  \underline{x}_k\rangle$ halmaz. Ez a legszűkebb olyan altér, ami mindezen vektorokat tartalmazza. 
+
+            \textcolor{orange}{\textbf{Megf:}} (1) Alterek metszete altér: $V_i \leq \mathbb{R}^n \forall i \Rightarrow \cap_i V_i \leq \mathbb{R}^n$ (2) $\{\underline{0}\} \leq \mathbb{R}^n$. (3) $\mathbb{R}^n \leq \mathbb{R}^n$. \textcolor{blue}{\textbf{Def:}} $\mathbb{R}^n$ \textcolor{red}{triviális alterei}: $\{\underline{0}\}, \mathbb{R}^n$.
+
+        \item \textbf{Triviális lineáris kombináció}
+        
+            \textcolor{blue}{\textbf{Def:}} A $\sum_{i=1}^{k} \lambda_i  \underline{x}_i$ kifejezés az $ \underline{x}_i, \dots,  \underline{x}_k$ \textcolor{red}{lineáris kombinációja}. \textcolor{red}{Triviális lineáris kombináció:} $0 \cdot \underline{x}_1 + \dots + 0 \cdot \underline{x}_k$.
+
+            \textcolor{orange}{\textbf{Megf:}} ($V \leq \mathbb{R}^n$) $\Longleftrightarrow$ ($V$ zárt a lineáris kombinációra)
+
+            \textcolor{green}{\textbf{Biz:}} $\Rightarrow:$ $\lambda_i \underline{x}_i \in V \forall i$ esetén, így a $\sum_{i=1}^{k} \lambda_i \underline{x}_i$ összegük is $V$-beli.
+
+            $\Leftarrow:$ Ha $\underline{x,y} \in V$ és $\lambda \in \mathbb{R}$, akkor $\underline{x} + \underline{y}$ ill. $\lambda \underline{x}$ lineáris kombinációk. Mivel $V$ zárt a lineáris kombinációra, ezért $\underline{x} + \underline{y}, \lambda \underline{x} \in V$. Ez tetszőleges $\underline{x,y}, \lambda$ esetén fennáll, tehát $V$ zárt a műveletekre, vagyis altér.
+
+        \item \textbf{Alterek metszete}
+            
+            \textcolor{blue}{\textbf{Def:}} Az $\underline{x}_1, \dots, \underline{x}_k$ által \textcolor{red}{generált altér} a $\langle \underline{x}_1, \dots, \underline{x}_k\rangle$ halmaz. Ez a legszűkebb olyan altér, ami mindezen vektorokat tartalmazza.
+
+            \textcolor{orange}{\textbf{Megf:}} (1) Alterek metszete altér: $V_i \leq \mathbb{R}^n \forall i \Rightarrow \cap_i V_i \leq \mathbb{R}^n$ (2) $\{\underline{0}\} \leq \mathbb{R}^n$. (3) $\mathbb{R}^n \leq \mathbb{R}^n$. \textcolor{blue}{\textbf{Def:}} $\mathbb{R}^n$ \textcolor{red}{triviális alterei}: $\{\underline{0}\}, \mathbb{R}^n$.
+
+        \item \textbf{Generátorrendszer}
+        
+            \textcolor{blue}{\textbf{Def:}} Az $\underline{x}_1, \dots, \underline{x}_k \in \mathbb{R}^n$ vektornak a $V \leq \mathbb{R}^n$ altér \textcolor{red}{generátorrendszerét} alkotják, ha $\langle \underline{x}_1, \dots, \underline{x}_k \rangle = V$.
+
+            \textcolor{violet}{\textbf{Példa:}} $e_1, e_2, \dots, e_n$ az $\mathbb{R}^n$ generátorrendszere, hisz minden $\mathbb{R}^n$-beli vektor előáll az egységvektrorok lineáris kombinációjaként, azaz $\langle e_1, \dots, e_n \rangle = \mathbb{R}^n$. 
+
+            Ha $\mathbb{R}^2$-ben ha $\underline{u}$ és $\underline{v}$ nem párhuzamosak, akkor $\{\underline{u,v}\}$ generátorrendszer, hiszen bármely $\underline{z}$ vektor előállítható \underline{$u$} és \underline{$v$} lineáris kombinációjaként. (Ehhez \underline{$u$} és \underline{$v$} egyenesére kell a "másik" vektorral párhuzamosan vetíteni az előállítandó $\underline{z}$.) Hasonlóan, ha $\mathbb{R}^3$-ban három vektor nem esik egyanarra az origón átmenő síkra, akkor ez a három vektor generátorrendszert alkot.
+
+        \item \textbf{Lineáris függetlenség 1.}
+        
+            \textcolor{blue}{\textbf{Def:}} Az $\underline{x}_1, \dots, \underline{x}_k \in \mathbb{R}^n$ vektorok \textcolor{red}{lineárisan függetlenek}, ha a nullvektort csak a triviális lineáris kombinációjuk állítja elő: $\lambda_1 \underline{x}_1 + \dots + \lambda_k \underline{x}_k = \underline{0} \Rightarrow \lambda_1 = \dots = \lambda_k = 0$
+
+            
+
+        \item \textbf{Lineáris függetlenség 2.}
+        
+            \textcolor{orange}{\textbf{Lemma:}} $\{\underline{x}_1, \ldots, \underline{x}_k\}$ lineárisan független vektorrendszer $\Longleftrightarrow$ egyik $\underline{x}_i$ sem áll elő a többi lineáris kombinációjaként.
+            
+            \textcolor{green}{\textbf{Biz:}} A fenti állítások tagadásainak ekvivalenciáját igazoljuk.
+            
+            1. Tfh $\{\underline{x}_1, \ldots, \underline{x}_k\}$ \textbf{nem} lineárisan független, azaz $\lambda_1 \underline{x}_1+\ldots+\lambda_k \underline{x}_k=\underline{0}$ és $\lambda_i \neq 0$. Ekkor $\underline{x}_i$ előállítható a többiből:
+            $\underline{x}_i=\frac{-1}{\lambda_i} \cdot(\lambda_1 \underline{x}_1+\ldots+\lambda_{i-1} \underline{x}_{i-1}+\lambda_{i+1} \underline{x}_{i+1}+\ldots \lambda_k \underline{x}_k)$.
+
+            1. Most tfh valamelyik $\underline{x}_i$ előáll a többi lineáris kombinációjaként: $\underline{x}_i=\lambda_1 \underline{x}_1+\ldots+\lambda_{i-1} \underline{x}_{i-1}+\lambda_{i+1} \underline{x}_{i+1}+\ldots \lambda_k \underline{x}_k$. Ekkor $\{\underline{x}_1, \ldots, \underline{x}_k\}$ nem lineárisan független, hiszen a nullvektor megkapható nemtriviális lineáris kombinációként: $\underline{0}=\lambda_1 \underline{x}_1+\ldots+\lambda_{i-1} \underline{x}_{i-1}+(-1) \cdot \underline{x}_i+\lambda_{i+1} \underline{x}_{i+1}+\ldots \lambda_k \underline{x}_k$.
+    \end{itemize}
 \end{document}
+
+\textcolor{blue}{\textbf{Def:}} 
+
+\textcolor{blue}{\textbf{Megj:}} 
+
+\textcolor{orange}{\textbf{Megf:}}
+
+\textcolor{green}{\textbf{Biz:}} 
+
+\textcolor{orange}{\textbf{Lemma:}}
+
+\textcolor{violet}{\textbf{Példa:}} 
+
+\textcolor{red}{}
+
+$\mathbb{R}^n$
+
+
+
+Lineáris függetlenség és genárálás
+Def: Az $\underline{x}_1, \ldots, \underline{x}_k \in \mathbb{R}^n$ vektorok a $V \leq \mathbb{R}^n$ altér generátorrendszerét alkotják, ha $\langle\underline{x}_1, \ldots, \underline{x}_k\rangle=V$.
+Def: $\mathrm{Az} \underline{x}_1, \ldots, \underline{x}_k \in \mathbb{R}^n$ vektorok lineárisan függetlenek, ha a nullvektort csak a triviális lineáris kombinációjuk állítja elő:
+$
+\lambda_1 \underline{x}_1+\ldots+\lambda_k \underline{x}_k=\underline{0} \Rightarrow \lambda_1=\ldots=\lambda_k=0 \text {. }
+$
+
+Ha a fenti vektorok nem lin. ftn-ek, akkor lineárisan összefüggők.

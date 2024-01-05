@@ -18,12 +18,12 @@
 	\centering \vfill
 	{\textsc{Budapesti Műszaki és Gazdaságtudományi Egyetem} \par} \vspace{7cm}
 	{\huge\bfseries A számítástudomány alapjai\par} \vspace{0.5cm}
-	{\large \textsc{Összefoglaló jegyzet}\par} \vspace{1.5cm}
+	{\large \textsc{Kidolgozott szóbeli tételsor}\par} \vspace{1.5cm}
 	{\Large\itshape Készítette: Illyés Dávid\par} \vfill
 
 	\noindent\fbox{%
     	\parbox{140mm}{
-			\color{red}\textbf{Ez  a jegyzet nagyon hasonlóan van struktúrálva az előadás jegyzetekhez és fő célja, hogy olyan módon adja át a "A Programozás Alapjai 1" nevű tárgy anyagát, hogy az teljesen kezdők számára is könnyen megérthető és megtanulható legyen. }
+			\textbf{A jegyzetben a "A számítástudomány alapjai" nevű tárgy 2023/24/1 félévében kiadott szóbeli tételsor van (többé-kevésbé) kidolgozva. (Jelenleg inkább csak össze gyűjtögetve, de finomítva még nincs.) \textcolor{red}{Minden a jegyzetben található információ (beleértve az ábrákat) a BME tulajdonát képzik és az eredeti előadás diákból, ill. azok alapján van megírva. Nem hivatalos BME által kiadott dokumentum!}}
    		}
 	}
 	
@@ -40,14 +40,14 @@
             \item Gráfelméleti alapfogalmak: \textbf{csúcs, él, diagram, fokszám}. Egyszerű gráf, irányított gráf, véges gráf, komplementer gráf, reguláris gráf, él/csúcstörlés, élhozzáadás, (feszítő/feszített) részgráf, izomorfia, élsorozat, séta, út, kör,\textbf{összefüggő gráf}, komponens. \underline{\textbf{kézfogás-lemma}}.
             \item \underline{\textbf{Élhozzáadási lemma}} erdő, \textbf{fa}, fák egyszerűbb tulajdonságai: \underline{két levél}, \underline{erdők élszáma}. \textbf{Feszítőfa} \underline{létezése}, feszítőfához tartozó alapkörök és alap vágások.
             \item \textbf{Minimális költségű feszítőfa}, mkffák struktúrája, \textbf{Kruskal-algoritmus} \underline{helyessége}, villamos hálózathoz tartozó normál fa keresése.
-            \item Éltalános gráfbejárás: \textbf{a csúcsok állapotváltozása, a bejárás általános lépése}, a bejáráshoz tartozó sorrender ill. az élek osztályozása bejárás után. A \textbf{BFS} és \underbar{tulajdonságai}, legrövidebb utak fájának \underline{létezése}.
-            \item Gréfút hossza, gráfcsúcsok távolsága, nemnegatív és konzervatív hosszfüggvény, triviális és pontos $(r,l)$\textbf{-felső becslés, \underline{élmenti javítás.} Dijkstra-algoritmus működése}, Ford-algoritmus \underline{helyessége} és lépésszáma. Legrövidebb utak fájának létezése.
+            \item Általános gráfbejárás: \textbf{a csúcsok állapotváltozása, a bejárás általános lépése}, a bejáráshoz tartozó sorrender ill. az élek osztályozása bejárás után. A \textbf{BFS} és \underbar{tulajdonságai}, legrövidebb utak fájának \underline{létezése}.
+            \item Gráfút hossza, gráfcsúcsok távolsága, nemnegatív és konzervatív hosszfüggvény, triviális és pontos $(r,l)$\textbf{-felső becslés, \underline{élmenti javítás.} Dijkstra-algoritmus működése}, Ford-algoritmus \underline{helyessége} és lépésszáma. Legrövidebb utak fájának létezése.
             \item \textbf{Mélységi keresés} és alkalmazásai (\underline{fellépő éltípusok}, mélységi- és befejezési számozásból az éltípus meghatározása, \underline{irányított kör létezésének eldöntése DFS-sel)}.
             \item \textbf{DAG}, \underline{jellemzése}, \textbf{topologikus sorrend} \underline{keresése}. Leghosszabb utak keresése, \textbf{PERT-módszer}, kritikus utak és tevékenységek.
             \item \textbf{Euler-séta és körséta} \underline{létezésének szükkséges és elégséges feltétele}. \textbf{Hamilton-kör és út} létezésére szükséges, ill. elégséges feltételek: \underline{komponensszám ponttörlés után} (Petersen-gráf) \underline{\textbf{Dirac, Ore tételei}}, gazdag párok, \underline{hízlalási lemma}, Chavátal-lezárt.
             \item \textbf{Gráfok síkba ill. gömbre rajzolhatósága, tartomény, sztereografikus projekció}, következményei. Az \underline{\textbf{Euler-féle poliédertétel}, duális kézfogáslemma} és következményei: \underline{felső korlátok az élszámra} és a \underline{minimális fokszáma} egyszerű, síkbarajzolható gráfokon.
-            \item \underline{\textbf{Kuratowski gráfok} síkbarajzolhatósága}, \textbf{soros bővítés, \textit{Kuratowski-tétel} könnyű iránya}. \textbf{Síkbarajzolt gárf duálisa}, a duális paraméterei. Vágás, elvágó él, soros élek. \textit{Kör-vágás duaklitása}, különféle élek duálisai. Whitney két tétele, Whitney operációk.
-            \item \textbf{Lineáris egyenletrendszer, kibővített együtthatómátrix, elemi sorekvivalens átalakítás} és \underline{kapcsolata a megoldásokkal}. \textbf{LA és RLA mátrix, vezéregyes, megoldás leolvasása RLA mátrix esetén}. Tilos sor, kötött változó, szabad paraméter, \underline{ezek jelentése a megoldás/megoldhatóság szempontjából.} \textbf{Gauss-elimináció}, \underline{összefüggés az egyértelműmegoldhatóság, az egynletek és ismeretlenek száma között}.
+            \sloppy\item \underline{\textbf{Kuratowski gráfok} síkbarajzolhatósága}, \textbf{soros bővítés, \textit{Kuratowski-tétel} könnyű iránya}. \textbf{Síkbarajzolt gárf duálisa}, a duális paraméterei. Vágás, elvágó él, soros élek. \textit{Kör-vágás dualitása}, különféle élek duálisai. Whitney két tétele, Whitney operációk.
+            \item \textbf{Lineáris egyenletrendszer, kibővített együtthatómátrix, elemi sorekvivalens átalakítás} és \underline{kapcsolata a megoldásokkal}. \textbf{LA és RLA mátrix, vezéregyes, megoldás leolvasása RLA mátrix esetén}. Tilos sor, kötött változó, szabad paraméter, \underline{ezek jelentése a megoldás/megoldhatóság szempontjából.} \textbf{Gauss-elimináció}, \underline{összefüggés az egyértelmű megoldhatóság, az egynletek és ismeretlenek száma között}.
             \item Az $\mathbb{R}^n$ \textbf{tér}, vektorműveletek azonosságai, (generált) \textbf{altér} (példák), (triviális) \textbf{lineáris kombináció}, alterek metszete, \textbf{generátorrendszer}, \textbf{lineáris függetlenség} (kétféle definíció). \underline{Lin.ftn rendszer hízlalása}, \underline{generátor-rendszer ritkítása}, \underline{kicserélési lemma}, \underline{\textbf{FG-egyenlőtlenség}} és következménye.
             \item ESÁ hatása a sor- és oszlopvektorokra, \textbf{oszlopvektorok lin.ftn-ségének eldöntése}. \textbf{Bázis} fogalm, \underline{\textbf{altér bázisának előállítása generátorrendszerből}} ill. homogén lineáris egyenletrendszerrel megadott altér esetén.
             \item Generátorrendszerből homogén lin.egyenletredszer előállítása. \textbf{Altér dimenziójának \underline{jóldefiniáltsága}}, $\mathbb{R}^n$ \textbf{standard bázisa, bázishoz tartozó koordinátavektor \underline{kiszámítása}}.
@@ -59,24 +59,90 @@
             \item \textbf{Sor- oszlop- és determinánsrang}, \underline{ezek viszonya} és \textbf{kiszámítása}. Összeg és szorzat rangja. \textbf{Lineáris egyenletrendszer mátrixegyenletes alakja}, a \underline{megoldhatóság és az oszlopok alterének kapcsolata}. Az egyértelmű megoldhatóság feltétele $n \times n$ együtthatómátrix esetén.
         \end{enumerate}
 
+	\section{Tétel}
 		
+		\subfile{sections/1/1.tex}
 
-4.
-Gráfút hossza, gráfcsúcsok távolsága nemnegatív és konzervatív hosszfüggvény, triviális és pontos (r, l)-felső becslés.
-!Kép!Adott G=(V,E) (ir.) gráf és egy !Képlet!élhosszfv.Egy G-beli  (ir.) út hossza az út éleinek összhossza, diste(n,v) pedig az (ir.)uv-utak közül a legrövidebb hosszát jelöli.Az l hosszfv konzervatív ha nincs G-ben negatív összhosszúságú (ir.) kör. Adott G=(V,E) (ir.) gráf r e v és egy l:E->R élhosszfv. Az f: ->R függvényt (r,l) - felső becslésnek nevezzük, ha f(r)=o és !Képlet! teljesül G minden v csúcsára. Az e=uv élmenti javítás esetén a f (v) értéket a min !Képlet! értékkel helyettesíthetjük.  (1) Ha l konzervatív akkor tetsz.  (r,l)-f. b. élmenti javítása (r,l)-fb-t ad. (2) Ha az f (r,l) felső becsléshez nincs érdemi élmenti javítás, akkor f(v)=diste(r,v) !Képlet!
-* Élmenti javítás:!Kép!!Kép!!Kép!
-* Dijkstra algoritmus működése:
-* Input: G=(V,E) (ir.) gráf, l. E-> R+ nemnegatív hosszfv, !Képlet! gyökér
-* Output: diste (r,v) minden !Képlet!
-* Működés. Kezdetben !Képlet! Az algoritmus C-dik fázisában (i=1,2,..., (v) a következő történik. 1. Legyen ui az v csúcs a !Képket! halmazból, amelyre f (r) minimális és legy !Képlet!2. Végezzünk élmenti javításokat minden Ui-ből kivezető uix élen. Az output a (v)-dik fázik utáni f függvény. Szokás  megjelölni a végső f (v) értékeket beállító éleket. Ha az output az f (r,l)- felső becslés, akkor (1) f (ui)!Képlet!(2) f (u1) !Képlet! (3) élmentijavítás nem változhat f-n
-A Dijkstra-algoritmus helyesen működik,azaz diste (r,v)=f(v) !Képlet! teljesül. Az algoritmus során megjelölt élek egy legrövidebb utak fáját alkotják G-ben: az r gyökérből minden r-ből elérhető csúcshoz vezet olyan legrövidebb út is ami csak megjelölt éleket tartalmaz. A Dijkstra-algoritmus lépésszáma legfeljebb. konst. !Képlet!, ahol n=(v) m=(E).
-!Kép!!Kép!!Kép!!Kép!
-*Ford-algoritmus: Input: G=(V,E) (ir.) gráf, l:E->R konzervatív hosszfv, !Képlet! gyökérpont.Output: diste(r,v) minden !Képlet! Működés: Legyen !Képlet! Kezdetben legy !Képlet! Az i-dik fázis !Képlet! esetén abból éll, hogy elvégezzük az !Képlet! élek menti javításokat. A végén az output !Képlet! minden v-re !Képlet!
-!Kép!
-Biz: Ha l konzervatív, akkor diste (r,v)=!Képlet! f1 (v)=dist(r,v) ha !Képlet! legrövidebb rv-út. f2(v)=dist(r,v) ha !Képlet! legrövidebb rv-út. !Képlet!=dist(r,v) ha !Képlet! élű legrövidebb rv-út. Tehát !Képlet! Ha fi=fi-1, akkor a Ford-algoritmust az i-dik fázis után be lehet fejezni, hisz nincs érdemi émj, így fu-1=fi. Az !Képlet! beállító élek legrövidebb utak fáját alkotják.
-Biz: A Dijkstra esethez hasonló. Tetsz. csúcsból visszafelé követve a végső értéket beállító éleket !Képlet!hosszúságú rv-utat találunk.Lépészám: Ha a !Képlet! akkor minden fázisban !Képlet!, ami konst.m lépés. Ez összesen !Képlet! az algoritmus hatékony.
-* Floyd-algoritmus: Input: G=(V,E) (ir.) gráf l:E->R konzervatív. Output: dist (u,v) !Képlet! Működés: Legyen !Képlet! és !Képlet! a legrövidebb olyan !Képlet! út hossza, aminek belső pontjai csak !Képlet! lehetnek. Kezdetben !Képlet!, különben !Képlet!. A j-dik fázisban !Képlet! alapján a !Képlet! függvényt határozza meg. Az n-dik fázi után dist!Képlet! az output. Ha ez fennáll: tehát helyes a Floyd-algoritmus. OUTPUT !Képlet! dist !Képlet!
-*Lépésszám: A !Képlet! felírása konst * n2 lépés. Minden fázis konst' *n2. Mivel összesen u fázis van azért a lépésszám legfeljebb konst'*n3 lépés, az algoritmus hatékony.
+	\section{Tétel}
+		
+		\subfile{sections/2/2.tex}
+		
+	\section{Tétel}
+		
+		\subfile{sections/3/3.tex}
+
+	\section{Tétel}
+		
+		\subfile{sections/4/4.tex}
+
+	\section{Tétel}
+		
+		\subfile{sections/5/5.tex}
+
+	\section{Tétel}
+		
+		\subfile{sections/6/6.tex}
+
+	\section{Tétel}
+		
+		\subfile{sections/7/7.tex}
+
+	\section{Tétel}
+		
+		\subfile{sections/8/8.tex}
+
+	\section{Tétel}
+		
+		\subfile{sections/9/9.tex}
+
+	\section{Tétel}
+		
+		\subfile{sections/10/10.tex}
+
+	
+\end{document}
+
+
+\section{Tétel}
+		
+		\subfile{sections/11/11.tex}
+
+	\section{Tétel}
+		
+		\subfile{sections/12/12.tex}
+
+	\section{Tétel}
+		
+		\subfile{sections/13/13.tex}
+
+	\section{Tétel}
+		
+		\subfile{sections/14/14.tex}
+
+	\section{Tétel}
+		
+		\subfile{sections/15/15.tex}
+
+	\section{Tétel}
+		
+		\subfile{sections/16/16.tex}
+
+	\section{Tétel}
+		
+		\subfile{sections/17/17.tex}
+
+	\section{Tétel}
+		
+		\subfile{sections/18/18.tex}
+
+	\section{Tétel}
+		
+		\subfile{sections/19/19.tex}
+
+	\section{Tétel}
+		
+		\subfile{sections/20/20.tex}
+
 
 11.
 *Altér bázisa A !Képlet! altér bázisa a V egy lin.ftn. generátorrendszere. Az e1, e2,...en vektorok az Rn standard bázisát alkotják. Állítás: Minden altérnek van bázisa. Kétféleképp is előállíthatjuk Rn tetsz. V alterének egy bázisát.  (1) Generátorrendszer ritkításával, azaz generátorrendszerből a többi által generált elem elhagyásával egész addig, amíg a maradék rendszer egyetlen elemét sem generálja a többi maradék ellen. Az így kapott generátorrendszer lin.ftn. (2) Lin.ftn. rendszer hízlalásával. Ha van az albérben a lin. ftn. rendszer által nem generált vektor, akkor azzal a rendszer úgy bővíthető, hogy a lin. ftn. tulajdonság megmarad.
@@ -111,87 +177,3 @@ Biz.: (1) Az előiző állítás (2) részét alkalmazzuk AT transzponálra.  (2
 * Sor, oszlop, determináns rang. !Kép!ESA' során a sorrang és oszloprang sem változik. Láttuk, hogy ESA' során a sorok által generált altér nem változik, így a dimenziója is ugyanannyi marad. ESA' hatására az oszlopok közti lineáris összefüggések sem változnak, ezért oszlopok egy halmaza pontosan akkorlin. ftn.ESA' előtt, ha ugyanezen oszlophalmaz ln. ftn. ESA' után. Ha A RLA mátrix akkor !Képlet! száma. A v1-ekhez tartozó oszlopok az oszlopok által generált altér bárisát alkotják, így !Képlet! száma. RLA mátrix csupa 0 sorait elhagyva a maradék (v1-t tartalmazó) sorok lin. ftn-ek,hisz egyikse áll elő a többi lin. kombjaként. Ezért S (A) is a v1-ek száma, tehát !Képlet!.Tetsz. A mátrix esetén !Képlet!. Legyen A' Az A-ból ESA'-okkal kapott RLA mátrix. Ekkor !Képlet!. !Képlet! Tetsz. A mátrixra !Képlet!. Ha s (A)=k, akkor az előző állítás miatt !Képlet!. Ha pedig d (A)=k akkor !Képlet! Ezért s(A)=d (A). AZ !Képlet! mátrix rangja r(A)=d(A) Rang meghatározása: ESA'-okkal képzett RLA mátrix v1-ei száma.
 (1) A transzponált sorai a mátrix oszlopainak felelnek meg. (2) A sorok által generált altér egy bázisát választhatjuk a sorvektorokból. Ez a bázis a sorok egy maximális méretű lin. ftn. részhalmaza. Ezért ennek a bázisnak az elemszáma s(A), vagyis a sorvektorok által generált altér dimenziója. Az oszlopokra vonatkozó állítást hasonló érvelés igazolja.
 !Kép!!Kép!!Kép!
-
-
-	\section{}
-		
-		\subfile{sections/1/1.tex}
-
-	\section{}
-		
-		\subfile{sections/2/2.tex}
-		
-	\section{}
-		
-		\subfile{sections/3/3.tex}
-
-	\section{}
-		
-		\subfile{sections/4/4.tex}
-
-	\section{}
-		
-		\subfile{sections/5/5.tex}
-
-	\section{}
-		
-		\subfile{sections/6/6.tex}
-
-	\section{}
-		
-		\subfile{sections/7/7.tex}
-
-	\section{}
-		
-		\subfile{sections/8/8.tex}
-
-	\section{}
-		
-		\subfile{sections/9/9.tex}
-
-	\section{}
-		
-		\subfile{sections/10/10.tex}
-
-	\section{}
-		
-		\subfile{sections/11/11.tex}
-
-	\section{}
-		
-		\subfile{sections/12/12.tex}
-
-	\section{}
-		
-		\subfile{sections/13/13.tex}
-
-	\section{}
-		
-		\subfile{sections/14/14.tex}
-
-	\section{}
-		
-		\subfile{sections/15/15.tex}
-
-	\section{}
-		
-		\subfile{sections/16/16.tex}
-
-	\section{}
-		
-		\subfile{sections/17/17.tex}
-
-	\section{}
-		
-		\subfile{sections/18/18.tex}
-
-	\section{}
-		
-		\subfile{sections/19/19.tex}
-
-	\section{}
-		
-		\subfile{sections/20/20.tex}
-
-	
-\end{document}

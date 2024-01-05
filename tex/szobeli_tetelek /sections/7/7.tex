@@ -11,7 +11,59 @@
 \end{center}
 
     \begin{itemize}
-        \item 
+        \item \textbf{Direct Acyclic Graphs}
+
+        \textcolor{blue}{\textbf{Def:}} A $G = (V,E)$ irányított gráf \textcolor{red}{aciklikus} (más néven \textcolor{red}{DAG}), ha $G$ nem tartalmaz irányított kört.
+
+        \textcolor{violet}{\textbf{Példa:}} DAG-ot úgy kaphatunk, hogy egy $G$ irányítatlan gráf csúcsait csupa különbözőszámmal megszámozzuk, és minden élt a kisebb számot viselő csúcsból a nagyobba irányítunk.
+
+        Ha ugyanis lenne az így megirányított gráfban irányított kör, akkor az élei mentén a számok végig növekednének, ami lehetetlen. Azt fogjuk ihazolni, hogy a fenti példa minden DAG-ot leír.
+
+        \textcolor{blue}{\textbf{Def:}} A $G = (V,E)$ irányított gráf csúcsainak \textcolor{red}{topologikus sorrendje} alatt a csúcsok olyan sorrendjét értjük, amire igaz, hogy minden irányított él a sorban előbb álló csúcsból vezet a sorban későbbi csúcsba. $(V=\{v_1,v_2,\dots,v_n\},v_iv_j \in E \Rightarrow i < j)$
+
+        \textcolor{orange}{\textbf{Tétel:}} ($G$ irányított gráf DAG) $\Leftrightarrow$ ($V(G)$-nek $\exists$ topologikus sorrendje).
+
+        \textcolor{green}{\textbf{Biz:}} Tegyük fel, hogy $\exists$ toplogikus sorrend. Láttuk, hogy $G$ ekkor DAG. \checkmark
+
+        \textcolor{green}{\textbf{Biz:}} Most tegyük fel, hogy $G$ DAG, és futtassunk rajra egy DFS-t. Láttuk, hogy a DFS után nem lesz visszaél, ezért minden $uv$ irányított élre $b(u) > b(v)$ teljesül. Ezért a csúcsok befejezési sorrendjének megfordítása a $G$ csúcsainak egy topologikus sorrendje.  \textcolor{blue}{$\Box$} 
+
+        \textcolor{orange}{\textbf{Köv:}} Irányított gráf aciklikussága DFS-sel gyorsan eldönthető: ha van visszaél, akkor a visszaél DFS-fabeli alapköre $G$ egy irányított köre, így $G$ nem DAG. Ha pedig nincs visszaél, akkor a fordított befejezési sorrend a $G$ egy topologikus sorrendje, $G$ tehát DAG.
+
+        \textcolor{blue}{\textbf{Megj:}} DAG-ban topologikus sorrendet forráskeresések és forrástörlések alkalmazásával is találhatunk.
+
+        \item \textbf{Leghosszabb út keresése}
+
+        \textcolor{violet}{\textbf{Ötlet:}} Az $l'(uv) = -l(uv)$ élhosszokkal a leghosszabb utak legrövidebbekké válnak. Olyanokat pedig tudunk keresni.
+
+        \textcolor{red}{\textbf{Gond:}} A módszerünk csak konzervatív élhosszokra működik. Irányítatlan gráfon ez nemnegatív élhosszokat jelent, ezért ez az ötlet itt nem segít. Itányított esetben nem baj a negatív élhossz, feltéve, hogy $G$ DAG. Ekkor Ford, Floyd bármelyike használható.
+
+        \textcolor{green}{\textbf{Jó hír:}} Van egy még gyorsabb módszer: a dinamikus programozás. Ennek segítségével tetszőleges $G$ DAG minden $v$ csúcsához ki tudjuk számítani a $v$-be vezető leghosszabb utat. (Sőt! \dots)
+
+        \textcolor{blue}{\textbf{Leghosszabb út DAG-ban:}} \underline{Input:} $G = (V,E) DAG, l:E \rightarrow \mathbb{R}. \underline{Output:} max$\{$l(P):P v$-be vezető út\} minden $v \in V$ csúcsra. \underline{Működés:} $\boxed{1} V = \{v_1,v_2,\dots,v_n\}$ topologikus sorrend meghatározása. $\boxed{2} i = 1,2,\dots,n: f(v_i) = max\{max\{f(v_j)+l(v_jv_i):v_jv_i \in E\},0\}$ Output: $f(v)\; \forall v \in V$
+
+        \textcolor{violet}{\textbf{Helyesség:}} Ha a $v_i$-be veeztő leghosszabb út utolsó előtti csúcsa $v_j$, akkor $f(v_i) = f(f_j) + l(v_jv_i)$.
+
+        \textcolor{blue}{\textbf{Megj:}} Ha a fenti algoritmusban minden csúcsra megjelöljük az $f(v)$ értéket beállító élt (éleket), akkor a megjelölt élek minden $v$ csúcsba megadnak egy leghosszabb utat. Sőt: minden $v$-be vezető leghosszabb megkapható így.
+
+        \item \textbf{A PERT probléma}
+
+        Egy $a,b,\dots$ tevékenységekből álló projektet kell végrehajtanunk. 
+
+        \textbf{Precedeniafeltételek:} bizonyos $(u,v)$ párok esetén előírás, hogy az $u$ tevékenységet a $v$ előtt kell elvégezni, ezért $v$ az $u$ kezdetét követően $c(uv)$ időkorlát elteltável kezdhető.
+
+        \textbf{Cél:} minden $v$ tevékenységhez olyan $k(v) \geq 0$ kezdési időpont meghatározása, ami nem sérti a preferenciafeltételeket, és a projekt végrehajtási ideje (a legnagyobb $k(v)$ érték) minimális.
+
+        G \textbf{irányított gráf} csúcsai a tevékenységek, élei pedig a precedenciafeltételek, az $uv$ él hossza $c(uv)$.
+
+        \textcolor{orange}{\textbf{Megf:}} (1) Ha $G$ nem DAG, akkor a projekt nem hajtható végre. (2) Ha $G$ DAG, akkor minden $v$ tevékenység legkorábbi kezdási időpontja a $v$-be vezető leghosszabb út hossza.
+
+        \textcolor{orange}{\textbf{Köv:}} A PERT probléma megoldása nem més, mint a $G$ DAG minden csúcsára az oda vezető leghosszabb út meghatározása.
+
+        \textcolor{violet}{\textbf{Terminológia:}} $G$ leghosszabb útja \textcolor{red}{kritikus út}, amivől több is lehet. Kritikus út csúcsai a \textcolor{red}{kritikus tevékenységek.}
+
+        \textcolor{orange}{\textbf{Megf:}} Ha egy kritikus tevékenység nem kezdődik el a lehető legkorábbi időpontban, akkor az egész projekt végrehajtása csúszik.
+
+
     \end{itemize}
 
 \end{document}

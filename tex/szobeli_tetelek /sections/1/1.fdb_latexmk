@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1703691453 "/Users/dave/Documents/GitHub/tex.1felev-szamitastudomany-alapjai/tex/szobeli_tetelek /sections/1/1.tex" "sections/1/1.pdf" "1" 1703691455 0
-  "/Users/dave/Documents/GitHub/tex.1felev-szamitastudomany-alapjai/tex/szobeli_tetelek /sections/1/1.tex" 1703691453 7061 7459a418ca128a159b456a6d266dd653 ""
+["pdflatex"] 1703853334 "/Users/dave/Documents/GitHub/tex.1felev-szamitastudomany-alapjai/tex/szobeli_tetelek /sections/1/1.tex" "sections/1/1.pdf" "1" 1703853336 0
+  "/Users/dave/Documents/GitHub/tex.1felev-szamitastudomany-alapjai/tex/szobeli_tetelek /sections/1/1.tex" 1703853334 6423 66dc0fd7753ffe39fde5b0f2c23b7e9d ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -19,6 +19,7 @@
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1248133631 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb" 1248133631 32915 7bf7720c61a5b3a7ff25b0964421c9b6 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1248133631 32716 08e384dc442464e7285e891af9f45947 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb" 1215737283 138258 6525c253f16cededa14c7fd0da7f67b2 ""
   "/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
@@ -64,9 +65,9 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1694545731 4681924 2c19acd65d59ba67d808d6d74d1273b0 ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1694545878 8183370 1c525ac4ee073a127ca1a6d396f25aaf ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "sections/1/../../szobeli.tex" 1703691335 22722 2bbd9f2c056a387ec52669d3b80345db ""
-  "sections/1/1.aux" 1703691455 32 044b7f8fc9779af7531264e0c5c84b6d "pdflatex"
-  "sections/1/1.tex" 1703691453 7061 7459a418ca128a159b456a6d266dd653 ""
+  "sections/1/../../szobeli.tex" 1703850605 22722 2bbd9f2c056a387ec52669d3b80345db ""
+  "sections/1/1.aux" 1703853336 32 044b7f8fc9779af7531264e0c5c84b6d "pdflatex"
+  "sections/1/1.tex" 1703853334 6423 66dc0fd7753ffe39fde5b0f2c23b7e9d ""
   (generated)
   "sections/1/1.aux"
   "sections/1/1.log"
