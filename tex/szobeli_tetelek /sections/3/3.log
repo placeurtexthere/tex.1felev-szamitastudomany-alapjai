@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  29 DEC 2023 17:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  5 JAN 2024 18:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -296,7 +296,7 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 <./img/1.png, id=1, 1014.79124pt x 317.185pt>
 File: ./img/1.png Graphic file (type png)
 <use ./img/1.png>
-Package pdftex.def Info: ./img/1.png  used on input line 33.
+Package pdftex.def Info: ./img/1.png  used on input line 32.
 (pdftex.def)             Requested size: 456.65184pt x 142.73192pt.
  [1
 
@@ -309,13 +309,13 @@ L3 programming layer <2023-08-29>
 Here is how much of TeX's memory you used:
  6074 strings out of 474934
  93176 string characters out of 5759811
- 1940807 words of memory out of 5000000
+ 1938807 words of memory out of 5000000
  27520 multiletter control sequences out of 15000+600000
  561565 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 77i,12n,82p,1259b,337s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 77i,12n,82p,1259b,333s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on sections/3/3.pdf (2 pages, 139366 bytes).
+Output written on sections/3/3.pdf (2 pages, 138485 bytes).
 PDF statistics:
  65 PDF objects out of 1000 (max. 8388607)
  38 compressed objects within 1 object stream

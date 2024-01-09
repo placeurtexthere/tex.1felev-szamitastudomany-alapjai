@@ -6,6 +6,7 @@
 \contentsline {section}{\numberline {5}Tétel}{11}{}%
 \contentsline {section}{\numberline {6}Tétel}{14}{}%
 \contentsline {section}{\numberline {7}Tétel}{16}{}%
-\contentsline {section}{\numberline {8}Tétel}{17}{}%
-\contentsline {section}{\numberline {9}Tétel}{21}{}%
-\contentsline {section}{\numberline {10}Tétel}{23}{}%
+\contentsline {section}{\numberline {8}Tétel}{18}{}%
+\contentsline {section}{\numberline {9}Tétel}{22}{}%
+\contentsline {section}{\numberline {10}Tétel}{24}{}%
+\contentsline {section}{\numberline {11}Tétel}{27}{}%

@@ -223,6 +223,14 @@ INPUT ./sections/10/./img/1.png
 INPUT sections/10/./img/1.png
 INPUT ./sections/10/./img/1.png
 INPUT ./sections/10/./img/1.png
+INPUT ./sections/11/11.tex
+INPUT sections/11/11.tex
+INPUT ./sections/11/11.tex
+INPUT sections/11/11.tex
+INPUT ./sections/11/img/1.png
+INPUT sections/11/img/1.png
+INPUT ./sections/11/img/1.png
+INPUT ./sections/11/img/1.png
 INPUT szobeli.aux
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb

@@ -16,16 +16,19 @@
 \begin{document}
 \begin{titlepage}
 	\centering \vfill
-	{\textsc{Budapesti Műszaki és Gazdaságtudományi Egyetem} \par} \vspace{7cm}
+	%{\textsc{Budapesti Műszaki és Gazdaságtudományi Egyetem} \par} \vspace{7cm}
+	{\textsc{Nem hivatalos BME jegyzet} \par} \vspace{7cm}
 	{\huge\bfseries A számítástudomány alapjai\par} \vspace{0.5cm}
 	{\large \textsc{Kidolgozott szóbeli tételsor}\par} \vspace{1.5cm}
 	{\Large\itshape Készítette: Illyés Dávid\par} \vfill
 
 	\noindent\fbox{%
     	\parbox{140mm}{
-			\textbf{A jegyzetben a "A számítástudomány alapjai" nevű tárgy 2023/24/1 félévében kiadott szóbeli tételsor van (többé-kevésbé) kidolgozva. (Jelenleg inkább csak össze gyűjtögetve, de finomítva még nincs.) \textcolor{red}{Minden a jegyzetben található információ (beleértve az ábrákat) a BME tulajdonát képzik és az eredeti előadás diákból, ill. azok alapján van megírva. Nem hivatalos BME által kiadott dokumentum!}}
+			\textbf{A jegyzetben a "A számítástudomány alapjai" nevű tárgy 2023/24/1 félévében kiadott szóbeli tételsor van (többé-kevésbé) kidolgozva. (Jelenleg inkább csak össze gyűjtögetve, de finomítva még nincs.)}
    		}
 	}
+
+	%\textcolor{red}{Minden a jegyzetben található információ (beleértve az ábrákat) a BME tulajdonát képzik és az eredeti előadás diákból, ill. azok alapján van megírva. Nem hivatalos BME által kiadott dokumentum!}
 	
 	\vfill {\large \today\par}
 \end{titlepage} 
@@ -40,13 +43,13 @@
             \item Gráfelméleti alapfogalmak: \textbf{csúcs, él, diagram, fokszám}. Egyszerű gráf, irányított gráf, véges gráf, komplementer gráf, reguláris gráf, él/csúcstörlés, élhozzáadás, (feszítő/feszített) részgráf, izomorfia, élsorozat, séta, út, kör,\textbf{összefüggő gráf}, komponens. \underline{\textbf{kézfogás-lemma}}.
             \item \underline{\textbf{Élhozzáadási lemma}} erdő, \textbf{fa}, fák egyszerűbb tulajdonságai: \underline{két levél}, \underline{erdők élszáma}. \textbf{Feszítőfa} \underline{létezése}, feszítőfához tartozó alapkörök és alap vágások.
             \item \textbf{Minimális költségű feszítőfa}, mkffák struktúrája, \textbf{Kruskal-algoritmus} \underline{helyessége}, villamos hálózathoz tartozó normál fa keresése.
-            \item Általános gráfbejárás: \textbf{a csúcsok állapotváltozása, a bejárás általános lépése}, a bejáráshoz tartozó sorrender ill. az élek osztályozása bejárás után. A \textbf{BFS} és \underbar{tulajdonságai}, legrövidebb utak fájának \underline{létezése}.
+            \item Általános gráfbejárás: \textbf{a csúcsok állapotváltozása, a bejárás általános lépései}, a bejáráshoz tartozó sorrend ill. az élek osztályozása bejárás után. A \textbf{BFS} és \underbar{tulajdonságai}, legrövidebb utak fájának \underline{létezése}.
             \item Gráfút hossza, gráfcsúcsok távolsága, nemnegatív és konzervatív hosszfüggvény, triviális és pontos $(r,l)$\textbf{-felső becslés, \underline{élmenti javítás.} Dijkstra-algoritmus működése}, Ford-algoritmus \underline{helyessége} és lépésszáma. Legrövidebb utak fájának létezése.
             \item \textbf{Mélységi keresés} és alkalmazásai (\underline{fellépő éltípusok}, mélységi- és befejezési számozásból az éltípus meghatározása, \underline{irányított kör létezésének eldöntése DFS-sel)}.
             \item \textbf{DAG}, \underline{jellemzése}, \textbf{topologikus sorrend} \underline{keresése}. Leghosszabb utak keresése, \textbf{PERT-módszer}, kritikus utak és tevékenységek.
-            \item \textbf{Euler-séta és körséta} \underline{létezésének szükkséges és elégséges feltétele}. \textbf{Hamilton-kör és út} létezésére szükséges, ill. elégséges feltételek: \underline{komponensszám ponttörlés után} (Petersen-gráf) \underline{\textbf{Dirac, Ore tételei}}, gazdag párok, \underline{hízlalási lemma}, Chavátal-lezárt.
-            \item \textbf{Gráfok síkba ill. gömbre rajzolhatósága, tartomény, sztereografikus projekció}, következményei. Az \underline{\textbf{Euler-féle poliédertétel}, duális kézfogáslemma} és következményei: \underline{felső korlátok az élszámra} és a \underline{minimális fokszáma} egyszerű, síkbarajzolható gráfokon.
-            \sloppy\item \underline{\textbf{Kuratowski gráfok} síkbarajzolhatósága}, \textbf{soros bővítés, \textit{Kuratowski-tétel} könnyű iránya}. \textbf{Síkbarajzolt gárf duálisa}, a duális paraméterei. Vágás, elvágó él, soros élek. \textit{Kör-vágás dualitása}, különféle élek duálisai. Whitney két tétele, Whitney operációk.
+            \item \textbf{Euler-séta és körséta} \underline{létezésének szükséges és elégséges feltétele}. \textbf{Hamilton-kör és út} létezésére szükséges, ill. elégséges feltételek: \underline{komponensszám ponttörlés után} (Petersen-gráf) \underline{\textbf{Dirac, Ore tételei}}, gazdag párok, \underline{hízlalási lemma}, Chavátal-lezárt.
+            \item \textbf{Gráfok síkba ill. gömbre rajzolhatósága, tartomány, sztereografikus projekció}, következményei. Az \underline{\textbf{Euler-féle poliédertétel}, duális kézfogáslemma} és következményei: \underline{felső korlátok az élszámra} és a \underline{minimális fokszáma} egyszerű, síkbarajzolható gráfokon.
+            \sloppy\item \underline{\textbf{Kuratowski gráfok} síkbarajzolhatósága}, \textbf{soros bővítés, \textit{Kuratowski-tétel} könnyű iránya}. \textbf{Síkbarajzolt gráf duálisa}, a duális paraméterei. Vágás, elvágó él, soros élek. \textit{Kör-vágás dualitása}, különféle élek duálisai. Whitney két tétele, Whitney operációk.
             \item \textbf{Lineáris egyenletrendszer, kibővített együtthatómátrix, elemi sorekvivalens átalakítás} és \underline{kapcsolata a megoldásokkal}. \textbf{LA és RLA mátrix, vezéregyes, megoldás leolvasása RLA mátrix esetén}. Tilos sor, kötött változó, szabad paraméter, \underline{ezek jelentése a megoldás/megoldhatóság szempontjából.} \textbf{Gauss-elimináció}, \underline{összefüggés az egyértelmű megoldhatóság, az egynletek és ismeretlenek száma között}.
             \item Az $\mathbb{R}^n$ \textbf{tér}, vektorműveletek azonosságai, (generált) \textbf{altér} (példák), (triviális) \textbf{lineáris kombináció}, alterek metszete, \textbf{generátorrendszer}, \textbf{lineáris függetlenség} (kétféle definíció). \underline{Lin.ftn rendszer hízlalása}, \underline{generátor-rendszer ritkítása}, \underline{kicserélési lemma}, \underline{\textbf{FG-egyenlőtlenség}} és következménye.
             \item ESÁ hatása a sor- és oszlopvektorokra, \textbf{oszlopvektorok lin.ftn-ségének eldöntése}. \textbf{Bázis} fogalm, \underline{\textbf{altér bázisának előállítása generátorrendszerből}} ill. homogén lineáris egyenletrendszerrel megadott altér esetén.
@@ -99,13 +102,11 @@
 		
 		\subfile{sections/10/10.tex}
 
-	
-\end{document}
-
-
-\section{Tétel}
+	\section{Tétel}
 		
 		\subfile{sections/11/11.tex}
+	
+\end{document}
 
 	\section{Tétel}
 		

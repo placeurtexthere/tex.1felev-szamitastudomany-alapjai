@@ -36,11 +36,11 @@
 
         Az $l$ hosszfv konzervatív ha nincs $G$-ben negatív összhosszúságú irányított kör. 
         
-        Adott $G=(V,E)$ irányított gráf $r\in v$ és egy $l:E\rightarrow R$ élhosszfv. Az $f:v \rightarrow R$ függvényt $(r,l)$-felső becslésnek nevezzük, ha $f(r)=0$ és $f(v) \leq dist_l(r,v)$ teljesül $G$ minden $v$ csúcsára. Az $e=uv$ élmenti javítás esetén a $f(v)$ értéket a $min\{f(v),f(u)+l(uv)\}$ értékkel helyettesíthetjük. \begin{itemize}
-        \item[(1)] Ha l konzervatív akkor tetsz.  (r,l)-f. b. élmenti javítása (r,l)-fb-t ad.
-        \item[(2)] Ha az $f(r,l)$ felső becsléshez nincs érdemi élmenti javítás, akkor $f(v)=dist_l(r,v)$ $\forall v \in V$.
+        Adott $G=(V,E)$ irányított gráf $r\in v$ és egy $l:E\rightarrow \mathbb{R}$ élhosszfv. Az $f:v \rightarrow \mathbb{R}$ függvényt $(r,l)$-felső becslésnek nevezzük, ha $f(r)=0$ és $f(v) \leq dist_l(r,v)$ teljesül $G$ minden $v$ csúcsára. Az $e=uv$ élmenti javítás esetén a $f(v)$ értéket a $min\{f(v),f(u)+l(uv)\}$ értékkel helyettesíthetjük. \begin{itemize}
+            \item[(1)] Ha l konzervatív akkor tetsz. $(r,l)$-fb. élmenti javítása (r,l)-fb-t ad.
+            \item[(2)] Ha az $f(r,l)$ felső becsléshez nincs érdemi élmenti javítás, akkor $f(v)=dist_l(r,v)$ $\forall v \in V$.
         \end{itemize}
-        \item \textbf{Az elméleti javítás}
+        \item \textbf{Az élmenti javítás}
 
         \textbf{\textcolor{blue}{Def:}} Tfh $f$ egy $(r,l)$-felső becslés és $uv \in E(G)$. Az $f$ \textcolor{red}{$uv$-elméleti javítása} az az $f'$, amire 
         $
@@ -54,11 +54,11 @@
         
         Ekkor (1) Az $f (r,l)$-felső becslés élmenti javítása mindig $(r,l)$-felső becslést ad.
 
-        \textbf{\textcolor{green}{Biz:}} Azt kell megmutatni, hogy van  olyan $rv$-út, aminek a hossza legfeljebb $f(u) + l(uv)$. Ha egy legrövidebb $ru$-utat kiegészítünk az $uv$ éllel, akkor olyan $rv$-élsorozatot kapunk, aminek az összhossza $dist_l (r,u) + l(uv) \leq f(u) + l(uv)$. ,,Könnyen" látható, hogy  az élhosszfüggvény konzervativitása miatt ha van $x$ összhosszúságú $rv$-élsorozat, akkor van legfeljebb $x$ összhosszúságú $rv$-út is. Ezek szerint van legfeljebb $f(u) + l(u,v)$ hosszúságú $uv$-út is, azaz az érdemi élmenti javítás után szintén $(r,l)$-felső becslést kapunk.   \textcolor{blue}{$\Box$} 
+        \textbf{\textcolor{green}{Biz:}} Azt kell megmutatni, hogy van  olyan $rv$-út, aminek a hossza legfeljebb $f(u) + l(uv)$. Ha egy legrövidebb $ru$-utat kiegészítünk az $uv$ éllel, akkor olyan $rv$-élsorozatot kapunk, aminek az összhossza $dist_l (r,u) + l(uv) \leq f(u) + l(uv)$. ,,Könnyen" látható, hogy  az élhosszfüggvény konzervativitása miatt ha van $x$ összhosszúságú $rv$-élsorozat, akkor van legfeljebb $x$ összhosszúságú $rv$-út is. Ezek szerint van legfeljebb $f(u) + l(u,v)$ hosszúságú $uv$-út is, azaz az érdemi élmenti javítás után szintén $(r,l)$-felső becslést kapunk.    
 
         (2) $f (r,l)$-felső becslés (pontosan) $\Longleftrightarrow$ ($f$-en $\nexists$ érdemi élmenti javítás).
 
-        \textcolor{green}{\textbf{Biz:}}  $\Rightarrow$: Ha $f$ pontos, akkor biztosan nincs rajta érdemi élmenti javítás: ha volna, akkor egy felső becslés a pontos érték alá csökkenne, így az élmenti javítás nem  $(r,l)$-felső becslést eredményezne. $\Leftarrow$: Legyen $v \in V(G)$ tetsz, és legyen $P$ egy legrövidebbb $rv$-út. A $P$ egyik éle mentén sincs érdemi élmenti javítás, ezért $P$ minden $u$ csúcsára pontos a felső becslés: $f(u) = dist_l(r,u)$. Ez igaz az út utolsó csúcsára, a tetszőlegesen választott $v$-re is.  \textcolor{blue}{$\Box$}
+        \textcolor{green}{\textbf{Biz:}}  $\Rightarrow$: Ha $f$ pontos, akkor biztosan nincs rajta érdemi élmenti javítás: ha volna, akkor egy felső becslés a pontos érték alá csökkenne, így az élmenti javítás nem  $(r,l)$-felső becslést eredményezne. $\Leftarrow$: Legyen $v \in V(G)$ tetsz, és legyen $P$ egy legrövidebbb $rv$-út. A $P$ egyik éle mentén sincs érdemi élmenti javítás, ezért $P$ minden $u$ csúcsára pontos a felső becslés: $f(u) = dist_l(r,u)$. Ez igaz az út utolsó csúcsára, a tetszőlegesen választott $v$-re is.  
         
         \item {Dijkstra algoritmus működése:} \begin{itemize}
             \item \textbf{Input}: $G=(V,E)$ irányított gráf, $l:E\rightarrow \mathbb{R}^+$ nemnegatív hosszfüggvény, $r \in V$ gyökér
@@ -66,7 +66,7 @@
             \item \textbf{Működés}: Kezdetben $U_0 = \emptyset, f(r) = 0$ és $f(v) = \infty$, ha $v \neq r$. 
             
             Az algoritmus $i$-dik fázisában $(i=1,2,..., |v|)$ a következő történik. \begin{itemize}
-                \item[1.] Legyen $u_i$ az $v$ csúcs a $v\backslash u_{i-1}$ halmazból, amelyre $f(r)$ minimális és legyen $u_{i-1} \cup {u_i}$.
+                \item[1.] Legyen $u_i$ a $v$ csúcs a $v\backslash u_{i-1}$ halmazból, amelyre $f(r)$ minimális és legyen $u_{i-1} \cup {u_i}$.
                 \item[2.] Végezzünk élmenti javításokat minden $u_i$-ből kivezető $u_ix$ élen.
             \end{itemize}
             
@@ -77,7 +77,7 @@
                 \item[(2)] $f(u_i) \leq f(u_2) \leq \dots \leq (u_n)$
                 \item[(3)] élmentijavítás nem változhat $f$-n.
             \end{itemize}
-            \item A Dijkstra-algoritmus helyesen működik, azaz $dist_l(r,v)=f(v) \forall v\in V$ teljesül. Az algoritmus során megjelölt élek egy legrövidebb utak fáját alkotják $G$-ben: az $r$ gyökérből minden $r$-ből elérhető csúcshoz vezet olyan legrövidebb út is ami csak megjelölt éleket tartalmaz. 
+            \item A Dijkstra-algoritmus helyesen működik, azaz $dist_l(r,v)=f(v) \forall v\in V$ teljesül. Az algoritmus során megjelölt élek egy legrövidebb utak fáját alkotják $G$-ben: az $r$ gyökérből minden $r$-ből elérhető csúcshoz vezet olyan legrövidebb út is, ami csak megjelölt éleket tartalmaz. 
             \item A Dijkstra-algoritmus lépésszáma legfeljebb. $konst \cdot (n^2+m)$, ahol $n=|v|$ $m=|E|$.
         \end{itemize}
         \item \textbf{\textcolor{blue}{Dijkstra-algoritmus:}} \underline{Input:} $G = (V,E), l : E \rightarrow \mathbb{R}_+, r \in V$. \underline{Output:} $dist_l(r,v) \forall v \in V$ \underline{Működés:} $U_0 := \emptyset, f_0$ a triviális. $(r,l)$-felső becslés. 
@@ -90,7 +90,7 @@
             
             \textcolor{orange}{\textbf{Megf:}} Ha a $v$-be vezet megjelölt él, akkor vezet $r$-ből $v$-be megjelölt éleken út, és ennek hozza megegyezik $f_{|V|} (v)$-vel.
 
-            \textcolor{green}{\textbf{Biz:}} $f_{|V|} (r) = 0$, és a megjelölt élek mentén haladva az $f_{|V|}$ érték az élhosszal növekszik.  \textcolor{blue}{$\Box$}
+            \textcolor{green}{\textbf{Biz:}} $f_{|V|} (r) = 0$, és a megjelölt élek mentén haladva az $f_{|V|}$ érték az élhosszal növekszik.  
 
         \item \textbf{Dijkstra helyessége}
 				
@@ -98,19 +98,19 @@
 
         (1) Ekkor $f_{|V|}(u_i) \leq f_{|V|}(u_{i+1})$ teljesül $\forall 1 \leq i \leq n$.
 
-        \textcolor{green}{\textbf{Biz:}} Az $i$-dik fázisban $f_i(u_i) \leq f_i(u_{i+1})$ teljesült az $u_i$ választása miatt. Ezek után $f_i(u_i)$ már nem változott: $f_{|V|}(u_i) = f_i(u_i)$. Ugyan $f_i(u_{i+1})$ még csökkenhetett, de csak az $u_iu_{i+1}$ él mentén történt javítás miatt, hiszen az $(i+1)$-dik fázisban $u_{i+1}$ bekerült az $U_i$ halmazba, és a hozzá tartozó $(r,l)$-fb már nem csökken tovább. Ekkor $f_{i+1}(u_{i+1}) = min \{f_i(u_{i+1}),f_i(u_i)+l(u_iu_{i+1})\} \geq f_i(u_i)$, mivel $l(u_iu_{i+1}) > 0$. Ezért $f_{|V|}(u_i) = f_i(u_i) \leq f_{i+1}(u_{i+1}) = f_{|V|}(u_{i+1})$  \textcolor{blue}{$\Box$}
+        \textcolor{green}{\textbf{Biz:}} Az $i$-dik fázisban $f_i(u_i) \leq f_i(u_{i+1})$ teljesült az $u_i$ választása miatt. Ezek után $f_i(u_i)$ már nem változott: $f_{|V|}(u_i) = f_i(u_i)$. Ugyan $f_i(u_{i+1})$ még csökkenhetett, de csak az $u_iu_{i+1}$ él mentén történt javítás miatt, hiszen az $(i+1)$-dik fázisban $u_{i+1}$ bekerült az $U_i$ halmazba, és a hozzá tartozó $(r,l)$-fb már nem csökken tovább. Ekkor $f_{i+1}(u_{i+1}) = min \{f_i(u_{i+1}),f_i(u_i)+l(u_iu_{i+1})\} \geq f_i(u_i)$, mivel $l(u_iu_{i+1}) > 0$. Ezért $f_{|V|}(u_i) = f_i(u_i) \leq f_{i+1}(u_{i+1}) = f_{|V|}(u_{i+1})$  
 
         (2) $f_{|V|}(u_1) \leq f_{|V|}(u_2) \leq \dots \leq f_{|V|}(u_n)$
 
         (3) A Dijsktra-algoritmus outputjaként kaptt $f_{|V|}$-n élmenti javítás nem tud változtatni.
 
-        \textcolor{green}{\textbf{Biz:}} Tegyük fel, hogy $u_iu_j \in E(G)$ a $G$ egy tetszőleges éle. Ha $i > j$, akkor (2) miatt $f_{|V|}(u_i) \geq f_{|V|}(u_j)$, ezért az $u_iu_j$ mentén történő javítás nem tudja $f_{|V|}(u_j)$-t csökkenteni, hisz $l(u_iu_j)$ pozitív. Ha pedig $i < j$, akkor az $i$-dik fázisban megrörtént az $u_iu_j$ mentén történő javítás, és ezt követően $f(u_i)$  nem váltorott, azaz $f_{|V|}(u_i) = f_i(u_i)$. A másik $(r,l)$-felső becslés pedig csak tovább csökkenhetett a késpbbi émj-ok során $f_{|V|}(u_j) \leq f_i(u_j)$. Ezért az $u_iu_j$ él mentén sem az $i$-dik fázisban, sem később nincs érdemi javítás.  \textcolor{blue}{$\Box$}
+        \textcolor{green}{\textbf{Biz:}} Tegyük fel, hogy $u_iu_j \in E(G)$ a $G$ egy tetszőleges éle. Ha $i > j$, akkor (2) miatt $f_{|V|}(u_i) \geq f_{|V|}(u_j)$, ezért az $u_iu_j$ mentén történő javítás nem tudja $f_{|V|}(u_j)$-t csökkenteni, hisz $l(u_iu_j)$ pozitív. Ha pedig $i < j$, akkor az $i$-dik fázisban megtörtént az $u_iu_j$ mentén történő javítás, és ezt követően $f(u_i)$  nem változott, azaz $f_{|V|}(u_i) = f_i(u_i)$. A másik $(r,l)$-felső becslés pedig csak tovább csökkenhetett a későbbi émj-ok során $f_{|V|}(u_j) \leq f_i(u_j)$. Ezért az $u_iu_j$ él mentén sem az $i$-dik fázisban, sem később nincs érdemi javítás.  
 
         \textcolor{orange}{\textbf{Tétel:}} A Dijsktra-algoritmus helyesen működik, azaz $G$ minden csúcsára igaz, hogy $dist(r,v) = f_{|V|}(v)$.
 
-        \textcolor{green}{\textbf{Biz:}} A Dijsktra-algoritmus az $f_0$ triviális $(r,l)$-felső becslésből indul ki, és élmenti javításokat alkalmaz. Így minden $f_i$ (speciálisan $f_{|V|}$ is) $(r,l)$-felső becslés lesz. A fenti (3)-as megfigyelés miatt $f_{|V|}$-n nem  végezhető érdemi élmenti javítás. Ezért egy korábbi (2)-es megfigyelés miatt $f_{|V|}$ pontos $(r,l)$-felső becslés, azaz $f_{|V|}(v) = dist_l(r,v) \forall v \in V(G)$.  \textcolor{blue}{$\Box$}
+        \textcolor{green}{\textbf{Biz:}} A Dijsktra-algoritmus az $f_0$ triviális $(r,l)$-felső becslésből indul ki, és élmenti javításokat alkalmaz. Így minden $f_i$ (speciálisan $f_{|V|}$ is) $(r,l)$-felső becslés lesz. A fenti (3)-as megfigyelés miatt $f_{|V|}$-n nem  végezhető érdemi élmenti javítás. Ezért egy korábbi (2)-es megfigyelés miatt $f_{|V|}$ pontos $(r,l)$-felső becslés, azaz $f_{|V|}(v) = dist_l(r,v) \forall v \in V(G)$.  
         
-        \item Könnyű olyan példát találni, ahol a Dijkstra-algoritmus konzervatív hosszüggvény esetén hibás eredményt ad. Azonban konzervatív hosszüffvény esetén is igaz, hogy 
+        \item Könnyű olyan példát találni, ahol a Dijkstra-algoritmus konzervatív hosszfüggvény esetén hibás eredményt ad. Azonban konzervatív hosszüffvény esetén is igaz, hogy 
 
         \begin{itemize}
             \item $(r,l)$-fb élmenti javítása $(r,l)$-fb-t eredményez, ill. 
@@ -123,13 +123,13 @@
 
         \textcolor{orange}{\textbf{Állítás:}} Ha $l$ konzervatív, akkor $dist_l(v)\; v \in V$-re.
 
-        \textcolor{green}{\textbf{Biz:}} $f_1(v) = dist_l(r,v)$ ha $\exists \leq 1$-élű legrövidebb $rv$-út. $f_2(v) = dist_l(r,v)$ ha $\exists \leq 2$-élű legrövidebb $rv$-út. $\dots$ $f_{n-1}(v) = dist_l(r,v)$ ha $\exists \leq (n-1)$-élű legrövidebb $rv$-út. Tehát $f_{n-1}(v) = dist_l(r,v) \forall v \in V$.  \textcolor{blue}{$\Box$} 
+        \textcolor{green}{\textbf{Biz:}} $f_1(v) = dist_l(r,v)$ ha $\exists \leq 1$-élű legrövidebb $rv$-út. $f_2(v) = dist_l(r,v)$ ha $\exists \leq 2$-élű legrövidebb $rv$-út. $\dots$ $f_{n-1}(v) = dist_l(r,v)$ ha $\exists \leq (n-1)$-élű legrövidebb $rv$-út. Tehát $f_{n-1}(v) = dist_l(r,v) \forall v \in V$.   
 
         \textcolor{orange}{\textbf{Megf:}} Ha $f_i = f_{i-1}$, akkor a Ford-algoritmust az $i$-dik fázis után be lehet fejezni, hisz nincs érdemi élmenti javítás, így $f_{n-1} = f_i$.
 
         \textcolor{blue}{\textbf{Megj:}} Az $f_{n-1}(v)$-t beállító élek legrövidebb utak fáját alkozják. 
 
-        \textcolor{green}{\textbf{Biz:}} A Dijkstra esethez hasonló. Tetszőleges $v$ csúcsból visszafelé követve a végső értékeket beállító éleket $f_{n-1}(v)$ hosszúságú $rv$-utat találunk.  \textcolor{blue}{$\Box$} 
+        \textcolor{green}{\textbf{Biz:}} A Dijkstra esethez hasonló. Tetszőleges $v$ csúcsból visszafelé követve a végső értékeket beállító éleket $f_{n-1}(v)$ hosszúságú $rv$-utat találunk.   
 
         \textcolor{blue}{\textbf{"Lépésszámanalízis":}} Ha a $|V(G)| = n$ és $|E(G)| = m$, akkor minden fázisban $\leq m$ élmenti javítás, ami $konst \cdot m$ lépés. Ez összesen $\leq konst \cdot (n-1) \cdot m \leq konst \cdot n^3$ lépés, az algoritmus hatékony.
 

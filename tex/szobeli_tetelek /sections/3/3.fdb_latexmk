@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1703868019 "/Users/dave/Documents/GitHub/tex.1felev-szamitastudomany-alapjai/tex/szobeli_tetelek /sections/3/3.tex" "sections/3/3.pdf" "3" 1703868020 0
-  "/Users/dave/Documents/GitHub/tex.1felev-szamitastudomany-alapjai/tex/szobeli_tetelek /sections/3/3.tex" 1703868019 5460 7999185dc5875f620046ce58c23b7da2 ""
+["pdflatex"] 1704476340 "/Users/dave/Documents/GitHub/tex.1felev-szamitastudomany-alapjai/tex/szobeli_tetelek /sections/3/3.tex" "sections/3/3.pdf" "3" 1704476341 0
+  "/Users/dave/Documents/GitHub/tex.1felev-szamitastudomany-alapjai/tex/szobeli_tetelek /sections/3/3.tex" 1704476339 5152 9966035d3839c9233f1ab309a6a23c79 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -65,10 +65,10 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1694545731 4681924 2c19acd65d59ba67d808d6d74d1273b0 ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1694545878 8183370 1c525ac4ee073a127ca1a6d396f25aaf ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "sections/3/../../szobeli.tex" 1703866974 22839 bab23695b303e59b36183e8d28e086b4 ""
+  "sections/3/../../szobeli.tex" 1704371847 19318 a412093985b44e07912ad009404dc2ab ""
   "sections/3/./img/1.png" 1703866635 48123 af137a812a8d095beb1148039320880d ""
-  "sections/3/3.aux" 1703868020 32 044b7f8fc9779af7531264e0c5c84b6d "pdflatex"
-  "sections/3/3.tex" 1703868019 5460 7999185dc5875f620046ce58c23b7da2 ""
+  "sections/3/3.aux" 1704476341 32 044b7f8fc9779af7531264e0c5c84b6d "pdflatex"
+  "sections/3/3.tex" 1704476339 5152 9966035d3839c9233f1ab309a6a23c79 ""
   (generated)
   "sections/3/3.aux"
   "sections/3/3.log"
