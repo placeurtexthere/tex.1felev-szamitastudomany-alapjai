@@ -11,67 +11,90 @@
 \end{center}
 
     \begin{itemize}
-        \item \textbf{Depth First Search (DFS)}
+        \item Általános gárfbejárás: A gráfbejárási algoritmus az inputgráf csúcsait és éleit fedezi fel. Minden csúcs az eléretlen $\rightarrow$ elért $\rightarrow$ befejezett állapotokat veszi fel. A bejárás akkor ér véget, amint minden csúcs befejezetté vált. 
+            \begin{itemize}
+                \item[1.] Van elért csúcs. Választunk egyet, mondjuk $u$-t. \begin{itemize}
+                    \item[(1a)] Ha van olyan $uv$ él, amire $v$ eléretlen, akkor $v$ elérté válik.
+                    \item[(1b)] Ha nincs ilyen $uv$ él, akkor $u$ befejezetté válik.
+                \end{itemize}
+                \item[2.] Nincs elért csúcs. \begin{itemize}
+                    \item[(2a)] Ha van eléretlen $u$ csúcs, akkor $u$-t elértté tesszük.
+                    \item[(2b)] Ha nincs eléretlen csúcs (azaz minden csúcs befejezett), akkor END.
+                \end{itemize} 
+            \end{itemize}
+
+            Az élek osztályozása:
+
+                \textbf{\textcolor{green}{faél:}} Olyan él, ami mentén egy csúcs elértté vált.
+
+                $uv$ \textbf{\textcolor{brown}{előreél:}} nem faél, de $u$-ból $v$-be faélekből irányított út vezet.
+
+                $uv$ \textbf{\textcolor{blue}{visszaél:}} $v$-ből $u$-ba faélekből irányított út vezet.
+
+                \textbf{\textcolor{red}{keresztél:}} minden más él ($u$ és $v$ közt nincs leszármazott viszony).
+
+
+        \item \textbf{Mélységi keresés (DFS (Depth First Search))}
+            
+            (A mélységi bejárás avagy DFS alatt olyan gráfbejárást értünk, amikor mindig a legutolsónak elért csúcsból kerül elérésre a soron következőnek elért csúcs. Az elérési illetve befejezési sorrendből adódik minden $v$ csúcshoz egy $m(v)$ mélységi ill. $b(v)$ befejezési szám.)
+
+            \textcolor{blue}{\textbf{"Mélységi bejárás (DFS):}} A bejárás során mindig a legutolsónak elért csúcsot választjuk az $\boxed{1.}$ esetben.
+
+            \textcolor{red}{Mélységi és befejezési számozás:} DFS után \textcolor{orange}{$m(v)$} ill. \textcolor{violet}{$b(v)$} a $v$ csúcs elérési ill. befejezési sorrendben kapott sorszáma.
+
+            \textcolor{blue}{\textbf{Megj:}} A BFS konkrét megvalósításában szükség van arra, hogy az \textcolor{orange}{elért} csúcsokat úgy tároljuk, hogy könnyű legyen kiválasztani az \textcolor{orange}{elért} csúcsok közül a legkorábban elértet. Erre egy célszerű adatstruktúra a \textit{sor} (avagy \textit{FIFO lista} (First In First Out)). Ha a BFS megvalósításában ezt az adatstruktúrát \textit{veremre} (más néven \textit{LIFO listára} (Last In First Out)) cseréljük, akkor a DFS egy megvalósítása adódik.
+
+            \textcolor{orange}{\textbf{Megf:}} Tegyük fel, hogy a $G$ gráf éleit DFS után osztályoztuk. 
+            
+            (1) Ha $uv$ \textcolor{green}{faél}, akkor \textcolor{orange}{$m(u)$} $<$ \textcolor{orange}{$m(v)$} és \textcolor{violet}{$b(u)$} $>$ \textcolor{violet}{$b(v)$}.
+
+            \textcolor{green}{\textbf{Biz:}} $v$-t $u$-ból értük el, ezért \textcolor{orange}{$m(u)$} $<$ \textcolor{orange}{$m(v)$}. A $v$ elérésekor $u$ és $v$ elért állapotúak. A DFS szerint $v$-t $u$ előtt fejezzük be.   
+
+            (2) Ha $uv$ \textcolor{brown}{előreél}, akkor \textcolor{orange}{$m(u)$} $<$ \textcolor{orange}{$m(v)$} és \textcolor{violet}{$b(u)$} $>$ \textcolor{violet}{$b(v)$}.
+
+            \textcolor{green}{\textbf{Biz:}} $u$-ból $v$-be faéleken keresztül vezet irányított út. (1) miatt az út mentén a mélységi szám növekszik, befejezési csökken.  
+
+            (3) Ha $uv$ \textcolor{blue}{visszaél}, akkor \textcolor{orange}{$m(u)$} $>$ \textcolor{orange}{$m(v)$} és \textcolor{violet}{$b(u)$} $<$ \textcolor{violet}{$b(v)$}.
+
+            \textcolor{green}{\textbf{Biz:}} $v$-ből $u$-ba faéleken keresztül vezet irányított út. (1) miatt az út mentén a mélységi szám növekszik, a befejezési csökken. 
+            
+            (4) Ha $uv$ \textcolor{red}{keresztél}, akkor \textcolor{orange}{$m(u)$} $>$ \textcolor{orange}{$m(v)$} és \textcolor{violet}{$b(u)$} $>$ \textcolor{violet}{$b(v)$}.
+
+            \textcolor{green}{\textbf{Biz:}} \textcolor{orange}{$m(u)$} $<$ \textcolor{orange}{$m(v)$} esetén a DFS miatt $v$ az $u$ leszármazottja lenne. Ezért $m(u) > m(u)$. Ha $u$-t a $v$ befejezése előtt érnénk el, akkor $u$ a $v$ leszármazottja lenne. Ezért az alábbi sorrendben történik $u$ és $v$ evolúciója: \textcolor{orange}{v elérése}, \textcolor{violet}{v befejezése}, \textcolor{orange}{u elérése}, \textcolor{violet}{u befejezése}.  
+
+            (5) Irányítatlan gráf DFS bejárása után nincs keresztél.
+
+            \textcolor{green}{\textbf{Biz:}} Indirekt. Ha $uv$ keresztél, akkor (4) miatt \textcolor{orange}{$m(u)$} $>$ \textcolor{orange}{$m(v)$}, továbbá $vu$ is keresztél, ezért \textcolor{orange}{$m(v)$} $>$ \textcolor{orange}{$m(u)$}. Ellentmondás.  
+
+            (6) Ha DFS után van visszaél, akkor $G$ tartalmaz irányított kört.
+
+            \textcolor{green}{\textbf{Biz:}} A DFS fa visszaélhez tartozó alapköre a $G$ egy irányított köre.  
+
+            (7) Ha DFS után nincs visszaél, akkor $G$-ben nincs irányított kör.
+
+            \textcolor{green}{\textbf{Biz:}} Bármely irányított körnek van olyan $uv$ éle, amire \textcolor{violet}{$b(u)$} $<$ \textcolor{violet}{$b(v)$}. Ez az él csak visszaél lehet.   
+
+            A mélységi bejárás lépésszáma lineáris, azaz van olyan $c$ konstans, hogy tetszőleges $u$ csúcsú, $m$ élű gráf DFS-éhez legfeljebb $c(n+m)$ lépés szükséges.
         
-        (A mélységi bejárás avagy DFS alatt olyan gráfbejárást értünk, amikor mindig a legutolsónak elért csúcsból kerül elérésre a soron következőnek elért csúcs. Az elérési illetve befejezési sorrendből adódik minden $v$ csúcshoz egy $m(v)$ mélységi ill. $b(v)$ befejezési szám.)
-
-        \textcolor{blue}{\textbf{"Mélységi bejárás (DFS):}} A bejárás során mindig a legutolsónak elért csúcsot választjuk az $\boxed{1.}$ esetben.
-
-        \textcolor{red}{Mélységi és befejezési számozás:} DFS után \textcolor{orange}{$m(v)$} ill. \textcolor{violet}{$b(v)$} a $v$ csúcs elérési ill. befejezési sorrendben kapott sorszáma.
-
-        \textcolor{blue}{\textbf{Megj:}} A BFS konkrét megvalósításában szükség van arra, hogy az \textcolor{orange}{elért} csúcsokat úgy tároljuk, hogy könnyű legyen kiválasztani az \textcolor{orange}{elért} csúcsok közül a legkorábban elértet. Erre egy célszerű adatstruktúra a \textit{sor} (avagy \textit{FIFO lista} (First In First Out)). Ha a BFS megvalósításában ezt az adatstruktúrát \textit{veremre} (más néven \textit{LIFO listára} (Last In First Out)) cseréljük, akkor a DFS egy megvalósítása adódik.
-
-        \textcolor{orange}{\textbf{Megf:}} Tegyük fel, hogy a $G$ gráf éleit DFS után osztályoztuk. 
-        
-        (1) Ha $uv$ \textcolor{green}{faél}, akkor \textcolor{orange}{$m(u)$} $<$ \textcolor{orange}{$m(v)$} és \textcolor{violet}{$b(u)$} $>$ \textcolor{violet}{$b(v)$}.
-
-        \textcolor{green}{\textbf{Biz:}} $v$-t $u$-ból értük el, ezért \textcolor{orange}{$m(u)$} $<$ \textcolor{orange}{$m(v)$}. A $v$ elérésekor $u$ és $v$ elért állapotúak. A DFS szerint $v$-t $u$ előtt fejezzük be.   
-
-        (2) Ha $uv$ \textcolor{brown}{előreél}, akkor \textcolor{orange}{$m(u)$} $<$ \textcolor{orange}{$m(v)$} és \textcolor{violet}{$b(u)$} $>$ \textcolor{violet}{$b(v)$}.
-
-        \textcolor{green}{\textbf{Biz:}} $u$-ból $v$-be faéleken keresztül vezet irányított út. (1) miatt az út mentén a mélységi szám növekszik, befejezési csökken.  
-
-        (3) Ha $uv$ \textcolor{blue}{visszaél}, akkor \textcolor{orange}{$m(u)$} $>$ \textcolor{orange}{$m(v)$} és \textcolor{violet}{$b(u)$} $<$ \textcolor{violet}{$b(v)$}.
-
-        \textcolor{green}{\textbf{Biz:}} $v$-ből $u$-ba faéleken keresztül vezet irányított út. (1) miatt az út mentén a mélységi szám növekszik, a befejezési csökken. 
-        
-        (4) Ha $uv$ \textcolor{red}{keresztél}, akkor \textcolor{orange}{$m(u)$} $>$ \textcolor{orange}{$m(v)$} és \textcolor{violet}{$b(u)$} $>$ \textcolor{violet}{$b(v)$}.
-
-        \textcolor{green}{\textbf{Biz:}} \textcolor{orange}{$m(u)$} $<$ \textcolor{orange}{$m(v)$} esetén a DFS miatt $v$ az $u$ leszármazottja lenne. Ezért $m(u) > m(u)$. Ha $u$-t a $v$ befejezése előtt érnénk el, akkor $u$ a $v$ leszármazottja lenne. Ezért az alábbi sorrendben történik $u$ és $v$ evolúciója: \textcolor{orange}{v elérése}, \textcolor{violet}{v befejezése}, \textcolor{orange}{u elérése}, \textcolor{violet}{u befejezése}.  
-
-        (5) Irányítatlan gráf DFS bejárása után nincs keresztél.
-
-        \textcolor{green}{\textbf{Biz:}} Indirekt. Ha $uv$ keresztél, akkor (4) miatt \textcolor{orange}{$m(u)$} $>$ \textcolor{orange}{$m(v)$}, továbbá $vu$ is keresztél, ezért \textcolor{orange}{$m(v)$} $>$ \textcolor{orange}{$m(u)$}. Ellentmondás.  
-
-        (6) Ha DFS után van visszaél, akkor $G$ tartalmaz irányított kört.
-
-        \textcolor{green}{\textbf{Biz:}} A DFS fa visszaélhez tartozó alapköre a $G$ egy irányított köre.  
-
-        (7) Ha DFS után nincs visszaél, akkor $G$-ben nincs irányított kör.
-
-        \textcolor{green}{\textbf{Biz:}} Bármely irányított körnek van olyan $uv$ éle, amire \textcolor{violet}{$b(u)$} $<$ \textcolor{violet}{$b(v)$}. Ez az él csak visszaél lehet.   
-
-        A mélységi bejárás lépésszáma lineáris, azaz van olyan $c$ konstans, hogy tetszőleges $u$ csúcsú, $m$ élű gráf DFS-éhez legfeljebb $c(n+m)$ lépés szükséges.
-    
         \item \textbf{Directed Acyclic Graphs}
 
-        \textcolor{blue}{\textbf{Def:}} A $G = (V,E)$ irányított gráf \textcolor{red}{aciklikus} (más néven \textcolor{red}{DAG}), ha $G$ nem tartalmaz irányított kört.
+            \textcolor{blue}{\textbf{Def:}} A $G = (V,E)$ irányított gráf \textcolor{red}{aciklikus} (más néven \textcolor{red}{DAG}), ha $G$ nem tartalmaz irányított kört.
 
-        \textcolor{violet}{\textbf{Példa:}} DAG-ot úgy kaphatunk, hogy egy $G$ irányítatlan gráf csúcsait csupa különböző számmal megszámozzuk, és minden élt a kisebb számot viselő csúcsból a nagyobba irányítunk.
+            \textcolor{violet}{\textbf{Példa:}} DAG-ot úgy kaphatunk, hogy egy $G$ irányítatlan gráf csúcsait csupa különböző számmal megszámozzuk, és minden élt a kisebb számot viselő csúcsból a nagyobba irányítunk.
 
-        Ha ugyanis lenne az így megirányított gráfban irányított kör, akkor az élei mentén a számok végig növekednének, ami lehetetlen. Azt fogjuk igazolni, hogy a fenti példa minden DAG-ot leír.
+            Ha ugyanis lenne az így megirányított gráfban irányított kör, akkor az élei mentén a számok végig növekednének, ami lehetetlen. Azt fogjuk igazolni, hogy a fenti példa minden DAG-ot leír.
 
-        \textcolor{blue}{\textbf{Def:}} A $G = (V,E)$ irányított gráf csúcsainak \textcolor{red}{topologikus sorrendje} alatt a csúcsok olyan sorrendjét értjük, amire igaz, hogy minden irányított él a sorban előbb álló csúcsból vezet a sorban későbbi csúcsba. $(V=\{v_1,v_2,\dots,v_n\},v_iv_j \in E \Rightarrow i < j)$
+            \textcolor{blue}{\textbf{Def:}} A $G = (V,E)$ irányított gráf csúcsainak \textcolor{red}{topologikus sorrendje} alatt a csúcsok olyan sorrendjét értjük, amire igaz, hogy minden irányított él a sorban előbb álló csúcsból vezet a sorban későbbi csúcsba. $(V=\{v_1,v_2,\dots,v_n\},v_iv_j \in E \Rightarrow i < j)$
 
-        \textcolor{orange}{\textbf{Tétel:}} ($G$ irányított gráf DAG) $\Leftrightarrow$ ($V(G)$-nek $\exists$ topologikus sorrendje).
+            \textcolor{orange}{\textbf{Tétel:}} ($G$ irányított gráf DAG) $\Leftrightarrow$ ($V(G)$-nek $\exists$ topologikus sorrendje).
 
-        \textcolor{green}{\textbf{Biz:}} Tegyük fel, hogy $\exists$ toplogikus sorrend. Láttuk, hogy $G$ ekkor DAG. \checkmark
+            \textcolor{green}{\textbf{Biz:}} Tegyük fel, hogy $\exists$ toplogikus sorrend. Láttuk, hogy $G$ ekkor DAG. \checkmark
 
-        \textcolor{green}{\textbf{Biz:}} Most tegyük fel, hogy $G$ DAG, és futtassunk rajra egy DFS-t. Láttuk, hogy a DFS után nem lesz visszaél, ezért minden $uv$ irányított élre $b(u) > b(v)$ teljesül. Ezért a csúcsok befejezési sorrendjének megfordítása a $G$ csúcsainak egy topologikus sorrendje.   
+            \textcolor{green}{\textbf{Biz:}} Most tegyük fel, hogy $G$ DAG, és futtassunk rajra egy DFS-t. Láttuk, hogy a DFS után nem lesz visszaél, ezért minden $uv$ irányított élre $b(u) > b(v)$ teljesül. Ezért a csúcsok befejezési sorrendjének megfordítása a $G$ csúcsainak egy topologikus sorrendje.   
 
-        \textcolor{orange}{\textbf{Köv:}} Irányított gráf aciklikussága DFS-sel gyorsan eldönthető: ha van visszaél, akkor a visszaél DFS-fabeli alapköre $G$ egy irányított köre, így $G$ nem DAG. Ha pedig nincs visszaél, akkor a fordított befejezési sorrend a $G$ egy topologikus sorrendje, $G$ tehát DAG.
+            \textcolor{orange}{\textbf{Köv:}} Irányított gráf aciklikussága DFS-sel gyorsan eldönthető: ha van visszaél, akkor a visszaél DFS-fabeli alapköre $G$ egy irányított köre, így $G$ nem DAG. Ha pedig nincs visszaél, akkor a fordított befejezési sorrend a $G$ egy topologikus sorrendje, $G$ tehát DAG.
 
-        \textcolor{blue}{\textbf{Megj:}} DAG-ban topologikus sorrendet forráskeresések és forrástörlések alkalmazásával is találhatunk.
+            \textcolor{blue}{\textbf{Megj:}} DAG-ban topologikus sorrendet forráskeresések és forrástörlések alkalmazásával is találhatunk.
 
     \end{itemize}
 

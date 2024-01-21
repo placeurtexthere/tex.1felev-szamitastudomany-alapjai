@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1704480903 "/Users/dave/Documents/GitHub/tex.1felev-szamitastudomany-alapjai/tex/szobeli_tetelek /sections/7/7.tex" "sections/7/7.pdf" "7" 1704480905 0
-  "/Users/dave/Documents/GitHub/tex.1felev-szamitastudomany-alapjai/tex/szobeli_tetelek /sections/7/7.tex" 1704480903 5758 77ec1319a899a59a87559319add4fbfb ""
+["pdflatex"] 1705660430 "/Users/dave/Documents/GitHub/tex.1felev-szamitastudomany-alapjai/tex/szobeli_tetelek /sections/7/7.tex" "sections/7/7.pdf" "7" 1705660431 0
+  "/Users/dave/Documents/GitHub/tex.1felev-szamitastudomany-alapjai/tex/szobeli_tetelek /sections/7/7.tex" 1705660430 6072 2ed83087fc6393906a67a00ab1f1565a ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -66,9 +66,9 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1694545731 4681924 2c19acd65d59ba67d808d6d74d1273b0 ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1694545878 8183370 1c525ac4ee073a127ca1a6d396f25aaf ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "sections/7/../../szobeli.tex" 1704478230 19317 f7531916d325ef25e3c2eba337872442 ""
-  "sections/7/7.aux" 1704480905 32 044b7f8fc9779af7531264e0c5c84b6d "pdflatex"
-  "sections/7/7.tex" 1704480903 5758 77ec1319a899a59a87559319add4fbfb ""
+  "sections/7/../../szobeli.tex" 1705659810 19375 6f768e2f2201af68cb5f910c61f8506d ""
+  "sections/7/7.aux" 1705660431 32 044b7f8fc9779af7531264e0c5c84b6d "pdflatex"
+  "sections/7/7.tex" 1705660430 6072 2ed83087fc6393906a67a00ab1f1565a ""
   (generated)
   "sections/7/7.aux"
   "sections/7/7.log"

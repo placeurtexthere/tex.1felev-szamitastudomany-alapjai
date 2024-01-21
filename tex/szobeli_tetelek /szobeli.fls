@@ -135,6 +135,10 @@ INPUT ./sections/2/2.tex
 INPUT sections/2/2.tex
 INPUT ./sections/2/2.tex
 INPUT sections/2/2.tex
+INPUT ./sections/2/./img/1.png
+INPUT sections/2/./img/1.png
+INPUT ./sections/2/./img/1.png
+INPUT ./sections/2/./img/1.png
 INPUT ./sections/3/3.tex
 INPUT sections/3/3.tex
 INPUT ./sections/3/3.tex
@@ -219,10 +223,6 @@ INPUT ./sections/10/10.tex
 INPUT sections/10/10.tex
 INPUT ./sections/10/10.tex
 INPUT sections/10/10.tex
-INPUT ./sections/10/./img/1.png
-INPUT sections/10/./img/1.png
-INPUT ./sections/10/./img/1.png
-INPUT ./sections/10/./img/1.png
 INPUT ./sections/11/11.tex
 INPUT sections/11/11.tex
 INPUT ./sections/11/11.tex

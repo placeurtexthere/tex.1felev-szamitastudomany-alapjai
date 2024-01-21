@@ -20,8 +20,8 @@
         \end{itemize} 
         \item \textbf{Diagram:} A $G = (V,E)$ gráf \textcolor{red}{diagramja} egy olyan lerajzolása, melyben a csúcsoknak (síkbeli) pontok felelnek meg, éleknek pedig a két végpontot összekötő, önmagukat nem metsző görbék.
         \item \textbf{Fokszám:}\begin{itemize}
-            \item $v \in V(G)$  esetén a $v$-re illeszkedő élek száma a $v$ fokszáma.
-            \item A G gráf csúcsának d (v) foka a vé végpontú élek száma (hurokél kétszer számít).
+            \item $v \in V(G)$ esetén a $v$-re illeszkedő élek száma a $v$ fokszáma.
+            \item A $G$ gráf csúcsának $d(v)$ foka a $v$ végpontú élek száma (hurokél kétszer számít).
         \end{itemize}
         \item Egyszerű gráf: ha egy gráf nem egyszerű, akkor lehetnek párhuzamos élei, hurokélei.
         \item Irányított gráf: Az \textcolor{red}{irányított gráf} olyan gráf, aminek minden éle irányított.
@@ -49,7 +49,7 @@
             \item A $G$ irányított gráfot akkor mondjuk \textcolor{red}{\textbf{erősen összefüggő}}nek, ha $G$ bármely $u,v \in V(G) $ esetén van \textbf{irányított} $uv$-út $G$-ben.
             \item \textcolor{red}{\textbf{gyengén összefügő}}, ha a $G$-nek megfelelő irányítatlan gráf, összefüggő.
         \end{itemize}
-        \item \textbf{Komponens:} \begin{itemize}
+        \item Komponens: \begin{itemize}
             \item[(1)] $K \subseteq V(G)$ pontosan akkor komponense $G$-nek, ha $K$-ból nem lép ki éle $G$-nek, de $\forall v,v' \in K$ esetén $v \sim v'$. (A komponensen belül el lehet jutni minden csúcsból minden csúcsba.)
             \item[(2)] Minden $G$ irányítatlan gráf csúcshalmaza egyértelműen bomlik fel $G$ komponenseinek diszjunkt uniójára.
             \item A $G$ komponense alatt sokszor nem csupán a $G$ csúcsainak egy $K$ részhalmazát, hanem a $K$ által feszített részgráfot értjük. 

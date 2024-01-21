@@ -11,7 +11,7 @@
 \end{center}
 
     \begin{itemize}
-        \item Lineáris egyenletrendszer
+        \item \textbf{Lineáris egyenletrendszer}
         
             \textcolor{blue}{\textbf{Def:}} \textcolor{red}{Lineáris egyenlet:} Ismeretlenek konstansszorosainak összege konstans. \textcolor{red}{Lineáris egyenletrendszer:} Véges sok lineáris egyenlet. \textcolor{red}{Megoldás:} Olyan érték adás, ami minden egyenletet igazzá tesz.
 
@@ -19,19 +19,17 @@
         
             \textcolor{blue}{\textbf{Def:}} \textcolor{red}{Lineáris egyenletrendszer kibővített együtthatómátrixa:} a sorok az egyenletek, az oszlopok az ismeretleneknek ill. az egyenletek jobb oldalainak felelnek meg, az egyes mezőkben pedig a megfelelő együttható ill. jobb oldali konstans áll. 
             
-        \item \textbf{Elemi sorekvivalens átalakítás} 
-        
-            \textcolor{violet}{\textbf{Megoldás módszere}} Ekvivalens átalakításokat végzünk. Ezek során a megoldások halmaza nem változik. Konkrétan: egyenleteket felcserélünk, egyenletet nemnullával vigigszorzunk ill. az $i$-dik egyenletet kicseréljük az $i$-dik és $j$-dik egyenletek összegére.
-            
-            \textcolor{blue}{\textbf{Def:}} A kibővített együtthatómátrix \textcolor{red}{elemi sorekvivalens átalakítása (ESÁ)}: (1) sorcsere, (2) sor nemnulla konstanssal végigszorzása, (3) az $i$-dik sor helyettesítése az $i$-dik és $j$-dik sorok (koordiántánkénti) összegével (az $i$-dik sor helyettesítése az $i$-dik sor és a $j$-dik sor konstansszorosának összegével, csupa 0 sor hozzáadása/elhagyása).
-
         \item \textbf{Elemi sorekvivalens átalakítás} \underline{és kapcsolata a megoldásokkal} 
         
             \textcolor{green}{\textbf{Biz:}} Minden ESÁ előtti megoldás megoldás marad az ESÁ után is. Minen ESÁ fordítottja megkapható ESÁ-ok egymásutánjaként is. Ezért minden ESÁ utáni megoldás megoldja az ESÁ előtti előtti rendszert is. 
 
             \textcolor{blue}{\textbf{Megj:}} A kibővített együtthatómátrix a lineáris egyenletrendszer felírásának egy tömör módja: elkerüljük vele a műveleti- és egyenlőségjelekkel piszmogást, mégis telejesen áttekinthető módon tartalmaz minden lényeges információt.
 
-        \item \textbf{LA és RLA mátrix}
+            \textcolor{violet}{\textbf{Megoldás módszere}} Ekvivalens átalakításokat végzünk. Ezek során a megoldások halmaza nem változik. Konkrétan: egyenleteket felcserélünk, egyenletet nemnullával vigigszorzunk ill. az $i$-dik egyenletet kicseréljük az $i$-dik és $j$-dik egyenletek összegére.
+            
+            \textcolor{blue}{\textbf{Def:}} A kibővített együtthatómátrix \textcolor{red}{elemi sorekvivalens átalakítása (ESÁ)}: (1) sorcsere, (2) sor nemnulla konstanssal végigszorzása, (3) az $i$-dik sor helyettesítése az $i$-dik és $j$-dik sorok (koordiántánkénti) összegével (az $i$-dik sor helyettesítése az $i$-dik sor és a $j$-dik sor konstansszorosának összegével, csupa 0 sor hozzáadása/elhagyása).
+
+        \item \textbf{LA és RLA mátrix, vezéregyes}
         
             \textcolor{blue}{\textbf{Def:}} Az $M$ mártix \textcolor{red}{lépcsős alakú} (\textcolor{red}{LA}), ha 
             
@@ -64,11 +62,11 @@
         
             \includegraphics[scale=0.38]{img/1.png}
 
-        \item \textbf{Tilos sor}
+        \item Tilos sor
         
             \textcolor{blue}{\textbf{Def:}} Kibővített együtthatómátrix \textcolor{red}{tilos sora}: $0 \dots 0 | x$ alakú sor, ha $x \neq 0$.
 
-        \item \textbf{Kötött változó és szabad változó} 
+        \item Kötött változó és szabad paraméter
         
             \textcolor{blue}{\textbf{Def:}} A RLA kibővített együtthatómátrix v1-hez tartozó változója \textcolor{red}{kötött}m a többi változó (amihez nem tartozik v1) \textcolor{red}{szabad} (vagy \textcolor{red}{szabad paraméter}). 
 
@@ -90,7 +88,7 @@
 
             \underline{Output:} Egy $M$-ből ESÁ-okkal kapható $M' \in \mathbb{R}^{n \times k}$ LA mátrix.
 
-            \underline{Működés:} Az algoritmus fázisokból áll. Az $i$-dik fázisban keresünk egy nemnulla elemet az ($i-1$)-dik sor alatt a lehet legkisebb sorszámú oszlopban. Ha nincsilyen elem, az algoritmus véget ér. Sorcserével ezt a nemnulla elemet az $i$-dik sorban visszük. Az $i$-dik sor konstanssal szorzásával ezt az elemet v1-sé alakítjuk. Az $i$-dik sor alatti sorokhoz az $i$-dik sor konstansszorosát hozzáadva kinullázuk a kapott v1 alatti elemeket.
+            \underline{Működés:} Az algoritmus fázisokból áll. Az $i$-dik fázisban keresünk egy nemnulla elemet az ($i-1$)-dik sor alatt a lehető legkisebb sorszámú oszlopban. Ha nincs ilyen elem, az algoritmus véget ér. Sorcserével ezt a nemnulla elemet az $i$-dik sorban visszük. Az $i$-dik sor konstanssal szorzásával ezt az elemet v1-sé alakítjuk. Az $i$-dik sor alatti sorokhoz az $i$-dik sor konstansszorosát hozzáadva kinullázuk a kapott v1 alatti elemeket.
 
         \item \underline{összefüggés az egyértelmű megoldhatóság, az egynletek és ismeretlenek száma között}
         

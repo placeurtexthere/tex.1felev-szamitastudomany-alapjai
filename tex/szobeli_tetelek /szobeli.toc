@@ -1,12 +1,12 @@
 \nobreakspace {}\hfill \textbf {Oldal}\par 
 \contentsline {section}{\numberline {1}Tétel}{4}{}%
 \contentsline {section}{\numberline {2}Tétel}{6}{}%
-\contentsline {section}{\numberline {3}Tétel}{7}{}%
-\contentsline {section}{\numberline {4}Tétel}{9}{}%
-\contentsline {section}{\numberline {5}Tétel}{11}{}%
-\contentsline {section}{\numberline {6}Tétel}{14}{}%
-\contentsline {section}{\numberline {7}Tétel}{16}{}%
-\contentsline {section}{\numberline {8}Tétel}{18}{}%
-\contentsline {section}{\numberline {9}Tétel}{22}{}%
-\contentsline {section}{\numberline {10}Tétel}{24}{}%
-\contentsline {section}{\numberline {11}Tétel}{27}{}%
+\contentsline {section}{\numberline {3}Tétel}{8}{}%
+\contentsline {section}{\numberline {4}Tétel}{10}{}%
+\contentsline {section}{\numberline {5}Tétel}{12}{}%
+\contentsline {section}{\numberline {6}Tétel}{15}{}%
+\contentsline {section}{\numberline {7}Tétel}{17}{}%
+\contentsline {section}{\numberline {8}Tétel}{19}{}%
+\contentsline {section}{\numberline {9}Tétel}{23}{}%
+\contentsline {section}{\numberline {10}Tétel}{25}{}%
+\contentsline {section}{\numberline {11}Tétel}{26}{}%

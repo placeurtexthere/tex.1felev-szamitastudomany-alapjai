@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  7 JAN 2024 18:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  20 JAN 2024 19:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -326,37 +326,48 @@ Underfull \hbox (badness 10000) in paragraph at lines 53--54
 
 ] [3] (./sections/1/1.tex [4
 
-{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]) [5] (./sections/2/2.tex) [6
+{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]) [5] (./sections/2/2.tex
+<sections/2/./img/1.png, id=38, 1150.2975pt x 270.00874pt>
+File: sections/2/./img/1.png Graphic file (type png)
+<use sections/2/./img/1.png>
+Package pdftex.def Info: sections/2/./img/1.png  used on input line 36.
+(pdftex.def)             Requested size: 460.11086pt x 108.00157pt.
 
-] (./sections/3/3.tex
-<sections/3/./img/1.png, id=42, 1014.79124pt x 317.185pt>
+Overfull \hbox (1.41405pt too wide) in paragraph at lines 36--37
+[][] 
+ []
+
+[6
+
+ <./sections/2/./img/1.png>]) [7] (./sections/3/3.tex
+<sections/3/./img/1.png, id=48, 1014.79124pt x 317.185pt>
 File: sections/3/./img/1.png Graphic file (type png)
 <use sections/3/./img/1.png>
-Package pdftex.def Info: sections/3/./img/1.png  used on input line 32.
+Package pdftex.def Info: sections/3/./img/1.png  used on input line 37.
 (pdftex.def)             Requested size: 456.65184pt x 142.73192pt.
- [7
+ [8
 
- <./sections/3/./img/1.png>]) [8] (./sections/4/4.tex [9
+ <./sections/3/./img/1.png>]) [9] (./sections/4/4.tex [10
 
-]) [10] (./sections/5/5.tex [11
+]) [11] (./sections/5/5.tex [12
 
-] [12]) [13] (./sections/6/6.tex [14
+] [13]) [14] (./sections/6/6.tex [15
 
-]) [15] (./sections/7/7.tex
+]) [16] (./sections/7/7.tex
 Overfull \hbox (8.012pt too wide) in paragraph at lines 18--19
 [][]\OT1/cmr/bx/n/10 (-20) P^^Selda:[] \OT1/cmr/m/n/10 (-20) DAG-ot ^^Sugy kaphatunk, hogy egy $\OML/cmm/m/it/10 G$ \OT1/cmr/m/n/10 (-20) ir^^Sany^^S^^Ptatlan gr^^Saf cs^^Sucsait csupa k^^?ul^^?onb^^?oz}osz^^Sammal megsz^^Samozzuk,
  []
 
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 46.
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 48.
 (/usr/local/texlive/2023/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 46.
- [16
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 48.
+ [17
 
-]) [17] (./sections/8/8.tex
-<sections/8/img/1.png, id=82, 544.0325pt x 124.465pt>
+]) [18] (./sections/8/8.tex
+<sections/8/img/1.png, id=88, 544.0325pt x 124.465pt>
 File: sections/8/img/1.png Graphic file (type png)
 <use sections/8/img/1.png>
 Package pdftex.def Info: sections/8/img/1.png  used on input line 18.
@@ -366,76 +377,72 @@ Overfull \hbox (25.00003pt too wide) in paragraph at lines 18--19
 [][] 
  []
 
-<sections/8/img/2.png, id=83, 722.7pt x 106.3975pt>
-File: sections/8/img/2.png Graphic file (type png)
-<use sections/8/img/2.png>
-Package pdftex.def Info: sections/8/img/2.png  used on input line 60.
-(pdftex.def)             Requested size: 483.69684pt x 71.21126pt.
-
-Overfull \hbox (25.00003pt too wide) in paragraph at lines 60--61
-[][] 
- []
-
-[18
+[19
 
  <./sections/8/img/1.png>]
-<sections/8/./img/3.png, id=89, 601.24625pt x 99.37125pt>
+<sections/8/img/2.png, id=93, 722.7pt x 106.3975pt>
+File: sections/8/img/2.png Graphic file (type png)
+<use sections/8/img/2.png>
+Package pdftex.def Info: sections/8/img/2.png  used on input line 72.
+(pdftex.def)             Requested size: 483.69684pt x 71.21126pt.
+
+Overfull \hbox (25.00003pt too wide) in paragraph at lines 72--73
+[][] 
+ []
+
+<sections/8/./img/3.png, id=94, 601.24625pt x 99.37125pt>
 File: sections/8/./img/3.png Graphic file (type png)
 <use sections/8/./img/3.png>
-Package pdftex.def Info: sections/8/./img/3.png  used on input line 70.
+Package pdftex.def Info: sections/8/./img/3.png  used on input line 82.
 (pdftex.def)             Requested size: 483.69684pt x 79.94592pt.
 
-Overfull \hbox (25.00003pt too wide) in paragraph at lines 70--71
+Overfull \hbox (25.00003pt too wide) in paragraph at lines 82--83
 [][] 
  []
 
-[19 <./sections/8/img/2.png> <./sections/8/./img/3.png>]
-<sections/8/./img/4.png, id=95, 547.04375pt x 86.3225pt>
+[20 <./sections/8/img/2.png> <./sections/8/./img/3.png>]
+<sections/8/./img/4.png, id=100, 547.04375pt x 86.3225pt>
 File: sections/8/./img/4.png Graphic file (type png)
 <use sections/8/./img/4.png>
-Package pdftex.def Info: sections/8/./img/4.png  used on input line 94.
+Package pdftex.def Info: sections/8/./img/4.png  used on input line 106.
 (pdftex.def)             Requested size: 483.69684pt x 76.32755pt.
 
-Overfull \hbox (25.00003pt too wide) in paragraph at lines 94--95
+Overfull \hbox (25.00003pt too wide) in paragraph at lines 106--107
 [][] 
  []
 
-<sections/8/./img/5.png, id=96, 198.7425pt x 176.66pt>
+<sections/8/./img/5.png, id=101, 198.7425pt x 176.66pt>
 File: sections/8/./img/5.png Graphic file (type png)
 <use sections/8/./img/5.png>
-Package pdftex.def Info: sections/8/./img/5.png  used on input line 101.
+Package pdftex.def Info: sections/8/./img/5.png  used on input line 113.
 (pdftex.def)             Requested size: 96.73788pt x 85.98999pt.
-<sections/8/./img/6.png, id=97, 191.71625pt x 172.645pt>
+<sections/8/./img/6.png, id=102, 191.71625pt x 172.645pt>
 File: sections/8/./img/6.png Graphic file (type png)
 <use sections/8/./img/6.png>
-Package pdftex.def Info: sections/8/./img/6.png  used on input line 106.
+Package pdftex.def Info: sections/8/./img/6.png  used on input line 118.
 (pdftex.def)             Requested size: 96.73788pt x 87.11522pt.
-<sections/8/./img/7.png, id=98, 367.3725pt x 196.735pt>
+[21 <./sections/8/./img/4.png> <./sections/8/./img/5.png> <./sections/8/./img/6.png>]
+<sections/8/./img/7.png, id=109, 367.3725pt x 196.735pt>
 File: sections/8/./img/7.png Graphic file (type png)
 <use sections/8/./img/7.png>
-Package pdftex.def Info: sections/8/./img/7.png  used on input line 124.
+Package pdftex.def Info: sections/8/./img/7.png  used on input line 142.
 (pdftex.def)             Requested size: 96.73788pt x 51.8043pt.
-[20 <./sections/8/./img/4.png> <./sections/8/./img/5.png> <./sections/8/./img/6.png> <./sections/8/./img/7.png>]) [21] (./sections/9/9.tex
-<sections/9/./img/1.png, id=109, 174.6525pt x 138.5175pt>
+) [22 <./sections/8/./img/7.png>] (./sections/9/9.tex
+<sections/9/./img/1.png, id=114, 174.6525pt x 138.5175pt>
 File: sections/9/./img/1.png Graphic file (type png)
 <use sections/9/./img/1.png>
-Package pdftex.def Info: sections/9/./img/1.png  used on input line 61.
+Package pdftex.def Info: sections/9/./img/1.png  used on input line 65.
 (pdftex.def)             Requested size: 96.73788pt x 76.72382pt.
- [22
+ [23
 
- <./sections/9/./img/1.png>]) [23] (./sections/10/10.tex
+]) [24 <./sections/9/./img/1.png>] (./sections/10/10.tex
 Underfull \hbox (badness 2680) in paragraph at lines 10--10
 []$[]$\OT1/cmr/m/n/10 (+20) , \OT1/cmr/bx/n/10 (+20) soros b}ov^^S^^Pt^^Ses, \OT1/cmr/bx/it/10 (+20) Kuratowski-t^^Setel \OT1/cmr/bx/n/10 (+20) k^^?onny}u ir^^Sanya\OT1/cmr/m/n/10 (+20) .
  []
 
-<sections/10/./img/1.png, id=117, 174.6525pt x 138.5175pt>
-File: sections/10/./img/1.png Graphic file (type png)
-<use sections/10/./img/1.png>
-Package pdftex.def Info: sections/10/./img/1.png  used on input line 56.
-(pdftex.def)             Requested size: 96.73788pt x 76.72382pt.
-[24
+) [25
 
- <./sections/10/./img/1.png>] [25]) [26] (./sections/11/11.tex
+] (./sections/11/11.tex
 Underfull \hbox (badness 10000) in paragraph at lines 10--10
 []\OT1/cmr/bx/n/10 (+20) Line^^Saris egyen-le-trend-szer, kib}ov^^S^^Ptett egy^^?utthat^^Som^^Satrix, el-emi sorek-vi-valens
  []
@@ -455,32 +462,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--10
 \OT1/cmr/m/n/10 (+20) param^^Seter, $[]$ \OT1/cmr/bx/n/10 (+20) Gauss-elimin^^Saci^^So\OT1/cmr/m/n/10 (+20) ,
  []
 
-<sections/11/img/1.png, id=129, 1200.485pt x 365.365pt>
+<sections/11/img/1.png, id=126, 1200.485pt x 365.365pt>
 File: sections/11/img/1.png Graphic file (type png)
 <use sections/11/img/1.png>
-Package pdftex.def Info: sections/11/img/1.png  used on input line 65.
+Package pdftex.def Info: sections/11/img/1.png  used on input line 63.
 (pdftex.def)             Requested size: 456.18904pt x 138.84013pt.
-[27
+[26
 
- <./sections/11/img/1.png (PNG copy)>]) [28] (./szobeli.aux)
+ <./sections/11/img/1.png (PNG copy)>]) [27] (./szobeli.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 6504 strings out of 474934
- 99588 string characters out of 5759811
- 1944807 words of memory out of 5000000
+ 6500 strings out of 474934
+ 99546 string characters out of 5759811
+ 1945807 words of memory out of 5000000
  27700 multiletter control sequences out of 15000+600000
- 572985 words of font info for 175 fonts, out of 8000000 for 9000
+ 572874 words of font info for 173 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,12n,65p,1283b,452s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on szobeli.pdf (29 pages, 655484 bytes).
+Output written on szobeli.pdf (28 pages, 661563 bytes).
 PDF statistics:
- 221 PDF objects out of 1000 (max. 8388607)
- 127 compressed objects within 2 object streams
+ 218 PDF objects out of 1000 (max. 8388607)
+ 125 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  34872 words of extra memory for PDF output out of 35830 (max. 10000000)
 

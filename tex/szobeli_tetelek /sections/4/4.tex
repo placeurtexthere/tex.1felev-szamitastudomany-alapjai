@@ -10,18 +10,28 @@
     }
 \end{center}
     \begin{itemize}
-        \item \textbf{Általános gárfbejárás \& BFS}: A gráfbejárási algoritmus az inputgráf csúcsait és éleit fedezi fel. Minden csúcs az eléretlen $\rightarrow$ elért $\rightarrow$ befejezett állapotokat veszi fel. A bejárás akkor ér véget, amint minden csúcs befejezetté vált. \begin{itemize}
+        \item Általános gárfbejárás: A gráfbejárási algoritmus az inputgráf csúcsait és éleit fedezi fel. Minden csúcs az eléretlen $\rightarrow$ elért $\rightarrow$ befejezett állapotokat veszi fel. A bejárás akkor ér véget, amint minden csúcs befejezetté vált. \begin{itemize}
             \item[1.] Van elért csúcs. Választunk egyet, mondjuk $u$-t. \begin{itemize}
                 \item[(1a)] Ha van olyan $uv$ él, amire $v$ eléretlen, akkor $v$ elérté válik.
                 \item[(1b)] Ha nincs ilyen $uv$ él, akkor $u$ befejezetté válik.
             \end{itemize}
             \item[2.] Nincs elért csúcs. \begin{itemize}
                 \item[(2a)] Ha van eléretlen $u$ csúcs, akkor $u$-t elértté tesszük.
-                \item[(2b)] Ha nincs eléretlen csúcs (azaz minden csúcs fejezett), akkor END.
+                \item[(2b)] Ha nincs eléretlen csúcs (azaz minden csúcs befejezett), akkor END.
             \end{itemize} 
         \end{itemize}
 
-        \textbf{Szélességi bejárás (BFS) szabálya:} \\Az 1. esetben mindig a legkorábban elért $u$-t választjuk.
+        Az élek osztályozása:
+
+			\textbf{\textcolor{green}{faél:}} Olyan él, ami mentén egy csúcs elértté vált.
+
+			$uv$ \textbf{\textcolor{brown}{előreél:}} nem faél, de $u$-ból $v$-be faélekből irányított út vezet.
+
+			$uv$ \textbf{\textcolor{blue}{visszaél:}} $v$-ből $u$-ba faélekből irányított út vezet.
+
+			\textbf{\textcolor{red}{keresztél:}} minden más él ($u$ és $v$ közt nincs leszármazott viszony).
+
+        \item \textbf{Szélességi bejárás (BFS) szabálya:} \\Az 1. esetben mindig a legkorábban elért $u$-t választjuk.
 
         \textbf{Input:} $G = (V,E)$ (ir/ir.tatlan) gráf, ($v \in V$ gyökérpont\footnote{A gyökérben kezdetben elért állapotú, ezért kivétel az általános szabály alól.}).
 
@@ -47,55 +57,55 @@
             
             A bejárás során kialakul a csúcsok egy \textcolor{red}{elérési} ill. egy \textcolor{red}{befejezési} sorrendje, továbbá minden csúcshoz feljegyezzük azt is, hogy melyik él mentén értük el (ha van ilyen él). Ez utóbbi élek ({faélek}) alkotják a \textcolor{red}{bejárás fáját} (ami egyrészt \textcolor{red}{irányított}, másrészt pedig \textcolor{red}{erdő}). A $G$ gráf további $uv$ éle \textcolor{red}{előreél} $\Rightarrow$, ha $u$ a bejárás fájában a $v$ őse, ha $u$ a $v$ \textcolor{red}{leszármazottja}, akkor \textcolor{red}{visszaél}. Minden más pedig \textcolor{red}{keresztél}. (Irányítatlan gráf bejárásakor minden élt oda-vissza irányított élnek tekintünk.)
 
-        \item \textbf{A BFS tulajdonságai}
-			
-        Nézzük meg egy \textbf{irányított} gráf BFS bejárását is.
+        \item \underline{A BFS tulajdonságai}
+                
+            Nézzük meg egy \textbf{irányított} gráf BFS bejárását is.
 
-        \textbf{\textcolor{Orange}{Állítás:}} Tfh $G=(V,E)$ BFS bejárása után a csúcsok elérési sorrendje $v_1,v_2,\dots,v_n$. Ekkor az alábbiak teljesülnek.
+            \textbf{\textcolor{Orange}{Állítás:}} Tfh $G=(V,E)$ BFS bejárása után a csúcsok elérési sorrendje $v_1,v_2,\dots,v_n$. Ekkor az alábbiak teljesülnek.
 
-        (1) Ha $i < j$, akkor $v_i$-t hamarabb fejezük be, mint $v_j$-t, továbbá $v_i$ gyerekei megelőzik $v_j$ gyerekeit az elérési sorrendben.
+            (1) Ha $i < j$, akkor $v_i$-t hamarabb fejezük be, mint $v_j$-t, továbbá $v_i$ gyerekei megelőzik $v_j$ gyerekeit az elérési sorrendben.
 
-        \textbf{\textcolor{green}{Biz:}} A $v_i$-t befejezésének pillanatában $v_i$ minden gyereke elért, de $v_j$-nek még egy gyereke sem az. Ezért $v_j$ gyerekeit a $v_i$ csúcs befejezése után érjük el, majd ezt követően fejezzük be $v_j$-t.   
+            \textbf{\textcolor{green}{Biz:}} A $v_i$-t befejezésének pillanatában $v_i$ minden gyereke elért, de $v_j$-nek még egy gyereke sem az. Ezért $v_j$ gyerekeit a $v_i$ csúcs befejezése után érjük el, majd ezt követően fejezzük be $v_j$-t.   
 
-        (2) \textbf{Az elérési és befejezési sorrend (BFS esetén) megegyezik.}
+            (2) \textbf{Az elérési és befejezési sorrend (BFS esetén) megegyezik.}
 
-        \textbf{\textcolor{green}{Biz:}} Ha $v_i$-t korábban érjük el, mint $v_j$-t, akkor (1) miatt $v_i$-t korábban is fejezzük be $v_j$-nél. Ezért bármely két csúcs sorrendje ugyanaz az elérési sorrendben mint befejezési sorrendben. Tehát az elérési sorrendnek meg kell egyeznie a befejezési sorrenddel.   
+            \textbf{\textcolor{green}{Biz:}} Ha $v_i$-t korábban érjük el, mint $v_j$-t, akkor (1) miatt $v_i$-t korábban is fejezzük be $v_j$-nél. Ezért bármely két csúcs sorrendje ugyanaz az elérési sorrendben mint befejezési sorrendben. Tehát az elérési sorrendnek meg kell egyeznie a befejezési sorrenddel.   
 
-        (3) \textbf{Gráfél nem ugorhat át faélt:} ha $k < i < j \leq l$ és  $v_i v_j$ faél, akkor $v_k v_l$ nem lehet gráfél.
+            (3) \textbf{Gráfél nem ugorhat át faélt:} ha $k < i < j \leq l$ és  $v_i v_j$ faél, akkor $v_k v_l$ nem lehet gráfél.
 
-        \textbf{\textcolor{green}{Biz:}} Ha $v_k v_l \in E(G)$, akkor $v_l$ szülője $v_k$ vagy egy $v_k$-t megelőző csúcs. (1) miatt $v_j$ szülője sem következhet $v_k$ után, vagyis $v_i$ nem lehet $v_j$ szülője.
+            \textbf{\textcolor{green}{Biz:}} Ha $v_k v_l \in E(G)$, akkor $v_l$ szülője $v_k$ vagy egy $v_k$-t megelőző csúcs. (1) miatt $v_j$ szülője sem következhet $v_k$ után, vagyis $v_i$ nem lehet $v_j$ szülője.
 
-        (4) \textbf{Nincs előreél.} (Irányítatlan eset: csak faél és keresztél van.) 
+            (4) \textbf{Nincs előreél.} (Irányítatlan eset: csak faél és keresztél van.) 
 
-        \textbf{\textcolor{green}{Biz:}} Indirekt: ha $v_i v_j$ előreél lenne, akkor $v_i$-ből $v_j$-be irányított út vezetne a BFS-fában, és $v_i v_j$ ennek a faélekből álló útnak az utolsó élét átugraná.   
+            \textbf{\textcolor{green}{Biz:}} Indirekt: ha $v_i v_j$ előreél lenne, akkor $v_i$-ből $v_j$-be irányított út vezetne a BFS-fában, és $v_i v_j$ ennek a faélekből álló útnak az utolsó élét átugraná.   
 
-        (5) Ha a BFS-fában $k$-élű irányított út vezet $u$-ból $v$-be, akkor $G$-ben nincs $k$-nál kevesebb élű $uv$-út.
+            (5) Ha a BFS-fában $k$-élű irányított út vezet $u$-ból $v$-be, akkor $G$-ben nincs $k$-nál kevesebb élű $uv$-út.
 
-        \textbf{\textcolor{green}{Biz:}} Ha lenne a BFS fa-beli útnál kevesebb élű út $G$-ben, akkor lenne olyan gráfél, ami faélt ugrik át.   
+            \textbf{\textcolor{green}{Biz:}} Ha lenne a BFS fa-beli útnál kevesebb élű út $G$-ben, akkor lenne olyan gráfél, ami faélt ugrik át.   
 
-        (6) \textbf{A BFS-fa egy legrövidebb utak fája:} a BFS-fa $v_1$ gyökeréből bármely $v_i$ csúcsba vezető faút a $G$ egy legkevesebb élű $v_1 v_i$-útja.
+            (6) \textbf{A BFS-fa egy legrövidebb utak fája:} a BFS-fa $v_1$ gyökeréből bármely $v_i$ csúcsba vezető faút a $G$ egy legkevesebb élű $v_1 v_i$-útja.
 
-        \item \textbf{Legrövidebb utak}
+        \item Legrövidebb utak
 				
-        \textbf{\textcolor{blue}{Def:}} Adott $G$ (ir) gráf és $l : E(G) \rightarrow \mathbb{R}$ hosszfüggvény esetén egy \textcolor{red}{$P$ út hossza} a $P$ éleinek összhossza: $l(P) = \sum_{e\in E(P)} l(e)$.
+            \textbf{\textcolor{blue}{Def:}} Adott $G$ (ir) gráf és $l : E(G) \rightarrow \mathbb{R}$ hosszfüggvény esetén egy \textcolor{red}{$P$ út hossza} a $P$ éleinek összhossza: $l(P) = \sum_{e\in E(P)} l(e)$.
 
-        Az $u$ és $v$ csúcsok \textcolor{red}{távolsága} a legrövidebb $uv$-út hossza: $dist_l(u,v):=$ min$\{l(P):P \;uv$-út$\}$ $(\nexists uv$-út$\Rightarrow dist_l (u,v)= \infty.)$ Az $l$  hosszfüggvénye \textcolor{red}{nemnegatív}, ha $l(e) \geq 0$ teljesül minden $e$ élre. Az $l$ hosszüggvény \textcolor{red}{konzervatív}, ha $G$-ben $\nexists$ negatív összhosszú ir. kör.
+            Az $u$ és $v$ csúcsok \textcolor{red}{távolsága} a legrövidebb $uv$-út hossza: $dist_l(u,v):=$ min$\{l(P):P \;uv$-út$\}$ $(\nexists uv$-út$\Rightarrow dist_l (u,v)= \infty.)$ Az $l$  hosszfüggvénye \textcolor{red}{nemnegatív}, ha $l(e) \geq 0$ teljesül minden $e$ élre. Az $l$ hosszüggvény \textcolor{red}{konzervatív}, ha $G$-ben $\nexists$ negatív összhosszú ir. kör.
 
-        \textbf{\textcolor{red}{Cél:}} Legrövidebb út keresése irányított/irányítatlan gráfban.
+            \textbf{\textcolor{red}{Cél:}} Legrövidebb út keresése irányított/irányítatlan gráfban.
 
-        \textbf{\textcolor{orange}{Megf:}} Ha $l(e) = 1 $ a $G$ minden $e$ élére, akkor $l(P)$ a $P$ élszáma. Ezért a BFS-fa minden gyökérből elérhető csúcsba tartalmaz egy legrövidebb utat a gyökérből, azaz a szélességi bejárás tekinthető egy legrövidebb utat kereső algoritmusnak is. 
+            \textbf{\textcolor{orange}{Megf:}} Ha $l(e) = 1 $ a $G$ minden $e$ élére, akkor $l(P)$ a $P$ élszáma. Ezért a BFS-fa minden gyökérből elérhető csúcsba tartalmaz egy legrövidebb utat a gyökérből, azaz a szélességi bejárás tekinthető egy legrövidebb utat kereső algoritmusnak is. 
 
-        \textbf{\textcolor{blue}{Def:}} Adott $G$ (ir) gráf, $l : E(G) \rightarrow \mathbb{R}$ hosszfüggvény és $r \in V(G)$. \textcolor{red}{$(r,l)$-felső becslés} olyan $f: V(G) \rightarrow \mathbb{R}$ függvény, ami felülről becsli minden csúcs $r$-től mért távolságát: $dist_l (r,v) \geq f(v) \forall v \in V(G)$.
+            \textbf{\textcolor{blue}{Def:}} Adott $G$ (ir) gráf, $l : E(G) \rightarrow \mathbb{R}$ hosszfüggvény és $r \in V(G)$. \textcolor{red}{$(r,l)$-felső becslés} olyan $f: V(G) \rightarrow \mathbb{R}$ függvény, ami felülről becsli minden csúcs $r$-től mért távolságát: $dist_l (r,v) \geq f(v) \forall v \in V(G)$.
 
-        \textcolor{red}{Triviális} $(r,l)$-felső becslés:
-        $
-            f(v) = \begin{cases}
-                0 & v = r \\
-                \infty & v \neq r
-            \end{cases}
-        $
+            \textcolor{red}{Triviális} $(r,l)$-felső becslés:
+            $
+                f(v) = \begin{cases}
+                    0 & v = r \\
+                    \infty & v \neq r
+                \end{cases}
+            $
 
-        \textcolor{red}{Pontos} $(r,l)$-felső becslés: $f(v) = dist_l(r,l)\; \forall v \in V(G)$.
+            \textcolor{red}{Pontos} $(r,l)$-felső becslés: $f(v) = dist_l(r,l)\; \forall v \in V(G)$.
     \end{itemize}
 
 \end{document}
