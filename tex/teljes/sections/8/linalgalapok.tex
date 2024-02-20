@@ -119,9 +119,9 @@
 
         \textcolor{orange}{\textbf{Megf:}} Ha $V \leq \mathbb{R}^n, \underline{x}_1, \underline{x}_2, \dots, \underline{x}_k \in V$ és $\lambda_1, \dots, \lambda_k \in \mathbb{R}$, akkor $\sum_{i=1}^{k} \lambda_i \underline{x}_i = \lambda_1\cdot \underline{x}_1 + \dots + \lambda_k \cdot \underline{x}_k \in V$.
 
-        \textcolor{blue}{\textbf{Def:}} A $\sum_{i=1}^{k} \lambda_i\underline{x}_i$ kifejezés az $\underline{x}_1, \dots, \underline{x}_k$ \textcolor{red}{lineráis kombinációja}. \\ \textcolor{red}{Triviális lineráis kombináció:} $0 \cdot \underline{x}_1 + \dots + 0 \cdot \underline{x}_k$.
+        \textcolor{blue}{\textbf{Def:}} A $\sum_{i=1}^{k} \lambda_i\underline{x}_i$ kifejezés az $\underline{x}_1, \dots, \underline{x}_k$ \textcolor{red}{lineáris kombinációja}. \\ \textcolor{red}{Triviális lineáris kombináció:} $0 \cdot \underline{x}_1 + \dots + 0 \cdot \underline{x}_k$.
 
-        \textcolor{orange}{\textbf{Megf:}} ($V \leq \mathbb{R}^n$) $\Longleftrightarrow$ ($V$ zárt lineráis kombinációra), azaz az altér definiálható az $\mathbb{R}^n$ lineráis kombinációra zárt részhalmazként. 
+        \textcolor{orange}{\textbf{Megf:}} ($V \leq \mathbb{R}^n$) $\Longleftrightarrow$ ($V$ zárt lineáris kombinációra), azaz az altér definiálható az $\mathbb{R}^n$ lineáris kombinációra zárt részhalmazként. 
 
         \textcolor{green}{\textbf{Biz:}} Triviális.
 
@@ -183,16 +183,105 @@
 
         Ha $\mathbb{R}^3$-ban pedig az igaz, hogy ha három vektor nem esik ugyanarra az origón átmenő síkra, akkor ez a három vektor lineárisan független rendszert alkot.
 
-        \textcolor{blue}{\textbf{Megj:}} A lineáris függetlenség (akárcsak a lineráis összefüggő tulajdonság) vektorok egy halmazára és nem az egyes vektorokra vonatkozik. Hasonló igaz a generátorrendszerre. Az, hogy egy konkrét $\underline{v}$ vektor benne van egy lineárisan független (lineárisan összefüggő vagy generátor-) rendszerben lényegében semmi információt nem ad $\underline{v}$-ről.
+        \textcolor{blue}{\textbf{Megj:}} A lineáris függetlenség (akárcsak a lineáris összefüggő tulajdonság) vektorok egy halmazára és nem az egyes vektorokra vonatkozik. Hasonló igaz a generátorrendszerre. Az, hogy egy konkrét $\underline{v}$ vektor benne van egy lineárisan független (lineárisan összefüggő vagy generátor-) rendszerben lényegében semmi információt nem ad $\underline{v}$-ről.
 
-        \textcolor{orange}{\textbf{Lemma:}} $\{\underline{x}_1, \dots, \underline{x}_k\}$ lineárisan független vektorrendszer $\Longleftrightarrow$ egyik $\underline{x}_i$ sem áll elő a többi lineáris kombinációjaként.
+        \textcolor{orange}{\textbf{Lemma:}} $\{\underline{x}_1, \dots, \underline{x}_k\}$ lineárisan független vektorrendszer $\Longleftrightarrow$ egyik $\underline{x}_i$ sem áll elő a többi lineáris kombinációjaként.
 
-        \textcolor{green}{\textbf{Biz:}} Tegyük fel, hogy $\{\underline{x}_1, \dots, \underline{x}_k\}$ \textbf{nem} lineárisan független, azaz $\lambda_1\underline{x}_1 + \dots + \lambda_k \underline{x}_k = \underline{0}$ és $\lambda_i \neq 0$. Ekkor $\underline{x}_i$ előállítható a többiből: $\underline{x}_i = \frac{-1}{\lambda_i} \cdot (\lambda_1\underline{x}_1 + \dots + \lambda_{i-1}\underline{x}_{i-1} + \lambda_{i+1}\underline{x}_{i+1} + \dots \lambda_k \underline{x}_k)$. \\ Most tegyük fel, hogy valamelyik $\underline{x}_i$ előáll a többi lineáris kombinációjaként: $\underline{x}_i = \lambda_1\underline{x}_1 + \dots + \lambda_{i-1}\underline{x}_{i-1} + \lambda_{i+1}\underline{x}_{i+1} + \dots \lambda_k \underline{x}_k$. \\ Ekkor $\{\underline{x}_1, \dots, \underline{x}_k\}$ nem lineárisan független, hiszen a nullvektor megkapható nemtriviális lineáris kombinációként: $\underline{0} = \lambda_1\underline{x}_1 + \dots + \lambda_{i-1}\underline{x}_{i-1} + (-1) \cdot \underline{x}_i + \lambda_{i+1}\underline{x}_{i+1} + \dots \lambda_k \underline{x}_k$.
+        \textcolor{green}{\textbf{Biz:}} Tegyük fel, hogy $\{\underline{x}_1, \dots, \underline{x}_k\}$ \textbf{nem} lineárisan független, azaz $\lambda_1\underline{x}_1 + \dots + \lambda_k \underline{x}_k = \underline{0}$ és $\lambda_i \neq 0$. Ekkor $\underline{x}_i$ előállítható a többiből: $\underline{x}_i = \frac{-1}{\lambda_i} \cdot (\lambda_1\underline{x}_1 + \dots + \lambda_{i-1}\underline{x}_{i-1} + \lambda_{i+1}\underline{x}_{i+1} + \dots \lambda_k \underline{x}_k)$. \\ Most tegyük fel, hogy valamelyik $\underline{x}_i$ előáll a többi lineáris kombinációjaként: $\underline{x}_i = \lambda_1\underline{x}_1 + \dots + \lambda_{i-1}\underline{x}_{i-1} + \lambda_{i+1}\underline{x}_{i+1} + \dots \lambda_k \underline{x}_k$. \\ Ekkor $\{\underline{x}_1, \dots, \underline{x}_k\}$ nem lineárisan független, hiszen a nullvektor megkapható nemtriviális lineáris kombinációként: $\underline{0} = \lambda_1\underline{x}_1 + \dots + \lambda_{i-1}\underline{x}_{i-1} + (-1) \cdot \underline{x}_i + \lambda_{i+1}\underline{x}_{i+1} + \dots \lambda_k \underline{x}_k$.
 
     \subsection{Független- és generáló halmazok}
 
         \textcolor{orange}{\textbf{Állítás:}} Tegyük fel, hogy $\underline{v} \in \mathbb{R}^n, \underline{v} \notin G$ és $\langle G \cup \{\underline{v}\} \rangle = V \leq \mathbb{R}^n$. Ekkor $(\langle G \rangle = V) \Longleftrightarrow (\underline{v} \in \langle G \rangle)$.
 
         \textcolor{blue}{\textbf{Megj:}} A fenti állítás tulajdonképpen azt mondja ki, hogy egy $V$ altér generátorrendszeréből pontosan akkor tudunk egy elemet elvenni úgy, hogy a maradék vektorok tobábbra is generátorrendszert alkossanak, ha a kihagyott elem előáll a maradék elemek lineáris kombinációjaként.
+
+        \textcolor{green}{\textbf{Biz:}} $\Rightarrow:$ Mivel $\langle G \rangle = V = \langle G \cup \{\underline{v}\} \rangle$, ezért $\underline{v} \in V$ és $\underline{v} \in \langle G \rangle$.
+
+        $\Leftarrow:$ Tetszőleges $\underline{u} \in V$ elemről azt kell megmutatni, hogy $\underline{u} \in \langle G \rangle$. Mivel $\underline{v} \in \langle G \rangle$, feltehető, hogy $\underline{v} = \sum_{\underline{g}\in G}\lambda_{\underline{g}}\underline{g}$. Tudjuk, hogy $\underline{u} \in V = \langle G \cup \{\underline{v}\} \rangle$, ezért $\underline{u} = \lambda\underline{v} + \sum_{\underline{g}\in G}\mu_{\underline{g}}\underline{g}$. Ebbe behelyettesítve a fenti kifejezést $\underline{u} = \sum_{\underline{g}\in G} (\mu_{\underline{g}} + \lambda \cdot \lambda_{\underline{g}}) \underline{g}$ adódik, azaz $\underline{u} \in \langle G \rangle$. Ez bármely $\underline{u} \in V$-re igaz, így $\langle G \rangle = V$.
+
+        \textcolor{orange}{\textbf{Lemma:}} Tegyük fel, hogy $F = \{\underline{f}_1, \dots, \underline{f}_k\} \subseteq \mathbb{R}^n$ lineárisan független. Ekkor $(F \cup \{\underline{f}\}$ lineárisan független) $\Longleftrightarrow (\underline{f} \notin \langle F \rangle)$
+
+        \textcolor{blue}{\textbf{Megj:}} A lemma szerint független halmaz hízlalása csakis olyan vektorral lehetséges, ami nem áll elő a független rendszer lineáris kombinációjaként. A $\Leftarrow$ irányt az ,,újonnan érkező vektor lemmájának" is nevezik.
+
+        \textcolor{green}{\textbf{Biz:}} $\Rightarrow$: Ha $F \cup \{\underline{f}\}$ lineárisan független, akkor $\underline{f}$ nem áll elő $F$-beliek lineáris kombinációjaként, azaz $\underline{f} \notin \langle F \rangle$.
+
+        $\Leftarrow$: Tegyük fel, hogy $\lambda \underline{f} + \lambda_1 \underline{f}_1 + \dots + \lambda_k \underline{f}_k = \underline{0}$.
+
+        Ha $\lambda = 0$, akkor a bal oldal az $\underline{f}_1, \dots, \underline{f}_k$ vektorok lineáris kombinációja, így $F$ lineáris függetlensége miatt $\lambda_i = 0 \forall i$. Tehát $\underline{0}$ csak triviális lineáris kombinációként áll elő, vagyis $F \cup \{\underline{f}\}$ csakugyan lineárisan független.
+
+        Ha pedig $\lambda \neq 0$, akkor $\underline{f}$ kifejezhető az $F$-beliekkel: $\underline{f} = \frac{-\lambda_1}{\lambda} \underline{f}_1 + \dots + \frac{-\lambda_k}{\lambda} \underline{f}_k$. Ez lehetetlen, hisz $\underline{f} \notin \langle F \rangle$.
+
+        \textcolor{orange}{\textbf{Köv:}} (\textbf{Kicserélési lemma}) Ha $F \subseteq V \leq \mathbb{R}^n$ lineárisan független és $\langle G \rangle = V$ generátorrendszer akkor $\forall \underline{f} \in F \; \exists \; \underline{g} \in G$, amire $F \setminus \{\underline{f}\} \cup \{\underline{g}\}$ is lineárisan független.
+
+        \textcolor{blue}{\textbf{Megj:}} A kicserélési lemma szerint bárhogy is törlünk a $V$ altér egy független rendszeréből egy vektrort, az pótolható a $V$ generátorrendszer egy alkalmas elemével úgy, hogy a kapott rendszer lineárisan független marad.
+
+        \textcolor{green}{\textbf{Biz:}} Indirekt bizonyítunk. Legyen $F' := F \setminus \{\underline{f}\}$. Mivel $F$ lineárisan független, ezért $\underline{f} \notin \langle F' \rangle$. Ha $F' \cup \{\underline{g}\}$ lineárisan összefüggő lenne minden $\underline{g} \in G$-re, akkor az előző lemma miatt $\underline{g} \in \langle F \rangle$ teljesülne minden $\underline{g} \in G$-re. Ez azt jelenti, hogy $G \subseteq \langle F'\rangle$, vagyis $\langle G \rangle \subseteq \langle F' \rangle$. Ezt felhasználva $\underline{f} \in V = \langle G \rangle \subseteq \langle F' \rangle \niton \underline{f}$ adódik, ami ellentmondás. Az indirekt feltevés megfőlt: van olyan $\underline{g} \in G$, amire $F' \cup \{\underline{g}\}$ lineárisan független.
+
+        \textcolor{orange}{\textbf{FG-egyenlőtlenség:}} Tegyük fel, hogy $G$ a $V \leq \mathbb{R}^n$ altér generátorrendszere, és $F \subseteq V$ lineárisan független. Ekkor $|F| \leq |G|$.
+
+        \textcolor{blue}{\textbf{Megj:}} Magyarul: altérben egy független rendszer sosem nagyobb, mint egy generátorrendszer.
+
+        \textcolor{green}{\textbf{Biz:}} Legyen $F_0 := F$. Ha $F_0 \subseteq G$, akkor $|F_0| \leq |G|$. Ha $F_0 \subsetneq G$, akkor $F_0 \setminus G \neq \emptyset$, legyen mondjuk $\underline{f} \in F_0 \setminus G$. A kicserélési lemma miatt van olyan $\underline{g} \in G$, amire $F_1 := F_0 \setminus \{\underline{f}\} \cup \{\underline{g}\}$ lineárisan független. Ezzel az $F_1$-gyel ugyanezt folytatva kapjuk az $F_2, F_3, \dots,$ lineárisan független rendszereket. Előbb-utóbb olyan $F_i$-hez jutunk, amivel ez már nem folytatható, mert $F_i \subseteq G$. Ekkor $|F_0| = |F_1| = \dots = |F_i| \leq |G|$, győztünk.
+
+        \textcolor{orange}{\textbf{Köv:}} Ha $F \subseteq \mathbb{R}^n$ lineárisan független, akkor $|F| \leq n$.
+
+        \textcolor{green}{\textbf{Biz:}} Láttuk, hogy $G = \{\underline{e}_1, \dots, \underline{e}_n\}$ az $\mathbb{R}^n$ generátorrendszere. Az FG-egyenlőtlenség miatt $|F| \leq |G| = n$.
+
+        \textcolor{orange}{\textbf{Állítás:}} Tegyük fel, hogy $F = \{\underline{f}_1, \dots, \underline{f}_k\} \subseteq \mathbb{R}^n$ lineárisan független és $\underline{f} \in \langle F \rangle$. Ekkor $\underline{f}$ egyértelműen áll elő $F$-beli vektorok lineáris kombinációjaként.
+
+        \textcolor{green}{\textbf{Biz:}} Mivel $f \in \langle F \rangle$, ezért $\underline{f}$ előáll az $F$-beliek lineáris kombinációjaként. Tegyük fel, hogy $\underline{f} = \lambda_1 \underline{f}_1 + \dots + \lambda_k \underline{f}_k = \mu_1 \underline{f}_1 + \dots + \mu_k \underline{f}_k$ két előállítás. Ekkor $\underline{0} = \underline{f} - \underline{f} = (\lambda_1 - \mu_1)\underline{f}_1 + \dots + (\lambda_k - \mu_k) \underline{f}_k$.
+
+        Mivel $F$ lineárisan független, a jobb oldalon álló lineáris kombináció triviális, azaz $\lambda_i = \mu_i \forall i$. Így a két fenti előállítás megegyezik, vagyis $f$ csak egyféleképp áll elő az $F$-beliek lineáris kombinációjaként.
+
+    \subsection{ESÁ-ok hatása a sor- és oszlopvektorokra}
+
+        Egy $M \in \mathbb{R}^{n \times k}$ mátrixot tekinthetünk $n$ db $\mathbb{R}^k$-beli sorvektornak és $k$ db $\mathbb{R}^n$-beli oszlopvektornak is. MOst azt vizsgáljuk, hogyan hat egy ESÁ ezen vektorok rendszerére.
+
+        \textcolor{orange}{\textbf{Állítás:}} Tegyük fel, hogy $M'$-t ESÁ-okkal kaptuk az $M \in \mathbb{R}^{n \times k}$ mátrixból. Ha $S$ ill. $S'$ az $M$ ill. $M'$ sorvektorainak halmaza, akkor $\langle S \rangle = \langle S' \rangle$. 
+
+        \textcolor{green}{\textbf{Biz:}} Feltehető, hogy $M'$-t egyetlen ESÁ-sal kaptuk $M$-ből. Bármelyik konkrét ESÁ-i is alkalmaztunk, $S' \subseteq \langle S \rangle$, így $\langle S' \rangle \subseteq \langle S \rangle$. Láttuk, hogy bármely ESÁ megfordítása is kivitelezhető ESÁ-okkal, ezért $\langle S \rangle \subseteq \langle S' \rangle$, és a két megfigyelésből $\langle S \rangle = \langle S'\rangle$ adódik.
+        
+        \textcolor{orange}{\textbf{Állítás:}} Tegyük fel, hogy az $M \in \mathbb{R}^{n \times k}$ mátrixból $M'$-t ESÁ-okkal kaptuk és $O = \{\underline{o}_1, \dots, \underline{o}_k\}$ ill. $O' = \{\underline{o'}_1, \dots, \underline{o'}_k\}$ az oszlopvektoraik halmaza. Ekkor $O$-n és $O'$-n ugyanazok a lineáris összefüggések teljesülnek: $(\sum_{i=1}^{k}\lambda_i \underline{o}_i= \sum_{i=1}^{k}\mu_i \underline{o}_i) \Longleftrightarrow (\sum_{i=1}^{k}\lambda_i \underline{o'}_i= \sum_{i=1}^{k}\mu_i \underline{o'}_i)$.
+
+        \textcolor{green}{\textbf{Biz:}} Ismét feltehető, hogy $M'$ egyetlen ESÁ-sal keletkezett. Ráadásul elég a $\Rightarrow:$ irányt bizonyítani: a $\Leftarrow:$ következik abból, hogy minden ESÁ fordítottja megvalósítható legfeljebb három ESÁ-sal. Ezért ha egy lineáris összefüggés fennál $M'$-re akkor az ezt legfeljebb három ESÁ megőrzi, tehát igaz marad $M$-re is.
+
+        \textcolor{green}{\textbf{Biz:}} $\Rightarrow$: A fenti lineáris összefüggés $M$-re pontosan azt jelenti, hogy $\sum_{i=1}^{k}\lambda_i x_i = \sum_{i=1}^{k}\mu_i x_i$ egyenletnek $M$ minden sora megoldása. Nekünk pedig azt kell igazolni, hogy ugyanezt az egyenletet az ESÁ után kapott $M'$ minden sora is megoldja. Sorcsere esetén pontosan ugyanazokról az egyenlőségekről van szó, skalárral szorzás esetén az egyik egyenletet skalárral kell szorozni, sorüsszeadás esetén pedig az új egyenlőség két korábban teljesülő egyenlet összege.
+
+        \textcolor{purple}{\textbf{Példa:}} Döntsük el, hogy lineárisan független rendszert alkotnak-e az alábbi mátrix oszlopai. Megoldás: ESÁ-okkal RLA mátrixot képezünk.
+
+        $\begin{matrix}
+            1 & 2 & 1 & 1 & \bigm| \\
+            -1 & -1 & -2 & 0 & \bigm| \\
+            1 & 4 & 0 & 5 & \bigm| \\
+            2 & 3 & 3 & 1 & \bigm| 
+        \end{matrix} 
+        \begin{matrix}
+            & 1 & 2 & 1 & 1 & \bigm| \\
+            & 0 & 1 & -1 & 1 & \bigm| \\
+            & 0 & 2 & -1 & 4 & \bigm| \\
+            & 0 & -1 & 1 & -1 & \bigm| 
+        \end{matrix} 
+        \begin{matrix}
+            & 1 & 2 & 1 & 1 & \bigm| \\
+            & 0 & 1 & -1 & 1 & \bigm| \\
+            & 0 & 0 & 1 & 2 & \bigm| \\
+            & 0 & 0 & 0 & 0 & \bigm| 
+        \end{matrix} 
+        \begin{matrix}
+            & 1 & 2 & 0 & -1 & \bigm| \\
+            & 0 & 1 & 0 & 3 & \bigm| \\
+            & 0 & 0 & 1 & 2 & \bigm| \\
+            & 0 & 0 & 0 & 0 & \bigm| 
+        \end{matrix} 
+        \begin{matrix}
+            & 1 & 0 & 0 & -7 & \bigm| \\
+            & 0 & 1 & 0 & 3 & \bigm| \\
+            & 0 & 0 & 1 & 2 & \bigm| \\
+            & 0 & 0 & 0 & 0 & \bigm| 
+        \end{matrix}$
+
+        A kapott mátrixra $\underline{o}_4 = -7\underline{o}_1 + 3\underline{o}_2 + 2\underline{o}_3$, ezért ugyanez a lineáris összefüggés a kiindulási mátrixra is igaz, tehát nem voltak lineárisan függetlenek az oszlopok.
+
+        \textcolor{orange}{\textbf{Megf:}} Az $M$ mátrix pontosan akkor RLA, ha megkaphatü az $\underline{e}_1, \dots, \underline{e}_k$ oszlopok alkotta mátrixból oszlopok beszúrásával. Minden beszúrt oszlop a tőle álló $\underline{e}_i$ oszlopok lineáris kombinációja.
 
 \end{document}

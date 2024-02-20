@@ -1,0 +1,375 @@
+\documentclass[../szamtud.tex]{subfiles}
+
+\begin{document}
+    
+    \subsection{Altér bázisa}
+
+        \textcolor{blue}{\textbf{Def:}} A $V \leq \mathbb{R}^n$ altér \textcolor{red}{bázisa} a $V$ egy lineárisan független generátorrendszere. 
+
+        \textcolor{purple}{\textbf{Példa:}} Az $e_1, e_2, \dots, e_n$ vektorok az $\mathbb{R}^n$ \textcolor{red}{standard bázisát} alkotják.
+
+        \textcolor{red}{\textbf{Kérdés:}} Minden altérnek van bázisa? Ha $\mathbb{R}^n$ egy $V$ altérnek van, akkor hogyan lehet előállítani $V$ egy bázisát?
+
+        
+
+        \textcolor{green}{\textbf{1. Módszer:}} Ha $V = \langle G \rangle$, azaz ha ismert a $V$ egy véges $G$ generátorrendszere, akkor $G$-t addig ritkítjuk, amíg lineárisan független nem lesz. 
+
+        Konkrétan: ha egy $\underline{g} \in G$ generátorelem előáll a $G \setminus \{\underline{g}\}$ elemeinek alkalmas lineáris kombinációjaként, akkor $G \setminus \{\underline{g}\}$ is generálja $V$-t. Ezért $\underline{g}$-t eldobhatjuk. Ha már nincs ilyen eldobható $\underline{g}$ vektor, akkor $G$ maradéka nem csak generátorrendszer, de lineárisan független is.
+
+        \textcolor{green}{\textbf{2. Módszer:}} Felépíthetjük $V$ bázisát a $V$ egy tetszőleges $F$ lineárisan független rendszeréből (akár $F = \emptyset$-ból) kiindulva. Ha $\langle F \rangle = V$, akkor kész vagyunk. Ha nem, akkor tetszőleges $\underline{f} \in V \setminus \langle F \rangle$ esetén $F \cup \{\underline{f}\}$ lineárisan független marad. Az FG-egyenlőtlenség miatt $F$ nem tartalmazhat $n$-nél több elemet, ezért legfeljebb $n$ lépésben megkapjuk $V$ bázisát.
+
+    \subsection{Bázis előállítása generátorrendszerből}
+
+        \textcolor{purple}{\textbf{Példa:}} Keressük meg az alábbi vektorok által generált $V$ altér egy bázisát!
+
+        \[
+            \underline{u} = \begin{pmatrix}
+                3 \\
+                -1 \\
+                0 \\ 
+                1 
+            \end{pmatrix}, \underline{v} = 
+            \begin{pmatrix}
+                2 \\
+                3 \\
+                -1 \\
+                -1 
+            \end{pmatrix}, \underline{w} = 
+            \begin{pmatrix}
+                -1 \\
+                4 \\
+                -1 \\
+                -2
+            \end{pmatrix}, \underline{x} = 
+            \begin{pmatrix}
+                5 \\
+                -9 \\
+                2 \\
+                5
+            \end{pmatrix}, \underline{y} = 
+            \begin{pmatrix}
+                2 \\
+                2 \\
+                2 \\
+                3
+            \end{pmatrix}
+        \]
+
+        \textcolor{green}{\textbf{Megoldás:}} Az $(\underline{u}|\underline{v}|\underline{w}|\underline{x}|\underline{y})$ mátrixot ESÁ-okkal RLA-vá alakítjuk. Ehhez szabad (de nem kötelező) Gauss-eliminációt használni.
+
+        $ 
+            \begin{matrix}
+                3 & 2 & -1 & 5 & 2 & \bigm| \\
+                -1 & 3 & 4 & -9 & 2 & \bigm| \\
+                0 & -1 & -1 & 2 & 2 & \bigm| \\
+                1 & -1 & -2 & 5 & 3 & \bigm| 
+            \end{matrix}  
+            \begin{matrix}
+                1 & -1 & -2 & 5 & 3 & \bigm| \\
+                -1 & 3 & 4 & -9 & 2 & \bigm| \\
+                0 & -1 & -1 & 2 & 2 & \bigm| \\
+                3 & 2 & -1 & 5 & 2 & \bigm| 
+            \end{matrix} 
+            \begin{matrix}
+                1 & -1 & -2 & 5 & 3 & \bigm| \\
+                0 & 2 & 2 & -4 & 5 & \bigm| \\
+                0 & -1 & -1 & 2 & 2 & \bigm| \\
+                0 & 5 & 5 & -10 & -7 & \bigm| 
+            \end{matrix} 
+        $
+
+        $
+            \begin{matrix}
+                1 & -1 & -2 & 5 & 3 & \bigm| \\
+                0 & -1 & -1 & 2 & 2 & \bigm| \\
+                0 & 2 & 2 & -4 & 5 & \bigm| \\
+                0 & 5 & 5 & -10 & -7 & \bigm| 
+            \end{matrix} 
+            \begin{matrix}
+                1 & -1 & -2 & 5 & 3 & \bigm| \\
+                0 & 1 & 1 & -2 & -2 & \bigm| \\
+                0 & 2 & 2 & -4 & 5 & \bigm| \\
+                0 & 5 & 5 & -10 & -7 & \bigm| 
+            \end{matrix} 
+            \begin{matrix}
+                1 & 0 & -1 & 3 & 1 & \bigm| \\
+                0 & 1 & 1 & -2 & -2 & \bigm| \\
+                0 & 0 & 0 & 0 & 9 & \bigm| \\
+                0 & 0 & 0 & 0 & 3 & \bigm| 
+            \end{matrix} 
+        $
+
+            \begin{minipage}{.25\linewidth}
+                $
+                    \begin{matrix}
+                        \underline{u} & \underline{v} & \underline{w} & \underline{x} & \underline{y} & \bigm| \\
+                        1 & 0 & -1 & 3 & 1 & \bigm| \\
+                        0 & 1 & 1 & -2 & -2 & \bigm| \\
+                        0 & 0 & 0 & 0 & 9 & \bigm| \\
+                        0 & 0 & 0 & 0 & 3 & \bigm| 
+                    \end{matrix} 
+                $
+            \end{minipage}
+            \begin{minipage}{.5\linewidth}
+                Ezek szerint $\underline{w} = \underline{v} - \underline{u}, \underline{x} = 3\underline{u} - 2\underline{v}$, és $\{\underline{u}, \underline{v}, \underline{y}\}$ lineárisan független generátorrendszer, tehát a $V$ altér bázisát alkotja.
+            \end{minipage}
+        
+        \textcolor{purple}{\textbf{Példa:}} Keressük meg az alábbi $V \leq \mathbb{R}^4$ altér egy bázisát!
+
+            \[
+                V = \begin{Bmatrix}
+                    \begin{pmatrix}
+                        2 \\
+                        3 \\
+                        -1 \\
+                        -1 
+                    \end{pmatrix} : x_1 + x_2 + x_3 + x_4 = 0, 3x_2 - 2x_4 = 0
+                \end{Bmatrix}
+            \]
+
+        \textcolor{green}{\textbf{Megoldás:}} Az altér egy homogén lineáris egyenletrendszer megoldásaiból áll. (Homogén: a jobboldalon 0-k állnak, amiket a kibővített együtthatómátrixból elhagyunk.) A megoldásokat leíró képletből fogjuk meghatározni $V$ egy bázisát.
+
+        \begin{minipage}{.44\linewidth}
+            $\begin{matrix}
+                1 & 1 & 1 & 1 & \bigm| \\
+                0 & 3 & 0 & -2 & \bigm|
+            \end{matrix}
+            \begin{matrix}
+                1 & 1 & 1 & 1 & \bigm| \\
+                0 & 1 & 0 & -\frac{2}{3} & \bigm|
+            \end{matrix}
+            \begin{matrix}
+                1 & 0 & 1 & -\frac{5}{3} & \bigm| \\
+                0 & 1 & 0 & -\frac{2}{3} & \bigm|
+            \end{matrix}$   
+        \end{minipage}
+        \begin{minipage}{.3\linewidth}
+            \begin{align*}
+                &x_3, x_4 \in \mathbb{R} \textrm{tetsz.,} \\
+                &x_1 = -x_3 - \frac{5}{3}x_4, \\
+                &x_2 = \frac{2}{3}x_4.
+            \end{align*}
+        \end{minipage}
+
+        A bázis elkészítéséhez a szp-ek olyan lineárisan független értékadásait keressük, amelyek lineáris kombinációjaként a szp-ek tetszőleges értékadása előáll. Ilyen pl., ha minden lehetséges módon egy szp-nek 1, a többinek 0 értéket adunk. Azaz az $x_3 = 1, x_4 = 0$ ill. $x_3 = 0, x_4= 1$ értékadásokhoz a $\underline{b}_1 = \begin{pmatrix} -1 \\ 0 \\ 1 \\ 0 \end{pmatrix}$ és $\underline{b}_2 = \begin{pmatrix} -\frac{5}{3} \\ \frac{3}{2} \\ 0 \\ 1 \end{pmatrix}$ vektorok alkotta bázis tartozik.
+        
+        \textcolor{purple}{\textbf{Példa:}} Írjuk fel a $V$ alteret meghatározó homogén lineáris egyenletrendszert, ahol $V$-t az alábbi vektorok generálják. 
+        
+        \[
+            \underline{u} = \begin{pmatrix}
+                3 \\
+                -1 \\
+                0 \\ 
+                1 
+            \end{pmatrix}, \underline{v} = 
+            \begin{pmatrix}
+                2 \\
+                3 \\
+                -1 \\
+                -1 
+            \end{pmatrix}, \underline{w} = 
+            \begin{pmatrix}
+                5 \\
+                -9 \\
+                2 \\
+                5
+            \end{pmatrix}, \underline{z} = 
+            \begin{pmatrix}
+                2 \\
+                2 \\
+                2 \\
+                3
+            \end{pmatrix}
+        \]
+
+        \textcolor{green}{\textbf{Megoldás:}} Az $(\underline{u}|\underline{v}|\underline{w}|\underline{x}|\textcolor{red}{\underline{y}})$ mátrixot ESÁ-okkal RLA-ra (LA-ra) hozzuk.
+
+        \[ 
+            \begin{matrix}
+                3 & 2 & 5 & 2 & \textcolor{red}{x_1} & \bigm| \\
+                -1 & 3 & -9 & 2 & \textcolor{red}{x_2} & \bigm| \\
+                0 & -1 & 2 & 2 & \textcolor{red}{x_3} & \bigm| \\
+                1 & -1 & 5 & 3 & \textcolor{red}{x_4} & \bigm| 
+            \end{matrix}  
+            \begin{matrix}
+                1 & -1 & 5 & 3 & x_4 & \bigm| \\
+                -1 & 3 & -9 & 2 & x_2 & \bigm| \\
+                0 & -1 & 2 & 2 & x_3 & \bigm| \\
+                3 & 2 & 5 & 2 & x_1 & \bigm| 
+            \end{matrix} 
+            \begin{matrix}
+                1 & -1 & 5 & 3 & x_4 & \bigm| \\
+                0 & -1 & 2 & 2 & x_2+x_4 & \bigm| \\
+                0 & -1 & 2 & 2 & x_3 & \bigm| \\
+                0 & 5 & -10 & -7 & x_2-3x_4 & \bigm| 
+            \end{matrix} 
+        \]
+
+        \[
+            \begin{matrix}
+                1 & -1 & 5 & 3 & x_4 & \bigm| \\
+                0 & -1 & 2 & 2 & x_3 & \bigm| \\
+                0 & 2 & -4 & 5 & x_2+x_4 & \bigm| \\
+                0 & 5 & -10 & -7 & x_2-3x_4 & \bigm| 
+            \end{matrix} 
+            \begin{matrix}
+                1 & -1 & 5 & 3 & x_4 & \bigm| \\
+                0 & 1 & -2 & -2 & -x_3 & \bigm| \\
+                0 & 2 & -4 & 5 & x_2+x_4 & \bigm| \\
+                0 & 5 & -10 & -7 & x_2-3x_4 & \bigm| 
+            \end{matrix} 
+            \begin{matrix}
+                1 & 0 & 3 & 1 & x_4-x_3 & \bigm| \\
+                0 & 1 & -2 & -2 & -x_3 & \bigm| \\
+                0 & 0 & 0 & 9 & x_2+2x_3+x_4 & \bigm| \\
+                0 & 0 & 0 & 3 & x_1-5x_3-3x_4 & \bigm| 
+            \end{matrix} 
+        \]
+        \[
+            \begin{matrix}
+                1 & 0 & 3 & 0 & \dots  & \bigm| \\
+                0 & 1 & -2 & 0 & \dots & \bigm| \\
+                0 & 0 & 0 & 1 & \frac{x_2+2x_3+x_4}{9} & \bigm| \\
+                0 & 0 & 0 & 0 & \frac{3x_1-x_2+13x_3-10x_4}{3} & \bigm| 
+            \end{matrix} 
+        \]
+
+        A kiindulási mátrix 5-dik oszlopa pontosan akkor van $V$-ben, ha az első 4 oszlop generálja. Ez azzal ekvivalens, hogy az RLA mátrix eslő 4 oszlopa generálja az 5-diket. Mivel $\underline{e}_1, \underline{e}_2, \underline{e}_3$ a generáló oszlopok között vannak, ezért csupán $3x_1-x_2+13x_3-10x_4 = 0$ a feltétel.
+
+    \subsection{Altér dimenziója}
+
+        \textcolor{orange}{\textbf{Megf:}} Ha $B_1$ és $B_2$ a $V \leq \mathbb{R}^n$ bázisai, akkor $|B_1| = |B_2|$.
+
+        \textcolor{green}{\textbf{Biz:}} Mivel $B_1$ lineárisan független és $B_2$ generátorrendszer $V$-ben, ezért az FG-egyenlőtlenség miatt $|B_1| \leq |B_2|$. 
+
+        Az is igaz, hogy $B_2$ lineárisan független és $B_1$ generátorrendszer $V$-ben, ezért az FG-egyenlőtlenség miatt $|B_1| \leq |B_2|$ is teljesül. A két  eredmény összevetéséből $|B_1| = |B_2|$ adódik.
+
+        \textcolor{blue}{\textbf{Def:}} A $V \leq \mathbb{R}^n$ altér \textcolor{red}{dimenziója} dim $V = k$, ha $V$-nek van $k$ vektorból álló bázis.
+
+        \textcolor{blue}{\textbf{Megj:}} A fenti tétel szerint az altér dimenziója egyértelmű.
+
+        \textcolor{purple}{\textbf{Példa:}} Az $\mathbb{R}^n$ tér dimenziója $n$. (U.i. $\underline{e}_1, \underline{e}_2, \dots, \underline{e}_3$ lineárisan független generátorrendszer)
+
+        \textcolor{orange}{\textbf{Állítás:}} Ha $U \leq V \leq \mathbb{R}^n$, akkor dim $U \leq$ dim $V$.
+
+        \textcolor{green}{\textbf{Biz:}} Legyen $B$ az $U$ bázisa. Ekkor $B \subseteq V$ lineárisan független, ezért a korábban látott 2. módszerrel $B$-t ki lehet egészíteni $V$ egy $B'$ bázisává, így dim $U = |B| \leq |B'| = $ dim $V$.
+
+        \textcolor{orange}{\textbf{Állítás:}} Ha $V \leq \mathbb{R}^n$ és $V_1, V_2$ a $V$ alterei, akkor dim$(V_1 \cap V_2) +$ dim $V \geq$ dim $V_1 +$ dim $V_2$.
+
+        \textcolor{green}{\textbf{Biz:}} Egészítsük ki az $U \cap V$ egy $B$ bázisát a $V_1$ egy $B \cup B_1$ ill. a $V_2$ egy $B \cup B_2$ bázisává. Igazoljuk, hogy $B \cup B_1 \cup B_2$ lineárisan független. 
+        
+        \noindent Tegyük fel, hogy $\sum_{\underline{b} \in B} \lambda_b \underline{b} + \sum_{\underline{b_1} \in B_1} \lambda_{b_1} \underline{b_1} + \sum_{\underline{b_2} \in B_2} \lambda_{b_2} \underline{b_2} = 0$. 
+        
+        \noindent Ezt átrendezve: $V_1 \ni \underline{x} = \sum_{\underline{b} \in B} \lambda_b \underline{b} + \sum_{\underline{b_1} \in B_1} \lambda_{b_1} \underline{b_1} = -\sum_{\underline{b_2} \in B_2} \lambda_{b_2} \underline{b_2} \in V_2$ adódik, ezért $\underline{x} \in V_1 \cap V_2$. 
+        
+        \noindent Ekkor $\underline{x} = \sum_{\underline{b} \in B} \mu_b \underline{b}$, hisz $B$ a $V_1 \cap V_2$ bázisa. 
+        
+        \noindent Innen $\underline{x} = \sum_{\underline{b} \in B} \mu_b \underline{b} + \sum_{\underline{b_2} \in B_2} \lambda_{b_2} \underline{b_2} = \underline{x} - \underline{x} = 0$. 
+        
+        \noindent A $B \cup B_2$ lineáris függetlensége miatt $\lambda_{\underline{b}_2} = 0 \; \forall \underline{b}_2 \in B_2$. Hasonlóan $\lambda_{b_1} = 0 \; \forall \underline{b}_1 \in B_1$, és $\lambda_{\underline{b}} = 0 \; \forall \underline{b} \in B$, azaz $B \cup B_1 \cup B_2$ lineárisan független. Ebből adódik, hogy dim $(V_1 \cap V_2)+$ dim $V \geq |B|+|B_1|+|B_2|+|B| =$ dim $V_1+$ dim $V_2$.
+
+        \textcolor{orange}{\textbf{Köv:}} $\mathbb{R}^3$-ban bármely két origón áthaladó sík (más szóval: kétdimenziós altér) tartalmaz közös egyenest.
+        
+        \textcolor{blue}{\textbf{Megj:}} $\mathbb{R}^4$-ben már található két olyan origón áthaladó sík, amik csak az origóban metszik egymást. Ilyenek pl. $\langle \underline{e}_1, \underline{e}_2 \rangle$ ill. $\langle \underline{e}_3, \underline{e}_4 \rangle$.
+
+        A továbbiakban azt szeretnénk indokolni, hogy $\mathbb{R}^n$ tetszőleges $k$ dimenziós altere ,,lényegében" úgy viselkedik, mint $\mathbb{R}^k$.
+
+    \subsection{Bázis szerinti koordináták}
+
+        Legyen $B$ a $V \leq \mathbb{R}^n$ altér bázisa. Mivel $B$ generátorrendszer, minden $\underline{v} \in V$ előáll a $B$ elemeinek lineáris kombinációjaként, azaz $\underline{v} = \sum_{\underline{b} \in B} \lambda_{\underline{b}}\underline{b}$ alakban.
+
+        A $B$ bázis lineárisan függetlenségéből pedig az következik, hogy tetszőleges $\underline{v} \in V$ lin.komb-ként történő előállítása egyértelmű: ha $\underline{v} = \sum_{\underline{b} \in B} \lambda_{\underline{b}}\underline{b} = \sum_{\underline{b} \in B} \mu_{\underline{b}}\underline{b}$, akkor $\lambda_{\underline{b}} = \mu_{\underline{b}} \forall \underline{b} \in B$. 
+        
+        Ez a gondolatmenet indokolja az alábbi fogalom jóldefiniáltságát.
+
+        \textcolor{blue}{\textbf{Def:}} Ha $B = \{\underline{b}_1, \underline{b}_2, \dots, \underline{b}_k\}$ a $V \leq \mathbb{R}^n$ altér bázisa és $\underline{v} = \sum_{i=1}^{k} \lambda_i \underline{b}_i$, akkor a $\underline{v}$ vektor \textcolor{red}{$B$ bázis szerinti koordinátavektora} $[\underline{v}]_B = \begin{pmatrix} \lambda_1 \\ \vdots \\ \lambda_k\end{pmatrix}$
+
+        Az alábbi összefüggések azonnal adódnak a definícióból. 
+
+        \textcolor{orange}{\textbf{Állítás:}} Ha $B = \{\underline{b}_1, \underline{b}_2, \dots, \underline{b}_k\}$ a $V \leq \mathbb{R}^n$ altér bázisa és $\underline{u}, \underline{v} \in V$ ill. $\lambda \in \mathbb{R}$, akkor  
+        \begin{itemize}
+            \item[(1)] $[\underline{u} + \underline{v}]_B = [\underline{u}]_B + [\underline{v}]_B$ ill.
+            \item[(2)] $[\lambda\underline{u}]_B = \lambda[\underline{u}]_B$.
+        \end{itemize}
+
+        \textcolor{green}{\textbf{Biz:}} (1) Tegyük fel, hogy $[\underline{u}]_B = \begin{pmatrix} \lambda_1 \\ \vdots \\ \lambda_k\end{pmatrix}$ és $[\underline{v}]_B = \begin{pmatrix} \mu_1 \\ \vdots \\ \mu_k\end{pmatrix}$. 
+        
+        Ekkor $\underline{u} = \sum_{i=1}^{k}\lambda_i \underline{b}_i$ és $\underline{v} = \sum_{i=1}^{k}\mu_i \underline{b}_i$, tehát $\underline{u} + \underline{v} = \sum_{i=1}^{k}\lambda_i \underline{b}_i + \sum_{i=1}^{k}\mu_i \underline{b}_i = \sum_{i=1}^{k}(\lambda_i + \mu_i) \underline{b}_i$, 
+        
+        ezért $[\underline{u} + \underline{v}]_B = \begin{pmatrix} \lambda_1 + \mu_1 \\ \vdots \\ \lambda_k + \mu_k \end{pmatrix} = [\underline{u}]_B + [\underline{v}]_B$.
+
+        \textcolor{green}{\textbf{Biz:}} (2) Tegyük fel, hogy $[\underline{u}]_B = \begin{pmatrix} \lambda_1 \\ \vdots \\ \lambda_k \end{pmatrix}$. 
+        
+        Ekkor $\lambda_{\underline{u}} = \lambda \cdot \sum_{i=1}^{k}\lambda_i \underline{b}_i = \sum_{i=1}^{k}\lambda\lambda_i \underline{b}_i \Rightarrow [\lambda \underline{u}]_B = \begin{pmatrix} \lambda\lambda_1 \\ \vdots \\ \lambda\lambda_k \end{pmatrix} = \lambda[\underline{u}]_B$
+
+        \textcolor{blue}{\textbf{Megj:}} A fenti állítás azt mutatja meg, hogy $\mathbb{R}^n$ bármely $V$ altere lényegében ugyanúgy viselkedik, mint az $\mathbb{R}^k$ tér, ahol $k =$ dim $V$.
+
+        \textcolor{red}{\textbf{Kínzó kérdés:}} Hogyan kell a koordinátavektort kiszámítani?
+
+        \textcolor{purple}{\textbf{Példa:}} Legyen $B = \{b_1, b_2\}$ a $V \leq \mathbb{R}^3$ bázisa, ahol $\underline{b}_1 = \begin{pmatrix} 3 \\ 2 \\ 3 \end{pmatrix}$ ill. $\underline{b}_2 = \begin{pmatrix} 4 \\ 3 \\ 2 \end{pmatrix}$ és $\underline{v} = \begin{pmatrix} 7 \\ 6 \\ -1 \end{pmatrix}$. Keressük a $[V]_B$-t, ha $v \in V$.
+
+        \textcolor{green}{\textbf{Megoldás:}} Az $(\underline{b}_1|\underline{b}_2|\underline{v})$ mátrixot RLA-vá transzformáljuk.
+
+        $\begin{matrix}
+            3 & 4 & 7 & \bigm| \\
+            2 & 3 & 6 & \bigm| \\
+            3 & 2 & -1 & \bigm| 
+        \end{matrix}
+        \begin{matrix}
+            1 & 1 & 1 & \bigm| \\
+            2 & 3 & 6 & \bigm| \\
+            3 & 2 & -1 & \bigm| 
+        \end{matrix}
+        \begin{matrix}
+            1 & 1 & 1 & \bigm| \\
+            0 & 1 & 4 & \bigm| \\
+            0 & -1 & -4 & \bigm| 
+        \end{matrix}
+        \begin{matrix}
+            1 & 0 & -3 & \bigm| \\
+            0 & 1 & 4 & \bigm| \\
+            0 & 0 & 0 & \bigm| 
+        \end{matrix}$
+
+        Az RLA mátrix harmadik oszlopa az első kettő lineáris kombinációja, így $\underline{v} = -3\underline{b}_1 + 4\underline{b}_2$, azaz $\underline{v} \in V$ és $[\underline{v}]_B = \binom{-3}{4}$.
+
+    \subsection{Mi haszna a lineáris algebrának???}
+
+        Amikről itt és nem esik szó: kapcsolat a koordinátageometriával, konvex alakzatok geometriájával ill. lineáris célfüggvény optimalizálását előíró feladatok megoldásával. 
+
+        A matematikailag különösen érdekes alkalmazások általában abból adódnak, hogy egy lineáris algebrától látszólag távol álló feladatról kiderül, hogy megfogalmazható lineáris algebrai terminológiával. Az így rendelkezésre álló eszközök pedig jóval hatékonyabbak lehetnek, mint az eredeti feladat témakörében szokásosak. Akár a legegyszerűbb lineáris algebrai eszköz (mint pl. az FG-egyenlőtlenség) nehéz tételek meglepően egyszerű igazolására is alkalmas lehet.
+
+        \textcolor{red}{\textbf{Buta kérdés:}} Egy $n$-elemű alaphalmazból legfeljebb hány részhalmazt lehet kiválasztani úgy, hogy bármely két kiválasztott részhalmaznak pontosan ugyanannyi közös eleme legyen?
+
+        \textcolor{orange}{\textbf{Fisher-egyenlőtlenség:}} Ha $\emptyset \neq A_1, A_2, \dots, A_k \subseteq \{x_1, \dots, x_n\}$ és $|A_i \cap A_j| = \lambda \; \forall 0 < i < j \leq k$, akkor $k \leq n$.
+
+        \textcolor{green}{\textbf{Biz:}} \begin{itemize}
+            \item[(1)] Ha $\lambda = 0$, akkor az $A_1, \dots, A_k$ halmazok diszjunktak, és az állítás triviális, hisz $|A_i| \geq 1 \forall i$. Feltehetjük, hogy $\lambda > 0$.
+            \item[(2)] Világos, hogy $|A_i| \geq \lambda \forall 1 \leq i \leq k$. Ha mondjuk $|A_1| = \lambda$, akkor $A_1 \subseteq A_j \forall j \neq 1$. Ezért az $A_2, \dots, A_n$ halmazok $A_1$-en kívüli része egymástól diszjunkt, tehát a darabszámuk legfeljebb $n-\lambda$ lehet, és ebből $k \leq n - \lambda + 1 \leq n$ adódik. Feltehetjük tehát, hogy $|A_i| > \lambda$ teljesül az $A_1, \dots, A_k$ halmazok mindegyikére.
+            \item[(3)] Legyen $|A_i| = \lambda + \mu_i$, ahol $\mu_i > 0 \forall 1 \leq i \leq k$. 
+            Jelölje rendre $a_1, \dots, a_k$ az $A_1, \dots, A_k$ halmazok karakterisztikus vektorát, azaz $a_i = \begin{pmatrix} \chi_1 \\ \vdots \\ \chi_n \end{pmatrix}$, ahol $\chi_j = \begin{cases} 1 &\text{ha } x_j \in A_i \\ 0 &\text{ha } x_j \in A_i \end{cases}$.
+    
+            Ha az $a_1, \dots, a_k$ vektorok lineárisan függetlenek, akkor az FG-egyenlőtlenség miatt $k \leq$ dim $\mathbb{R}^n = n$.
+    
+            Tegyük fel, hogy $\lambda_1 \underline{a}_1 + \dots + \lambda_k \underline{a}_k = 0$. A bal oldali vektor $A_j$ elemeinek megfelelő koordinátáit összeadva $\mu_j \lambda_j + \lambda \cdot \sum_{i=1}^{k}\lambda_i = 0$ adódik. 
+    
+            Ha $\sum_{i=1}^{k}\lambda_i > 0$, akkor $\lambda_j < 0 \forall j$, így $\sum_{i=1}^{k}\lambda_i < 0$, ellentmondás.
+    
+            Hasonlóan, ha $\sum_{i=1}^{k}\lambda_i < 0$, akkor $\lambda_j > 0 \forall j$, ez sem lehetséges. 
+    
+            Végül, ha ha $\sum_{i=1}^{k}\lambda_i = 0$, akkor $\lambda_j = 0 \forall j$, és az $a_1, \dots, a_k$ vektorok csakugyan lineárisan függetlenek. 
+        \end{itemize}
+        
+\end{document}    
+
+
+
+\textcolor{blue}{\textbf{Def:}}
+
+\textcolor{purple}{\textbf{Példa:}} 
+
+\textcolor{red}{\textbf{Kérdés:}} 
+
+\textcolor{orange}{\textbf{Megf:}}
+
+\textcolor{green}{\textbf{Biz:}}

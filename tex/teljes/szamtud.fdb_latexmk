@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1706878407 "/Users/dave/Documents/GitHub/tex.1felev-szamitastudomany-alapjai/tex/teljes/szamtud.tex" "szamtud.pdf" "szamtud" 1706878409 0
-  "/Users/dave/Documents/GitHub/tex.1felev-szamitastudomany-alapjai/tex/teljes/szamtud.tex" 1706878404 2258 249e1c70514e8986d3898265797467c3 ""
+["pdflatex"] 1707646244 "/Users/dave/Documents/GitHub/tex.1felev-szamitastudomany-alapjai/tex/teljes/szamtud.tex" "szamtud.pdf" "szamtud" 1707646247 0
+  "/Users/dave/Documents/GitHub/tex.1felev-szamitastudomany-alapjai/tex/teljes/szamtud.tex" 1707646241 2375 b2bdf815b24422397bcf1e6f407ef372 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -161,6 +161,7 @@
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1694545878 8183370 1c525ac4ee073a127ca1a6d396f25aaf ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
   "sections/1/grafelmeletialapok.tex" 1703853560 18490 16305a9eaafb54efa7b1021c49f0f9f6 ""
+  "sections/10/determinans.tex" 1707646214 3885 5b1fa450b1ed3df357fd617a93ba4212 ""
   "sections/2/minktgffa.tex" 1698776639 7507 d66dcd2be425184750f43d06f6cf98db ""
   "sections/3/bfsdijkstra.tex" 1703865813 13646 8a872c5982cbf9030bf08937ac00fb85 ""
   "sections/4/fordfloyddfs.tex" 1704225398 13594 c05edbc371a1b820f1ffb531044c7daa ""
@@ -176,10 +177,11 @@
   "sections/6/./img/1.png" 1698492829 19402 b18921f82dd78b3d83b3426559e63eb2 ""
   "sections/6/sikgrafok.tex" 1704295942 10903 1b2c3361d4a6dd2a7b970e021273fe9d ""
   "sections/7/gausseliminacio.tex" 1706861680 13136 e34f615bde3149c04db30609f1199205 ""
-  "sections/8/linalgalapok.tex" 1706878345 14817 3742e0b6a89e67499279f1c9f6799a17 ""
-  "szamtud.aux" 1706878409 6753 f3432580d88ac76be3186a5bfa6f48a3 "pdflatex"
-  "szamtud.tex" 1706878404 2258 249e1c70514e8986d3898265797467c3 ""
-  "szamtud.toc" 1706878409 4443 433bae4bdd6774ac36a99e87a5e4fbc6 "pdflatex"
+  "sections/8/linalgalapok.tex" 1707574821 25235 bbf634ea28ef794304d468aaa64dde37 ""
+  "sections/9/bazisdimenzio.tex" 1707594414 22062 50deea5c38e322c5a9eb3e5377b3bc32 ""
+  "szamtud.aux" 1707646247 8631 bfcea000c9a74849a03f02cb85ede304 "pdflatex"
+  "szamtud.tex" 1707646241 2375 b2bdf815b24422397bcf1e6f407ef372 ""
+  "szamtud.toc" 1707646247 5706 7cbbb21de88f6039904135e2ad166b0e "pdflatex"
   (generated)
   "szamtud.aux"
   "szamtud.log"
